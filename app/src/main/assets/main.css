@@ -1,0 +1,46 @@
+
+
+header, section, footer,aside,nav,article,hgroup{
+	display:block;
+}
+body{
+	text-align:center;	
+} 
+#big_wrapper{
+	border:0px solid black;
+	width:1200px;
+	margin:20px auto;
+	background-attachment: fixed;
+	background-position: center; 
+
+}
+
+#top_menu{
+	background:transparent;
+	color:yellow;
+}
+#top_menu li{
+	display:inline-block;
+	list-style:none;
+	padding:5px;
+	font: bold 26px Tahoma;
+	color:white;
+}
+#calendar_table{
+	font: bold 15px Tahoma;
+
+}
+#marquee{
+	font: bold 12px Tahoma;
+}
+
+#calendar_table{
+	font: bold 15px Tahoma;
+	color:black;
+}
+
+.contents {
+  padding-left: 210px;
+}
+
+

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.gelo.ceuapp.ceuchoosemusic">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ceu4">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CEU Hymn"
+                android:padding="8dp"
+                android:textColor="#fff"
+                android:background="@color/colorPrimary"
+                android:textSize="20sp"
+                android:id="@+id/hymn"
+                android:layout_below="@+id/btn_elcollar"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="El Collar de Sampaguita"
+                android:padding="8dp"
+                android:textColor="#fff"
+                android:background="@color/colorPrimary"
+                android:textSize="20sp"
+                android:id="@+id/btn_elcollar"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/btn_sampmabango"
+                android:layout_alignLeft="@+id/btn_sampmabango"
+                android:layout_alignStart="@+id/btn_sampmabango" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sampaguita La Flor de Manila"
+                android:padding="8dp"
+                android:textColor="#fff"
+                android:background="@color/colorPrimary"
+                android:textSize="20sp"
+                android:id="@+id/btn_laflor"
+                android:layout_below="@+id/et_choosemusic"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="57dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sampaguitang Mabango"
+                android:padding="8dp"
+                android:textColor="#fff"
+                android:background="@color/colorPrimary"
+                android:textSize="20sp"
+                android:id="@+id/btn_sampmabango"
+                android:layout_below="@+id/btn_laflor"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:id="@+id/et_choosemusic"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

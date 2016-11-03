@@ -1,0 +1,100 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gelo.ceuapp.faq"
+    android:background="@drawable/ceu4">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Disciplinary Measures"
+                android:padding="8dp"
+                android:textColor="#fff"
+                android:background="@color/colorPrimary"
+                android:textSize="20sp"
+                android:id="@+id/btn_offense"
+                android:layout_marginTop="71dp"
+                android:layout_below="@+id/et_aboutt"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"/>
+
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enrollment Procedures"
+                android:padding="8dp"
+                android:textColor="#fff"
+                android:background="@color/colorPrimary"
+                android:textSize="20sp"
+                android:id="@+id/btn_enroll"
+                android:layout_below="@+id/btn_ceuchoosemusic"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Other Transaction"
+                android:padding="8dp"
+                android:textColor="#fff"
+                android:background="@color/colorPrimary"
+                android:textSize="20sp"
+                android:id="@+id/btn_othertransac"
+                android:layout_below="@+id/btn_offense"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CEU Music"
+                android:padding="8dp"
+                android:textColor="#fff"
+                android:background="@color/colorPrimary"
+                android:textSize="20sp"
+                android:id="@+id/btn_ceuchoosemusic"
+                android:layout_below="@+id/btn_othertransac"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CEU Board Members"
+                android:padding="8dp"
+                android:textColor="#fff"
+                android:background="@color/colorPrimary"
+                android:textSize="20sp"
+                android:id="@+id/btn_board"
+                android:layout_below="@+id/btn_enroll"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:id="@+id/et_aboutt"/>
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

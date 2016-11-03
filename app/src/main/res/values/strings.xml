@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">CEU Manila Assistant App</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="title_activity_navigation_gif">NavigationGif</string>
+    <string name="title_activity_colleges_group">collegesGroup</string>
+    <string name="title_activity_cah">CAH</string>
+
+    <string name="title_activity_cdl">CDL</string>
+    <string name="title_activity_chapel">Chapel</string>
+    <string name="title_activity_dcth">DCTH</string>
+    <string name="title_activity_dent_sci">Dent-Sci</string>
+    <string name="title_activity_ffh">FFH</string>
+    <string name="title_activity_fsh">FSH</string>
+    <string name="title_activity_fgh">FGH</string>
+    <string name="title_activity_gdlsc">GDLSC</string>
+    <string name="title_activity_isc">ISC</string>
+    <string name="title_activity_lah">LAH</string>
+    <string name="title_activity_mvh">MVH</string>
+    <string name="title_activity_north_quad">North Quadrangle</string>
+    <string name="title_activity_phlh">PHLH</string>
+    <string name="title_activity_sac">SAC</string>
+    <string name="title_activity_sdvh">SDVH</string>
+    <string name="title_activity_tech_center">TC</string>
+    <string name="title_activity_aboutform">aboutform</string>
+    <string name="title_activity_developer_page">DeveloperPage</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+
+</resources>

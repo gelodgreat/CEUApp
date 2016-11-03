@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+
+        <item
+            android:id="@+id/nav_vicinitymap"
+            android:icon="@drawable/ic_action_map"
+            android:title="Vicinity Map" />
+
+        <item
+            android:id="@+id/nav_univcalendar"
+            android:icon="@drawable/ic_action_calendar_month"
+            android:title="University Calendar" />
+
+        <item
+            android:id="@+id/nav_college"
+            android:icon="@drawable/ic_school"
+            android:title="Schools/Colleges" />
+        <item
+            android:id="@+id/nav_faq"
+            android:icon="@drawable/ic_action_help"
+            android:title="FAQ" />
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_info"
+            android:title="About" />
+
+        <item
+            android:id="@+id/nav_inspire"
+            android:icon="@drawable/ic_mood"
+            android:title="#CEUInspire" />
+
+
+    </group>
+
+        <item android:title="Exit">
+            <menu>
+        <item
+            android:id="@+id/nav_exit"
+            android:icon="@drawable/ic_power_settings_new"
+            android:title="Exit" />
+            </menu>
+        </item>
+
+
+
+   <!-- <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send" />
+        </menu>
+    </item>-->
+
+</menu>

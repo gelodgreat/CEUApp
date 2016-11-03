@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/aboutdevss"
+        android:orderInCategory="100"
+        android:title="About Developers"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/aboutapps"
+        android:orderInCategory="100"
+        android:title="About Application"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/aboutdisclaimer"
+        android:orderInCategory="100"
+        android:title="Disclaimer"
+        app:showAsAction="never"
+        />
+
+</menu>
