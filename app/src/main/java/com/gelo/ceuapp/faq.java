@@ -12,6 +12,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,6 +28,9 @@ public static EditText et_aboutt;
     public faq() {
         // Required empty public constructor
     }
+
+    InterstitialAd mInterstitialAd;
+    private InterstitialAd interstitial;
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -107,7 +115,37 @@ public static EditText et_aboutt;
         });
 
 
+
+        AdView mAdView = (AdView) view.findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
+        // Prepare the Interstitial Ad
+        interstitial = new InterstitialAd(this.getActivity());
+        // Insert the Ad Unit ID
+        interstitial.setAdUnitId(getString(R.string.admob_interstitial_id));
+
+        interstitial.loadAd(adRequest);
+        // Prepare an Interstitial Ad Listener
+        interstitial.setAdListener(new AdListener() {
+            public void onAdLoaded() {
+                // Call displayInterstitial() function
+                displayInterstitial();
+            }
+        });
+
+
+
         return view;
+    }
+
+
+
+    public void displayInterstitial() {
+// If Ads are loaded, show Interstitial else show nothing.
+        if (interstitial.isLoaded()) {
+            interstitial.show();
+        }
     }
 
 }
