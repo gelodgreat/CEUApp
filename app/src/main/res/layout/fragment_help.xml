@@ -15,16 +15,16 @@
 
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="HELP"
-                android:padding="8dp"
-                android:textColor="#fff"
-                android:background="@color/colorPrimary"
-                android:textSize="28sp"
                 android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
-                android:layout_centerHorizontal="true" />
+                android:background="@color/colorPrimary"
+                android:padding="8dp"
+                android:text="HELP"
+                android:textColor="#fff"
+                android:textSize="28sp" />
 
             <EditText
                 android:layout_width="wrap_content"

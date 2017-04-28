@@ -1,9 +1,16 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        free {
+            keyAlias 'key0'
+            keyPassword 'microcircle'
+            storeFile file('C:/Users/AngeloDesktop/Desktop/ceuappsignedkey/signedceupappkey.jks')
+            storePassword 'microcircle'
+        }
+    }
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
-
     defaultConfig {
         applicationId "com.gelo.ceuapp"
         minSdkVersion 16

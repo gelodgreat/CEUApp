@@ -19,71 +19,71 @@
             android:layout_height="match_parent">
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Disciplinary Measures"
-                android:padding="8dp"
-                android:textColor="#fff"
-                android:background="@color/colorPrimary"
-                android:textSize="20sp"
                 android:id="@+id/btn_offense"
-                android:layout_marginTop="71dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/et_aboutt"
                 android:layout_centerHorizontal="true"
-                android:layout_marginBottom="20dp"/>
-
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="71dp"
+                android:background="@color/colorPrimary"
+                android:padding="8dp"
+                android:text="Disciplinary Measures"
+                android:textColor="#fff"
+                android:textSize="20sp" />
 
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Enrollment Procedures"
-                android:padding="8dp"
-                android:textColor="#fff"
-                android:background="@color/colorPrimary"
-                android:textSize="20sp"
                 android:id="@+id/btn_enroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/btn_ceuchoosemusic"
                 android:layout_centerHorizontal="true"
-                android:layout_marginBottom="20dp"/>
+                android:layout_marginBottom="20dp"
+                android:background="@color/colorPrimary"
+                android:padding="8dp"
+                android:text="Enrollment Procedures"
+                android:textColor="#fff"
+                android:textSize="20sp" />
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Other Transaction"
-                android:padding="8dp"
-                android:textColor="#fff"
-                android:background="@color/colorPrimary"
-                android:textSize="20sp"
                 android:id="@+id/btn_othertransac"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/btn_offense"
                 android:layout_centerHorizontal="true"
-                android:layout_marginBottom="20dp"/>
+                android:layout_marginBottom="20dp"
+                android:background="@color/colorPrimary"
+                android:padding="8dp"
+                android:text="Other Transaction"
+                android:textColor="#fff"
+                android:textSize="20sp" />
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="CEU Music"
-                android:padding="8dp"
-                android:textColor="#fff"
-                android:background="@color/colorPrimary"
-                android:textSize="20sp"
                 android:id="@+id/btn_ceuchoosemusic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/btn_othertransac"
                 android:layout_centerHorizontal="true"
-                android:layout_marginBottom="20dp"/>
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="CEU Board Members"
-                android:padding="8dp"
-                android:textColor="#fff"
+                android:layout_marginBottom="20dp"
                 android:background="@color/colorPrimary"
-                android:textSize="20sp"
+                android:padding="8dp"
+                android:text="CEU Music"
+                android:textColor="#fff"
+                android:textSize="20sp" />
+
+            <Button
                 android:id="@+id/btn_board"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/btn_enroll"
                 android:layout_centerHorizontal="true"
-                android:layout_marginBottom="20dp"/>
+                android:layout_marginBottom="20dp"
+                android:background="@color/colorPrimary"
+                android:padding="8dp"
+                android:text="CEU Board Members"
+                android:textColor="#fff"
+                android:textSize="20sp" />
 
             <EditText
                 android:layout_width="wrap_content"

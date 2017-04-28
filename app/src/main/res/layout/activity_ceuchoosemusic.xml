@@ -20,58 +20,58 @@
             android:background="@drawable/ceu4">
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="CEU Hymn"
-                android:padding="8dp"
-                android:textColor="#fff"
-                android:background="@color/colorPrimary"
-                android:textSize="20sp"
                 android:id="@+id/hymn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/btn_elcollar"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="El Collar de Sampaguita"
-                android:padding="8dp"
-                android:textColor="#fff"
-                android:background="@color/colorPrimary"
-                android:textSize="20sp"
-                android:id="@+id/btn_elcollar"
                 android:layout_marginTop="20dp"
-                android:layout_below="@+id/btn_sampmabango"
-                android:layout_alignLeft="@+id/btn_sampmabango"
-                android:layout_alignStart="@+id/btn_sampmabango" />
+                android:background="@color/colorPrimary"
+                android:padding="8dp"
+                android:text="CEU Hymn"
+                android:textColor="#fff"
+                android:textSize="20sp" />
 
             <Button
-                android:layout_width="wrap_content"
+                android:id="@+id/btn_elcollar"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Sampaguita La Flor de Manila"
-                android:padding="8dp"
-                android:textColor="#fff"
+                android:layout_alignLeft="@+id/btn_sampmabango"
+                android:layout_alignStart="@+id/btn_sampmabango"
+                android:layout_below="@+id/btn_sampmabango"
+                android:layout_marginTop="20dp"
                 android:background="@color/colorPrimary"
-                android:textSize="20sp"
+                android:padding="8dp"
+                android:text="El Collar de Sampaguita"
+                android:textColor="#fff"
+                android:textSize="20sp" />
+
+            <Button
                 android:id="@+id/btn_laflor"
-                android:layout_below="@+id/et_choosemusic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:layout_marginTop="57dp" />
+                android:layout_below="@+id/et_choosemusic"
+                android:layout_marginTop="57dp"
+                android:background="@color/colorPrimary"
+                android:padding="8dp"
+                android:text="Sampaguita La Flor de Manila"
+                android:textColor="#fff"
+                android:textSize="20sp" />
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Sampaguitang Mabango"
-                android:padding="8dp"
-                android:textColor="#fff"
-                android:background="@color/colorPrimary"
-                android:textSize="20sp"
                 android:id="@+id/btn_sampmabango"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/btn_laflor"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp" />
+                android:layout_marginTop="20dp"
+                android:background="@color/colorPrimary"
+                android:padding="8dp"
+                android:text="Sampaguitang Mabango"
+                android:textColor="#fff"
+                android:textSize="20sp" />
 
             <EditText
                 android:layout_width="wrap_content"
