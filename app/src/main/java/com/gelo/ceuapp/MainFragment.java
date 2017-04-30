@@ -209,9 +209,9 @@ public class MainFragment extends Fragment {
         ArrayAdapter adapter = new ArrayAdapter(getActivity().getApplicationContext(), android.R.layout.select_dialog_item, Building_List);
 
         autoCompleteTextView.setDropDownBackgroundDrawable(new ColorDrawable(getContext().getResources().getColor(R.color.colorPrimaryDark)));
-        autoCompleteTextView.setTextSize(20);
-        autoCompleteTextView.setDropDownWidth(500);
-
+        autoCompleteTextView.setTextSize(15);
+        autoCompleteTextView.setDropDownWidth(1200);
+        autoCompleteTextView.setDropDownHeight(750);
         autoCompleteTextView.setThreshold(1);
         autoCompleteTextView.setAdapter(adapter);
 
@@ -769,8 +769,6 @@ public class MainFragment extends Fragment {
                 }
             }
         });
-
-
 
 
         return view;

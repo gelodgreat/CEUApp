@@ -8,7 +8,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.gelo.ceuapp.chooseenroll"
-    android:background="@drawable/ceu4">
+    android:background="#000000">
 
 
     <ScrollView
@@ -25,14 +25,15 @@
                 android:id="@+id/btn_alienproc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_above="@+id/btn_seconddeg"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="29dp"
+                android:layout_marginBottom="13dp"
                 android:background="@color/colorPrimary"
                 android:padding="8dp"
                 android:text="Alien/Non-Resident"
                 android:textColor="#fff"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:layout_above="@+id/btn_seconddeg"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
 
 
             <Button
@@ -53,40 +54,42 @@
                 android:id="@+id/btn_fresh"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_above="@+id/btn_alienproc"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="24dp"
+                android:layout_marginBottom="12dp"
                 android:background="@color/colorPrimary"
                 android:padding="8dp"
                 android:text="Freshmen"
                 android:textColor="#fff"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:layout_above="@+id/btn_alienproc"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
 
             <Button
                 android:id="@+id/btn_seconddeg"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_above="@+id/btn_transferee"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="26dp"
                 android:background="@color/colorPrimary"
                 android:padding="8dp"
                 android:text="Second Degree"
                 android:textColor="#fff"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
 
             <Button
                 android:id="@+id/btn_transferee"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_above="@+id/btn_contin"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="24dp"
+                android:layout_marginBottom="11dp"
                 android:background="@color/colorPrimary"
                 android:padding="8dp"
                 android:text="Transferee"
                 android:textColor="#fff"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:layout_above="@+id/btn_contin"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
 
             <EditText
                 android:layout_width="wrap_content"
