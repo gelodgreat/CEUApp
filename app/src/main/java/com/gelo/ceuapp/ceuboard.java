@@ -1,8 +1,8 @@
 package com.gelo.ceuapp;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -18,17 +18,17 @@ public class ceuboard extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ceuboard);
-    showboard();
+        showboard();
 
-    floatButton = (ImageButton)findViewById(R.id.img_gohomeboard_float);
-    floatButton.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            Intent intent= new Intent(getApplicationContext(),MainActivity.class);
-            startActivity(intent);
-        }
-    });
-}
+        floatButton = (ImageButton) findViewById(R.id.img_gohomeboard_float);
+        floatButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
 
     public void showboard() {
         wv_showboard = (WebView) findViewById(R.id.wv_showboard);
@@ -37,6 +37,7 @@ public class ceuboard extends AppCompatActivity {
         webSettings.setBuiltInZoomControls(true);
         webSettings.setSupportZoom(true);
         webSettings.setJavaScriptEnabled(true);
+        webSettings.setDisplayZoomControls(false);
         wv_showboard.setBackgroundColor(15658734);
         wv_showboard.loadUrl("file:///android_asset/board_of_directors.html");
     }

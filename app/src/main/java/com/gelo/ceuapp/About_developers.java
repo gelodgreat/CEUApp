@@ -3,12 +3,7 @@ package com.gelo.ceuapp;
 import android.animation.ObjectAnimator;
 import android.app.ActivityGroup;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.FrameLayout;
-import android.widget.ImageButton;
 import android.widget.TabHost;
 
 public class About_developers extends ActivityGroup {
@@ -18,7 +13,7 @@ public class About_developers extends ActivityGroup {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_developers);
 
-        ObjectAnimator animator=ObjectAnimator.ofInt(R.id.horiscroll, "ScrollX", 1000);
+        ObjectAnimator animator = ObjectAnimator.ofInt(R.id.horiscroll, "ScrollX", 1000);
         animator.setDuration(250);
         animator.start();
 
@@ -56,7 +51,6 @@ public class About_developers extends ActivityGroup {
         tab6.setContent(i6);
 
 
-
         tabHost.addTab(tab1);
         tabHost.addTab(tab2);
         tabHost.addTab(tab3);
@@ -66,9 +60,6 @@ public class About_developers extends ActivityGroup {
 
 
         onclickbutton();
-
-
-
 
 
     }
@@ -94,7 +85,6 @@ public class About_developers extends ActivityGroup {
                 startActivity(intent);
             }
         });*/
-
 
 
     }

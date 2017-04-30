@@ -1,7 +1,7 @@
 package com.gelo.ceuapp;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 
@@ -14,13 +14,14 @@ public class developer_viril extends AppCompatActivity {
         aboutviril();
     }
 
-    public void aboutviril(){
-        WebView wv = (WebView)findViewById(R.id.wv_aboutviril);
+    public void aboutviril() {
+        WebView wv = (WebView) findViewById(R.id.wv_aboutviril);
         WebSettings webSettings = wv.getSettings();
         webSettings.setBuiltInZoomControls(true);
         webSettings.setSupportZoom(true);
         webSettings.setJavaScriptEnabled(true);
         wv.setBackgroundColor(15658734);
+        webSettings.setDisplayZoomControls(false);
 
         wv.loadUrl("file:///android_asset/rhejabout.html");
     }

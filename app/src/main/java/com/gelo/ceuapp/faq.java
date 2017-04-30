@@ -10,7 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
@@ -23,7 +22,7 @@ import com.google.android.gms.ads.InterstitialAd;
  */
 public class faq extends Fragment {
 
-public static EditText et_aboutt;
+    public static EditText et_aboutt;
 
     public faq() {
         // Required empty public constructor
@@ -35,23 +34,21 @@ public static EditText et_aboutt;
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        et_aboutt = (EditText)getView().findViewById(R.id.et_aboutt);
+        et_aboutt = (EditText) getView().findViewById(R.id.et_aboutt);
         //noinspection SimplifiableIfStatement
         if (id == R.id.aboutdevss) {
 
-            Intent intent= new Intent(getActivity(),aboutform.class);
+            Intent intent = new Intent(getActivity(), aboutform.class);
             et_aboutt.setText("devs");
             startActivity(intent);
             return true;
-        }
-        else if (id == R.id.aboutapps){
-            Intent intent= new Intent(getActivity(),aboutform.class);
+        } else if (id == R.id.aboutapps) {
+            Intent intent = new Intent(getActivity(), aboutform.class);
             et_aboutt.setText("apps");
             startActivity(intent);
             return true;
-        }
-        else if (id == R.id.aboutdisclaimer){
-            Intent intent= new Intent(getActivity(),aboutform.class);
+        } else if (id == R.id.aboutdisclaimer) {
+            Intent intent = new Intent(getActivity(), aboutform.class);
             et_aboutt.setText("disclaimer");
             startActivity(intent);
             return true;
@@ -62,16 +59,15 @@ public static EditText et_aboutt;
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        final View view=inflater.inflate(R.layout.fragment_faq, container, false);
+        final View view = inflater.inflate(R.layout.fragment_faq, container, false);
 
         Button btn_offense = (Button) view.findViewById(R.id.btn_offense);
         btn_offense.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent= new Intent("com.gelo.ceuapp.Offenses");
+                Intent intent = new Intent("com.gelo.ceuapp.Offenses");
                 startActivity(intent);
             }
 
@@ -81,7 +77,7 @@ public static EditText et_aboutt;
         btn_ceuchoosemusic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent= new Intent("com.gelo.ceuapp.ceuchoosemusic");
+                Intent intent = new Intent("com.gelo.ceuapp.ceuchoosemusic");
                 startActivity(intent);
             }
         });
@@ -90,30 +86,29 @@ public static EditText et_aboutt;
         btn_gotoenroll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent= new Intent("com.gelo.ceuapp.chooseenroll");
+                Intent intent = new Intent("com.gelo.ceuapp.chooseenroll");
                 startActivity(intent);
             }
         });
 
-        Button btn_othertransac = (Button)view.findViewById(R.id.btn_othertransac);
+        Button btn_othertransac = (Button) view.findViewById(R.id.btn_othertransac);
         btn_othertransac.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent= new Intent("com.gelo.ceuapp.othertransac");
+                Intent intent = new Intent("com.gelo.ceuapp.othertransac");
                 startActivity(intent);
             }
         });
 
 
-        Button board = (Button)view.findViewById(R.id.btn_board);
+        Button board = (Button) view.findViewById(R.id.btn_board);
         board.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent= new Intent("com.gelo.ceuapp.ceuboard");
+                Intent intent = new Intent("com.gelo.ceuapp.ceuboard");
                 startActivity(intent);
             }
         });
-
 
 
         AdView mAdView = (AdView) view.findViewById(R.id.adView);
@@ -135,14 +130,12 @@ public static EditText et_aboutt;
         });
 
 
-
         return view;
     }
 
 
-
     public void displayInterstitial() {
-// If Ads are loaded, show Interstitial else show nothing.
+        // If Ads are loaded, show Interstitial else show nothing.
         if (interstitial.isLoaded()) {
             interstitial.show();
         }

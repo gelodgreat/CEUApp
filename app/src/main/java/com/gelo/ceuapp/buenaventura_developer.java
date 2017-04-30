@@ -22,18 +22,17 @@ public class buenaventura_developer extends Fragment {
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         final View view = inflater.inflate(R.layout.fragment_buenaventura_developer, container, false);
 
-        WebView wv=(WebView)view.findViewById(R.id.wv_aboutbrenz);
+        WebView wv = (WebView) view.findViewById(R.id.wv_aboutbrenz);
         WebSettings webSettings = wv.getSettings();
         webSettings.setBuiltInZoomControls(true);
         webSettings.setSupportZoom(true);
         webSettings.setJavaScriptEnabled(true);
         wv.setBackgroundColor(15658734);
-
+        webSettings.setDisplayZoomControls(false);
         wv.loadUrl("file:///android_asset/buenaventuraabout.html");
 
         return view;

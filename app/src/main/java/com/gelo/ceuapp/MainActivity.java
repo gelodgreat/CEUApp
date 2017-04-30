@@ -2,32 +2,17 @@ package com.gelo.ceuapp;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.ApplicationInfo;
-import android.content.pm.PackageManager;
-import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.widget.ButtonBarLayout;
-import android.view.Gravity;
-import android.view.SurfaceView;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
-
-import decoder.GifRun;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     NavigationView navigationView = null;
@@ -36,12 +21,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public static EditText et_aboutt;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mydb=new Database(this);
+        mydb = new Database(this);
 
 
 
@@ -50,8 +34,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         //SET THE FRAGMENT INITIALLY
         MainFragment fragment = new MainFragment();
-        android.support.v4.app.FragmentTransaction fragmentTransaction =
-                getSupportFragmentManager().beginTransaction();
+        android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.fragment_container, fragment);
         fragmentTransaction.commit();
 
@@ -63,8 +46,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         .setAction("Action", null).show();*/
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
@@ -83,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     }
 
-    public void openDrawer(){
+    public void openDrawer() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.openDrawer(GravityCompat.START);
     }
@@ -94,7 +76,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
-        }else{
+        } else {
             drawer.openDrawer(GravityCompat.START);
         }
     }
@@ -113,27 +95,25 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        et_aboutt = (EditText)findViewById(R.id.et_aboutt);
+        et_aboutt = (EditText) findViewById(R.id.et_aboutt);
         //noinspection SimplifiableIfStatement
         if (id == R.id.aboutdevss) {
 
-            Intent intent= new Intent(this,DevelperPage.class);
+            Intent intent = new Intent(this, DevelperPage.class);
             et_aboutt.setText("devs");
             startActivity(intent);
             return true;
-        }
-        else if (id == R.id.aboutapps){
+        } else if (id == R.id.aboutapps) {
 
 
-            Intent intent= new Intent(this,aboutform.class);
+            Intent intent = new Intent(this, aboutform.class);
             et_aboutt.setText("apps");
             startActivity(intent);
             return true;
-        }
-        else if (id == R.id.aboutdisclaimer){
+        } else if (id == R.id.aboutdisclaimer) {
 
 
-            Intent intent= new Intent(this,aboutform.class);
+            Intent intent = new Intent(this, aboutform.class);
             et_aboutt.setText("disclaimer");
             startActivity(intent);
             return true;
@@ -150,52 +130,46 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         if (id == R.id.nav_vicinitymap) {
             MainFragment fragment = new MainFragment();
-            android.support.v4.app.FragmentTransaction fragmentTransaction =
-                    getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.fragment_container,fragment);
+            android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_container, fragment);
             fragmentTransaction.commit();
         } else if (id == R.id.nav_faq) {
-                faq fragment = new faq();
-                android.support.v4.app.FragmentTransaction fragmentTransaction =
-                        getSupportFragmentManager().beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_container,fragment);
-                fragmentTransaction.commit();
+            faq fragment = new faq();
+            android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_container, fragment);
+            fragmentTransaction.commit();
         } else if (id == R.id.nav_univcalendar) {
             UnivCalendar fragment = new UnivCalendar();
-            android.support.v4.app.FragmentTransaction fragmentTransaction =
-                    getSupportFragmentManager().beginTransaction();
+            android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment_container, fragment);
             fragmentTransaction.commit();
 
         } else if (id == R.id.nav_college) {
             Colleges fragment = new Colleges();
-            android.support.v4.app.FragmentTransaction fragmentTransaction =
-                    getSupportFragmentManager().beginTransaction();
+            android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment_container, fragment);
             fragmentTransaction.commit();
 
-//        } else if (id == R.id.nav_help) {
-//            help fragment = new help();
-//            android.support.v4.app.FragmentTransaction fragmentTransaction =
-//                    getSupportFragmentManager().beginTransaction();
-//            fragmentTransaction.replace(R.id.fragment_container,fragment);
-//            fragmentTransaction.commit();
+            //        } else if (id == R.id.nav_help) {
+            //            help fragment = new help();
+            //            android.support.v4.app.FragmentTransaction fragmentTransaction =
+            //                    getSupportFragmentManager().beginTransaction();
+            //            fragmentTransaction.replace(R.id.fragment_container,fragment);
+            //            fragmentTransaction.commit();
 
         } else if (id == R.id.nav_about) {
             about fragment = new about();
-            android.support.v4.app.FragmentTransaction fragmentTransaction =
-                    getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.fragment_container,fragment);
+            android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_container, fragment);
             fragmentTransaction.commit();
 
         } else if (id == R.id.nav_inspire) {
             CEUInspire fragment = new CEUInspire();
-            android.support.v4.app.FragmentTransaction fragmentTransaction =
-                    getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.fragment_container,fragment);
+            android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_container, fragment);
             fragmentTransaction.commit();
 
-        } else if (id==R.id.nav_exit){
+        } else if (id == R.id.nav_exit) {
 
             AlertDialog.Builder alertdialog = new AlertDialog.Builder(this);
 
@@ -205,7 +179,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     overridePendingTransition(R.anim.animation, R.anim.animation2);
-					MainActivity.this.finishAffinity();
+                    MainActivity.this.finishAffinity();
                 }
             });
 
@@ -222,9 +196,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
                 }
             });
-
-
-
 
 
             alertdialog.show();

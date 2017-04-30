@@ -4,16 +4,12 @@ package com.gelo.ceuapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.text.Html;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
-
 
 
 /**
@@ -31,23 +27,21 @@ public class about extends Fragment {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        et_aboutt = (EditText)getView().findViewById(R.id.et_aboutt);
+        et_aboutt = (EditText) getView().findViewById(R.id.et_aboutt);
         //noinspection SimplifiableIfStatement
         if (id == R.id.aboutdevss) {
 
-            Intent intent= new Intent(getActivity(),aboutform.class);
+            Intent intent = new Intent(getActivity(), aboutform.class);
             et_aboutt.setText("devs");
             startActivity(intent);
             return true;
-        }
-        else if (id == R.id.aboutapps){
-            Intent intent= new Intent(getActivity(),aboutform.class);
+        } else if (id == R.id.aboutapps) {
+            Intent intent = new Intent(getActivity(), aboutform.class);
             et_aboutt.setText("apps");
             startActivity(intent);
             return true;
-        }
-        else if (id == R.id.aboutdisclaimer){
-            Intent intent= new Intent(getActivity(),aboutform.class);
+        } else if (id == R.id.aboutdisclaimer) {
+            Intent intent = new Intent(getActivity(), aboutform.class);
             et_aboutt.setText("disclaimer");
             startActivity(intent);
             return true;
@@ -56,8 +50,7 @@ public class about extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
         View view = inflater.inflate(R.layout.fragment_about, container, false);

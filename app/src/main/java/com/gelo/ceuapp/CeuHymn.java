@@ -1,14 +1,10 @@
 package com.gelo.ceuapp;
 
-import android.app.Activity;
-import android.graphics.Color;
 import android.media.MediaPlayer;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Html;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.webkit.WebView;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -23,36 +19,34 @@ public class CeuHymn extends AppCompatActivity implements View.OnClickListener {
     TextView lyrics;
     ScrollView scr;
     MediaPlayer mp;
-    String a=new String("false");
-
+    String a = new String("false");
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ceu_hymn);
-        mp=MediaPlayer.create(this, R.raw.ceuhymn);
+        mp = MediaPlayer.create(this, R.raw.ceuhymn);
         mp.setLooping(true);
         mp.start();
 
-        LinearLayout layout=new LinearLayout(this);
-        LinearLayout.LayoutParams layoutparams=new LinearLayout.LayoutParams(75, 75, 100);
-        RelativeLayout rellayout=new RelativeLayout(this);
-        WebView lyrics=new WebView(this);
+        LinearLayout layout = new LinearLayout(this);
+        LinearLayout.LayoutParams layoutparams = new LinearLayout.LayoutParams(75, 75, 100);
+        RelativeLayout rellayout = new RelativeLayout(this);
+        WebView lyrics = new WebView(this);
 
 
-
-        play=new ImageButton(this);
+        play = new ImageButton(this);
         play.setBackgroundResource(R.drawable.play);
         play.setLayoutParams(layoutparams);
         play.setOnClickListener(this);
 
-        pause=new ImageButton(this);
+        pause = new ImageButton(this);
         pause.setBackgroundResource(R.drawable.pause);
         pause.setLayoutParams(layoutparams);
         pause.setOnClickListener(this);
 
-        stop=new ImageButton(this);
+        stop = new ImageButton(this);
         stop.setBackgroundResource(R.drawable.stop);
         stop.setLayoutParams(layoutparams);
         stop.setOnClickListener(this);
@@ -69,49 +63,38 @@ public class CeuHymn extends AppCompatActivity implements View.OnClickListener {
         rellayout.addView(layout);
 
 
-
-
-
         setContentView(rellayout);
 
 
-
-
-
-
-
     }
-
 
 
     @Override
     public void onClick(View v) {
 
 
+        if (v == play) {
 
-
-        if (v==play){
-
-            if (a=="true"){
+            if (a == "true") {
                 mp.reset();
-                mp=MediaPlayer.create(this, R.raw.ceuhymn);
+                mp = MediaPlayer.create(this, R.raw.ceuhymn);
                 mp.start();
-            }else{
+            } else {
 
                 mp.start();
-                a="true";
+                a = "true";
 
             }
-        }else if (v==pause){
-            if (mp.isPlaying()){
+        } else if (v == pause) {
+            if (mp.isPlaying()) {
                 mp.pause();
-                a="false";
+                a = "false";
             }
 
 
-        }else{
+        } else {
             mp.stop();
-            a="true";
+            a = "true";
             //super.onBackPressed();
         }
     }
