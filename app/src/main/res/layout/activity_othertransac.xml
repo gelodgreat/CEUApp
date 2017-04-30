@@ -27,7 +27,7 @@
                 android:layout_height="wrap_content"
                 android:background="@color/colorPrimary"
                 android:padding="8dp"
-                android:text="Add n Drop"
+                android:text="Add and Drop"
                 android:textColor="#fff"
                 android:textSize="20sp"
                 android:layout_alignParentTop="true"

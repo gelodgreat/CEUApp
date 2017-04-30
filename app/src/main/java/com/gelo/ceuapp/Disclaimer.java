@@ -18,7 +18,7 @@ public class Disclaimer extends AppCompatActivity {
         webSettings.setSupportZoom(true);
         webSettings.setJavaScriptEnabled(true);
         wv.setBackgroundColor(15658734);
-
+        webSettings.setDisplayZoomControls(false);
         if (about.et_about.getText().toString().equalsIgnoreCase("disclaimer")) {
             wv.loadUrl("file:///android_asset/disclaimer.html");
         } else if (about.et_about.getText().toString().equalsIgnoreCase("apps")) {
