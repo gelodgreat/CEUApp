@@ -44,6 +44,7 @@ public class Information extends AppCompatActivity {
         webSettings.setSupportZoom(true);
         webSettings.setJavaScriptEnabled(true);
         wv.setBackgroundColor(15658734);
+        webSettings.setDisplayZoomControls(false);
 
         this.setTitle(Colleges.title);
 

@@ -37,6 +37,7 @@ public class commencetransac extends AppCompatActivity {
         webSettings.setSupportZoom(true);
         webSettings.setJavaScriptEnabled(true);
         wv_commencetransac.setBackgroundColor(15658734);
+        webSettings.setDisplayZoomControls(false);
 
         if (othertransac.et_choosetransac.getText().toString().equalsIgnoreCase("cross")) {
             wv_commencetransac.loadUrl("file:///android_asset/cross_enroll.html");
