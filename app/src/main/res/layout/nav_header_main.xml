@@ -10,7 +10,7 @@
         android:id="@+id/profile_image"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:src="@drawable/ceulogotan"
+        android:src="@drawable/applogo"
         android:layout_marginTop="40dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"

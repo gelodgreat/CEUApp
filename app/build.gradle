@@ -5,6 +5,7 @@ android {
         free {
         }
     }
+
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
     defaultConfig {
@@ -35,4 +36,5 @@ dependencies {
     compile 'com.android.support:support-v4:25.2.0'
     'Ads'
     compile 'com.google.android.gms:play-services-ads:8.4.0'
+
 }
