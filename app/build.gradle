@@ -12,15 +12,21 @@ android {
         applicationId 'com.gelo.ceuapp'
         minSdkVersion 16
         targetSdkVersion 25
-        versionName '1.5'
-        versionCode 4
+        versionName '1.5.2'
+        versionCode 5
     }
     buildTypes {
         release {
             minifyEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFile 'C:/Android_SDK/sdk/tools/proguard/proguard-android.txt'
         }
         debug {
+            minifyEnabled true
+            useProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'),
+                    'proguard-rules.pro'
         }
     }
     productFlavors {
@@ -35,6 +41,11 @@ dependencies {
     compile 'de.hdodenhof:circleimageview:2.1.0'
     compile 'com.android.support:support-v4:25.2.0'
     'Ads'
-    compile 'com.google.android.gms:play-services-ads:8.4.0'
-
+    //    compile 'com.google.firebase:firebase-ads:10.2.1'
+    compile 'com.google.android.gms:play-services-ads:10.2.4'
 }
+
+
+
+
+apply plugin: 'com.google.gms.google-services'

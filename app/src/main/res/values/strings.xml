@@ -34,8 +34,9 @@
     <string name="title_activity_developer_page">DeveloperPage</string>
     <string name="section_format">Hello World from section: %1$d</string>
 
-
-    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="admob_interstitial_id">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="banner_ad_unit_id">ca-app-pub-1707899762861819/7062586280</string>
+    <string name="banner_ad_unit_id2">ca-app-pub-1707899762861819/8120517085</string>
+    <!--<string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>-->
+    <!--<string name="banner_ad_unit_id2">ca-app-pub-3940256099942544/6300978111</string>-->
 </resources>
 

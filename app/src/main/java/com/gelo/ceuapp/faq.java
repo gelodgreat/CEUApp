@@ -11,10 +11,10 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.MobileAds;
 
 
 /**
@@ -111,34 +111,46 @@ public class faq extends Fragment {
         });
 
 
-        AdView mAdView = (AdView) view.findViewById(R.id.adView);
+        AdView mAdView, mAdView2;
+
+//        AdRequest adRequest = new AdRequest.Builder().build();
+//        mAdView.loadAd(adRequest);
+//
+//        // Prepare the Interstitial Ad
+//        interstitial = new InterstitialAd(this.getActivity());
+//        // Insert the Ad Unit ID
+//        interstitial.setAdUnitId(getString(R.string.banner_ad_unit_id));
+//
+//        interstitial.loadAd(adRequest);
+//        // Prepare an Interstitial Ad Listener
+//        interstitial.setAdListener(new AdListener() {
+//            public void onAdLoaded() {
+//                // Call displayInterstitial() function
+//                displayInterstitial();
+//            }
+//        });
+
+
+        MobileAds.initialize(getContext().getApplicationContext(), "ca-app-pub-1707899762861819~4381648286");
+
+        mAdView = (AdView) view.findViewById(R.id.adView);
+        mAdView2 = (AdView) view.findViewById(R.id.adView2);
+
         AdRequest adRequest = new AdRequest.Builder().build();
+
+        mAdView2.loadAd(adRequest);
         mAdView.loadAd(adRequest);
-
-        // Prepare the Interstitial Ad
-        interstitial = new InterstitialAd(this.getActivity());
-        // Insert the Ad Unit ID
-        interstitial.setAdUnitId(getString(R.string.admob_interstitial_id));
-
-        interstitial.loadAd(adRequest);
-        // Prepare an Interstitial Ad Listener
-        interstitial.setAdListener(new AdListener() {
-            public void onAdLoaded() {
-                // Call displayInterstitial() function
-                displayInterstitial();
-            }
-        });
 
 
         return view;
     }
 
 
-    public void displayInterstitial() {
-        // If Ads are loaded, show Interstitial else show nothing.
-        if (interstitial.isLoaded()) {
-            interstitial.show();
-        }
-    }
+//    public void displayInterstitial() {
+//        // If Ads are loaded, show Interstitial else show nothing.
+//        if (interstitial.isLoaded()) {
+//            interstitial.show();
+//        }
+//    }
 
 }
