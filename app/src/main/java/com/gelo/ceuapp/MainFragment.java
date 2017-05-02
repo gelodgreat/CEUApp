@@ -11,7 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;*/
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.drawable.ColorDrawable;
@@ -27,7 +26,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
@@ -69,18 +67,14 @@ public class MainFragment extends Fragment {
         //t.setText(conf.smallestScreenWidthDp);
 
         autoCompleteTextView = (AutoCompleteTextView) view.findViewById(R.id.actvd);
-        ArrayAdapter adapter = new ArrayAdapter(getActivity().getApplicationContext(), android.R.layout.simple_expandable_list_item_1, Building_List);
 
+        ArrayAdapter adapter = new ArrayAdapter(getActivity().getApplicationContext(), android.R.layout.simple_expandable_list_item_1, Building_List);
         autoCompleteTextView.setDropDownBackgroundDrawable(new ColorDrawable(getContext().getResources().getColor(R.color.colorPrimaryDark)));
         autoCompleteTextView.setTextSize(15);
         autoCompleteTextView.setDropDownWidth(1500);
         autoCompleteTextView.setDropDownHeight(500);
         autoCompleteTextView.setThreshold(1);
         autoCompleteTextView.setAdapter(adapter);
-
-        autoCompleteTextView.setFocusable(true);
-        InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
-        imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, InputMethodManager.HIDE_IMPLICIT_ONLY);
 
         autoCompleteTextView.setOnKeyListener(new View.OnKeyListener() {
             public boolean onKey(View v, int keyCode, KeyEvent event) {
@@ -113,7 +107,6 @@ public class MainFragment extends Fragment {
                                 Intent intent = new Intent("com.gelo.ceuapp.Navigation_Gif");
                                 startActivity(intent);
                             }
-                            return true;
                         default:
                             break;
                     }
@@ -121,6 +114,7 @@ public class MainFragment extends Fragment {
                 return false;
             }
         });
+
 
         ImageButton imgb_drawer = (ImageButton) view.findViewById(R.id.imgb_drawer);
         imgb_drawer.setOnClickListener(new View.OnClickListener() {
@@ -353,7 +347,6 @@ public class MainFragment extends Fragment {
         search_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 if (search.getText().toString().equalsIgnoreCase("SAC")) {
                     Intent intent = new Intent("com.gelo.ceuapp.sac");
                     search.setText("");

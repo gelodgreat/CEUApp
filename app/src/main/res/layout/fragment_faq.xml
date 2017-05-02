@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#000000">
+    android:background="@drawable/scorpibg">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -34,10 +34,10 @@
                 android:text="Disciplinary Measures"
                 android:textColor="#fff"
                 android:textSize="20sp"
+                android:layout_marginTop="60dp"
                 android:layout_below="@+id/et_aboutt"
                 android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginTop="47dp" />
+                android:layout_alignParentStart="true" />
 
 
             <Button
@@ -49,10 +49,10 @@
                 android:text="Enrollment Procedures"
                 android:textColor="#fff"
                 android:textSize="20sp"
-                android:layout_above="@+id/btn_board"
+                android:layout_marginTop="14dp"
+                android:layout_below="@+id/btn_ceuchoosemusic"
                 android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginBottom="12dp" />
+                android:layout_alignParentStart="true" />
 
             <Button
                 android:id="@+id/btn_othertransac"
@@ -63,7 +63,7 @@
                 android:text="Other Transaction"
                 android:textColor="#fff"
                 android:textSize="20sp"
-                android:layout_marginTop="13dp"
+                android:layout_marginTop="12dp"
                 android:layout_below="@+id/btn_offense"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true" />
@@ -77,9 +77,10 @@
                 android:text="CEU Music"
                 android:textColor="#fff"
                 android:textSize="20sp"
-                android:layout_centerVertical="true"
+                android:layout_below="@+id/btn_othertransac"
                 android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="13dp" />
 
             <Button
                 android:id="@+id/btn_board"
@@ -90,10 +91,10 @@
                 android:text="CEU Board Members"
                 android:textColor="#fff"
                 android:textSize="20sp"
-                android:layout_above="@+id/adView"
+                android:layout_below="@+id/btn_enroll"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:layout_marginBottom="38dp" />
+                android:layout_marginTop="17dp" />
 
             <EditText
                 android:layout_width="wrap_content"
