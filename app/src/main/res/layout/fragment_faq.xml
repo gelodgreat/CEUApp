@@ -111,7 +111,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_alignParentBottom="true"
                 ads:adSize="BANNER"
-                ads:adUnitId="@string/banner_ad_unit_id">
+                ads:adUnitId="@string/banner_ad_unit_id_banner1">
             </com.google.android.gms.ads.AdView>
 
             <com.google.android.gms.ads.AdView
@@ -119,7 +119,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 ads:adSize="BANNER"
-                ads:adUnitId="@string/banner_ad_unit_id2"
+                ads:adUnitId="@string/banner_ad_unit_id_banner2"
                 android:layout_alignParentTop="true"
                 android:layout_alignLeft="@+id/adView"
                 android:layout_alignStart="@+id/adView"></com.google.android.gms.ads.AdView>

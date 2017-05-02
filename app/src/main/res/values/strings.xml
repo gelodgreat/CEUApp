@@ -34,9 +34,14 @@
     <string name="title_activity_developer_page">DeveloperPage</string>
     <string name="section_format">Hello World from section: %1$d</string>
 
-    <string name="banner_ad_unit_id">ca-app-pub-1707899762861819/7062586280</string>
-    <string name="banner_ad_unit_id2">ca-app-pub-1707899762861819/8120517085</string>
-    <!--<string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>-->
-    <!--<string name="banner_ad_unit_id2">ca-app-pub-3940256099942544/6300978111</string>-->
+    <string name="banner_ad_unit_id_interstitial">ca-app-pub-1707899762861819/7062586280</string>
+    <string name="banner_ad_unit_id_banner1">ca-app-pub-1707899762861819/3116737880</string>
+    <string name="banner_ad_unit_id_banner2">ca-app-pub-1707899762861819/4593471086</string>
+    <string name="banner_ad_unit_id_banner3">ca-app-pub-1707899762861819/2837536280</string>
+
+    <string name="ad_app_id">ca-app-pub-1707899762861819~4381648286</string>
+    <string name="test_device_id">EE4E4E93619380D25BB8972686F6210D</string>
+
+
 </resources>
 

@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
@@ -63,6 +64,9 @@ public class faq extends Fragment {
         // Inflate the layout for this fragment
         final View view = inflater.inflate(R.layout.fragment_faq, container, false);
 
+        MobileAds.initialize(getActivity().getApplicationContext(), getString(R.string.ad_app_id));
+
+
         Button btn_offense = (Button) view.findViewById(R.id.btn_offense);
         btn_offense.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -112,45 +116,43 @@ public class faq extends Fragment {
 
 
         AdView mAdView, mAdView2;
-
-//        AdRequest adRequest = new AdRequest.Builder().build();
-//        mAdView.loadAd(adRequest);
-//
-//        // Prepare the Interstitial Ad
-//        interstitial = new InterstitialAd(this.getActivity());
-//        // Insert the Ad Unit ID
-//        interstitial.setAdUnitId(getString(R.string.banner_ad_unit_id));
-//
-//        interstitial.loadAd(adRequest);
-//        // Prepare an Interstitial Ad Listener
-//        interstitial.setAdListener(new AdListener() {
-//            public void onAdLoaded() {
-//                // Call displayInterstitial() function
-//                displayInterstitial();
-//            }
-//        });
-
-
-        MobileAds.initialize(getContext().getApplicationContext(), "ca-app-pub-1707899762861819~4381648286");
-
         mAdView = (AdView) view.findViewById(R.id.adView);
         mAdView2 = (AdView) view.findViewById(R.id.adView2);
 
-        AdRequest adRequest = new AdRequest.Builder().build();
+        AdRequest adRequest = new AdRequest.Builder().addTestDevice(getString(R.string.test_device_id)).build();
 
-        mAdView2.loadAd(adRequest);
         mAdView.loadAd(adRequest);
+        mAdView2.loadAd(adRequest);
+
+        // Prepare the Interstitial Ad
+        interstitial = new InterstitialAd(this.getActivity());
+        // Insert the Ad Unit ID
+        interstitial.setAdUnitId(getString(R.string.banner_ad_unit_id_interstitial));
+
+        interstitial.loadAd(adRequest);
+        // Prepare an Interstitial Ad Listener
+        interstitial.setAdListener(new AdListener() {
+            public void onAdLoaded() {
+                // Call displayInterstitial() function
+                displayInterstitial();
+            }
+        });
+
+
+        //        AdRequest adRequest = new AdRequest.Builder().build();
+        //        mAdView2.loadAd(adRequest);
+        //        mAdView.loadAd(adRequest);
 
 
         return view;
     }
 
 
-//    public void displayInterstitial() {
-//        // If Ads are loaded, show Interstitial else show nothing.
-//        if (interstitial.isLoaded()) {
-//            interstitial.show();
-//        }
-//    }
+    public void displayInterstitial() {
+        // If Ads are loaded, show Interstitial else show nothing.
+        if (interstitial.isLoaded()) {
+            interstitial.show();
+        }
+    }
 
 }

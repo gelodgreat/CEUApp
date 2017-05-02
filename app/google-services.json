@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "362678896824",
+    "firebase_url": "https://ceuapp-42fc2.firebaseio.com",
+    "project_id": "ceuapp-42fc2",
+    "storage_bucket": "ceuapp-42fc2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:362678896824:android:0ee4c64e850d569b",
+        "android_client_info": {
+          "package_name": "com.gelo.ceuapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "362678896824-igo3q6k0v6661igp0b2986i4ptm8kpb1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gelo.ceuapp",
+            "certificate_hash": "d91cf7b117823c74c2c61f30e398dcc19e8bfe46"
+          }
+        },
+        {
+          "client_id": "362678896824-4s7gb6h3092l21tagipob67n41l78a9o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAv6Qs0_zSKK8bUZoHnHG4Np2DO-ifWfpk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "362678896824-4s7gb6h3092l21tagipob67n41l78a9o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -7,9 +7,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 public class Offenses extends AppCompatActivity {
 
     public static EditText et_off;
+    private AdView mAdView3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +21,11 @@ public class Offenses extends AppCompatActivity {
 
         setContentView(R.layout.activity_offenses);
         Click();
+
+
+        mAdView3 = (AdView) findViewById(R.id.offensesAd);
+        AdRequest adRequest = new AdRequest.Builder().addTestDevice(getString(R.string.test_device_id)).build();
+        mAdView3.loadAd(adRequest);
 
     }
 

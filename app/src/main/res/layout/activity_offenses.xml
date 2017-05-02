@@ -7,12 +7,13 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/scorpibg"
     tools:context="com.gelo.ceuapp.Offenses">
 
     <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:fillViewport="true">
 
         <RelativeLayout
@@ -31,9 +32,22 @@
                 android:layout_height="match_parent"
                 android:src="@drawable/handbook_pic"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="-135dp"
+                android:layout_marginTop="-350dp"
                 android:id="@+id/iv_pic"
                 />
+
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/offensesAd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                ads:adSize="BANNER"
+                ads:adUnitId="@string/banner_ad_unit_id_banner3"
+                android:layout_marginTop="19dp"
+                android:layout_below="@+id/btn_lessserious"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"></com.google.android.gms.ads.AdView>
 
             <Button
                 android:layout_width="wrap_content"
@@ -42,7 +56,7 @@
                 android:text="Slight Offense"
                 android:layout_below="@+id/iv_pic"
                 android:width="180dp"
-                android:layout_marginTop="-135dp"
+                android:layout_marginTop="-340dp"
                 android:textColor="#fff"
                 android:background="@color/colorPrimary"
                />
@@ -59,7 +73,7 @@
                 android:background="@color/colorPrimary"/>
 
             <Button
-                android:layout_marginTop="-135dp"
+                android:layout_marginTop="-340dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/btn_serious"
