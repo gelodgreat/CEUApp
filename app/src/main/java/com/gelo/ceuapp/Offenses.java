@@ -23,7 +23,9 @@ public class Offenses extends AppCompatActivity {
 
 
         AdView mAdView3 = (AdView) findViewById(R.id.offensesAd);
-        AdRequest adRequest = new AdRequest.Builder().addTestDevice(getString(R.string.test_device_id)).build();
+        AdRequest adRequest = new AdRequest.Builder()
+                //                .addTestDevice(getString(R.string.test_device_id))
+                .build();
         mAdView3.loadAd(adRequest);
 
     }

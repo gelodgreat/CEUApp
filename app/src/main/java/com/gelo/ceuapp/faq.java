@@ -119,7 +119,9 @@ public class faq extends Fragment {
         mAdView = (AdView) view.findViewById(R.id.adView);
         mAdView2 = (AdView) view.findViewById(R.id.adView2);
 
-        AdRequest adRequest = new AdRequest.Builder().addTestDevice(getString(R.string.test_device_id)).build();
+        AdRequest adRequest = new AdRequest.Builder()
+                //                .addTestDevice(getString(R.string.test_device_id))
+                .build();
 
         mAdView.loadAd(adRequest);
         mAdView2.loadAd(adRequest);
