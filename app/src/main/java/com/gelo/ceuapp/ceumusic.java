@@ -11,13 +11,13 @@ import android.widget.ImageButton;
 
 public class ceumusic extends AppCompatActivity implements View.OnClickListener {
 
-    ImageButton floatButton;
-    ImageButton play;
-    ImageButton pause;
+    private ImageButton floatButton;
+    private ImageButton play;
+    private ImageButton pause;
     ImageButton stop;
-    MediaPlayer mp;
-    WebView wv;
-    String a = new String("false");
+    private MediaPlayer mp;
+    private WebView wv;
+    private String a = "false";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

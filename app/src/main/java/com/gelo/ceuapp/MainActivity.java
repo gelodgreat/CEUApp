@@ -15,9 +15,9 @@ import android.view.MenuItem;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-    NavigationView navigationView = null;
-    Toolbar toolbar = null;
-    Database mydb;
+    private NavigationView navigationView = null;
+    private final Toolbar toolbar = null;
+    private Database mydb;
     public static EditText et_aboutt;
 
 

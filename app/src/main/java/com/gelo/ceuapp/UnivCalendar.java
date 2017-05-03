@@ -19,7 +19,7 @@ import android.widget.EditText;
  */
 public class UnivCalendar extends Fragment {
 
-    public static EditText et_aboutt;
+    private static EditText et_aboutt;
 
     public UnivCalendar() {
         // Required empty public constructor

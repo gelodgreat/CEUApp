@@ -10,7 +10,7 @@ import android.widget.ImageButton;
 
 public class Information extends AppCompatActivity {
 
-    ImageButton floatButton;
+    private ImageButton floatButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +36,7 @@ public class Information extends AppCompatActivity {
         showinformation();
     }
 
-    public void showinformation() {
+    private void showinformation() {
         WebView wv = (WebView) findViewById(R.id.wv_information);
 
         WebSettings webSettings = wv.getSettings();

@@ -9,7 +9,14 @@ import android.widget.EditText;
 
 public class othertransac extends AppCompatActivity {
 
-    public static Button btn_crossenroll, btn_eval, btn_id, btn_promi, btn_read, btn_refund, btn_shifting, btn_addndrop;
+    private static Button btn_crossenroll;
+    private static Button btn_eval;
+    private static Button btn_id;
+    private static Button btn_promi;
+    private static Button btn_read;
+    private static Button btn_refund;
+    private static Button btn_shifting;
+    private static Button btn_addndrop;
     public static EditText et_choosetransac;
 
     @Override
@@ -19,7 +26,7 @@ public class othertransac extends AppCompatActivity {
         onClickTransactionOn();
     }
 
-    public void onClickTransactionOn() {
+    private void onClickTransactionOn() {
         btn_crossenroll = (Button) findViewById(R.id.btn_crossenroll);
         btn_eval = (Button) findViewById(R.id.btn_evaluation);
         btn_id = (Button) findViewById(R.id.btn_id);

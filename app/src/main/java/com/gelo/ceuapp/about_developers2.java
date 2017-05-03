@@ -40,7 +40,7 @@ public class about_developers2 extends ActivityGroup {
         onclickprev();
     }
 
-    public void onclickprev(){
+    private void onclickprev() {
         ImageButton prev,homeb2;
 
         prev = (ImageButton)findViewById(R.id.img_aboutprev_float);

@@ -14,7 +14,7 @@ public class developer_viril extends AppCompatActivity {
         aboutviril();
     }
 
-    public void aboutviril() {
+    private void aboutviril() {
         WebView wv = (WebView) findViewById(R.id.wv_aboutviril);
         WebSettings webSettings = wv.getSettings();
         webSettings.setBuiltInZoomControls(true);

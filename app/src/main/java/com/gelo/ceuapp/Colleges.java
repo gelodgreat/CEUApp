@@ -19,7 +19,7 @@ import android.widget.ImageView;
 public class Colleges extends Fragment {
 
     public static String title;
-    public static EditText et_aboutt;
+    private static EditText et_aboutt;
 
     public Colleges() {
         // Required empty public constructor

@@ -9,7 +9,10 @@ import android.widget.EditText;
 
 public class ceuchoosemusic extends AppCompatActivity {
 
-    public static Button btn_elcollar, btn_laflor, btn_mabango, btn_ceuhymn;
+    private static Button btn_elcollar;
+    private static Button btn_laflor;
+    private static Button btn_mabango;
+    private static Button btn_ceuhymn;
     public static EditText et_choosemusic;
 
     @Override
@@ -19,7 +22,7 @@ public class ceuchoosemusic extends AppCompatActivity {
         choosmusic();
     }
 
-    public void choosmusic() {
+    private void choosmusic() {
         btn_elcollar = (Button) findViewById(R.id.btn_elcollar);
         btn_laflor = (Button) findViewById(R.id.btn_laflor);
         btn_mabango = (Button) findViewById(R.id.btn_sampmabango);

@@ -11,8 +11,8 @@ import android.widget.ImageButton;
 public class ceuboard extends AppCompatActivity {
 
 
-    public static WebView wv_showboard;
-    ImageButton floatButton;
+    private static WebView wv_showboard;
+    private ImageButton floatButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +30,7 @@ public class ceuboard extends AppCompatActivity {
         });
     }
 
-    public void showboard() {
+    private void showboard() {
         wv_showboard = (WebView) findViewById(R.id.wv_showboard);
 
         WebSettings webSettings = wv_showboard.getSettings();

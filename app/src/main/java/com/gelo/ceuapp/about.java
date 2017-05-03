@@ -17,8 +17,11 @@ import android.widget.EditText;
  */
 public class about extends Fragment {
 
-    public static Button btn_devs, btn_apps, btn_disclaimer;
-    public static EditText et_about, et_aboutt;
+    private static Button btn_devs;
+    private static Button btn_apps;
+    private static Button btn_disclaimer;
+    public static EditText et_about;
+    private static EditText et_aboutt;
 
     public about() {
         // Required empty public constructor

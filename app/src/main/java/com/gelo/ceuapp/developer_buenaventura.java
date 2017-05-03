@@ -14,7 +14,7 @@ public class developer_buenaventura extends AppCompatActivity {
         aboutbrenz();
     }
 
-    public void aboutbrenz() {
+    private void aboutbrenz() {
         WebView wv = (WebView) findViewById(R.id.wv_aboutbrenz);
         WebSettings webSettings = wv.getSettings();
         webSettings.setBuiltInZoomControls(true);

@@ -2,47 +2,54 @@
 package decoder;
 
 
-
-import java.util.Vector;
-import java.io.InputStream;
- import android.graphics.Bitmap;
+import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
+
+import java.io.InputStream;
+import java.util.Vector;
 public class GIFDecode {
 
-	public static final int STATUS_OK = 0;
-	public static final int STATUS_FORMAT_ERROR = 1;
-	public static final int STATUS_OPEN_ERROR = 2;
-	
-	protected InputStream in;
-	protected int status;
-	
-	protected int width; // full image width
-	protected int height; // full image height
-	protected boolean gctFlag; // global color table used
-	protected int gctSize; // size of global color table
-	protected int loopCount = 1; // iterations; 0 = repeat forever
-	
-	protected int[] gct; // global color table
-	protected int[] lct; // local color table
-	protected int[] act; // active color table
-	
-	protected int bgIndex; // background color index
-	protected int bgColor; // background color
-	protected int lastBgColor; // previous bg color
-	protected int pixelAspect; // pixel aspect ratio
-	
-	protected boolean lctFlag; // local color table flag
-	protected boolean interlace; // interlace flag
-	protected int lctSize; // local color table size
-	
-	protected int ix, iy, iw, ih; // current image rectangle
-	protected int lrx, lry, lrw, lrh;
-	protected Bitmap image; // current frame
-	protected Bitmap lastImage; // previous frame
-	protected int frameindex=0;
-	public int getFrameindex() {
-		return frameindex;
-	}
+    private static final int STATUS_OK = 0;
+    private static final int STATUS_FORMAT_ERROR = 1;
+    private static final int STATUS_OPEN_ERROR = 2;
+
+    private InputStream in;
+    private int status;
+
+    private int width; // full image width
+    private int height; // full image height
+    private boolean gctFlag; // global color table used
+    private int gctSize; // size of global color table
+    private int loopCount = 1; // iterations; 0 = repeat forever
+
+    private int[] gct; // global color table
+    private int[] lct; // local color table
+    private int[] act; // active color table
+
+    private int bgIndex; // background color index
+    private int bgColor; // background color
+    private int lastBgColor; // previous bg color
+    private int pixelAspect; // pixel aspect ratio
+
+    private boolean lctFlag; // local color table flag
+    private boolean interlace; // interlace flag
+    private int lctSize; // local color table size
+
+    private int ix;
+    private int iy;
+    private int iw;
+    private int ih; // current image rectangle
+    private int lrx;
+    private int lry;
+    private int lrw;
+    private int lrh;
+    private Bitmap image; // current frame
+    private Bitmap lastImage; // previous frame
+    private int frameindex = 0;
+
+    public int getFrameindex() {
+        return frameindex;
+    }
 
 
 	public void setFrameindex(int frameindex) {
@@ -52,41 +59,41 @@ public class GIFDecode {
 		}
 	}
 
-	protected byte[] block = new byte[256]; // current data block
-	protected int blockSize = 0; // block size
-	
-	// last graphic control extension info
-	protected int dispose = 0;
-	// 0=no action; 1=leave in place; 2=restore to bg; 3=restore to prev
-	protected int lastDispose = 0;
-	protected boolean transparency = false; // use transparent color
-	protected int delay = 0; // delay in milliseconds
-	protected int transIndex; // transparent color index
-	
-	protected static final int MaxStackSize = 4096;
-	// max decoder pixel stack size
-	
-	// LZW decoder working arrays
-	protected short[] prefix;
-	protected byte[] suffix;
-	protected byte[] pixelStack;
-	protected byte[] pixels;
-	
-	protected Vector<GifFrame> frames; // frames read from current file
-	protected int frameCount;
-	
-	static class GifFrame {
-		public GifFrame(Bitmap im, int del) {
-			image = im;
+    private final byte[] block = new byte[256]; // current data block
+    private int blockSize = 0; // block size
+
+    // last graphic control extension info
+    private int dispose = 0;
+    // 0=no action; 1=leave in place; 2=restore to bg; 3=restore to prev
+    private int lastDispose = 0;
+    private boolean transparency = false; // use transparent color
+    private int delay = 0; // delay in milliseconds
+    private int transIndex; // transparent color index
+
+    private static final int MaxStackSize = 4096;
+    // max decoder pixel stack size
+
+    // LZW decoder working arrays
+    private short[] prefix;
+    private byte[] suffix;
+    private byte[] pixelStack;
+    private byte[] pixels;
+
+    private Vector<GifFrame> frames; // frames read from current file
+    private int frameCount;
+
+    static class GifFrame {
+        public GifFrame(Bitmap im, int del) {
+            image = im;
 			delay = del;
 		}
-	
-		public Bitmap image;
-		public int delay;
-	}
-	
-	/**
-	* Gets display duration for specified frame.
+
+        public final Bitmap image;
+        public final int delay;
+    }
+
+    /**
+     * Gets display duration for specified frame.
 	*
 	* @param n
 	*            int index of frame
@@ -111,10 +118,11 @@ public class GIFDecode {
 	public int getLoopCount() {
 		return loopCount;
 	}
-	protected void setPixels() {
-		int[] dest = new int[width * height];
-		// fill in starting image contents based on last image's dispose code
-		if (lastDispose > 0) {
+
+    private void setPixels() {
+        int[] dest = new int[width * height];
+        // fill in starting image contents based on last image's dispose code
+        if (lastDispose > 0) {
 			if (lastDispose == 3) {
 				// use image before last
 				int n = frameCount - 2;
@@ -206,10 +214,11 @@ public class GIFDecode {
 		}
 	return	((GifFrame) frames.elementAt(frameindex)).image;
 	}
-	public int read(InputStream is) {
-		init();
-		if (is != null) {
-			in = is;
+
+    public void read(InputStream is) {
+        init();
+        if (is != null) {
+            in = is;
 			readHeader();
 			if (!err()) {
 				readContents();
@@ -225,12 +234,12 @@ public class GIFDecode {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return status;
-	}
-	protected void decodeImageData() {
-		int NullCode = -1;
-		int npix = iw * ih;
-		int available, clear, code_mask, code_size, end_of_information, in_code, old_code, bits, code, count, i, datum, data_size, first, top, bi, pi;
+    }
+
+    private void decodeImageData() {
+        int NullCode = -1;
+        int npix = iw * ih;
+        int available, clear, code_mask, code_size, end_of_information, in_code, old_code, bits, code, count, i, datum, data_size, first, top, bi, pi;
 		
 		if ((pixels == null) || (pixels.length < npix)) {
 			pixels = new byte[npix]; // allocate new pixel array
@@ -334,31 +343,33 @@ public class GIFDecode {
 			pixels[i] = 0; // clear missing pixels
 		}
 	}
-	
-	protected boolean err() {
-		return status != STATUS_OK;
-	}
-	
-	protected void init() {
-		status = STATUS_OK;
-		frameCount = 0;
-		frames = new Vector<GifFrame>();
+
+    private boolean err() {
+        return status != STATUS_OK;
+    }
+
+    private void init() {
+        status = STATUS_OK;
+        frameCount = 0;
+        frames = new Vector<GifFrame>();
 		gct = null;
 		lct = null;
 	}
-	protected int read() {
-		int curByte = 0;
-		try {
-			curByte = in.read();
+
+    private int read() {
+        int curByte = 0;
+        try {
+            curByte = in.read();
 		} catch (Exception e) {
 			status = STATUS_FORMAT_ERROR;
 		}
 		return curByte;
 	}
-	protected int readBlock() {
-		blockSize = read();
-		int n = 0;
-		if (blockSize > 0) {
+
+    private int readBlock() {
+        blockSize = read();
+        int n = 0;
+        if (blockSize > 0) {
 			try {
 				int count = 0;
 				while (n < blockSize) {
@@ -377,10 +388,11 @@ public class GIFDecode {
 		}
 		return n;
 	}
-	protected int[] readColorTable(int ncolors) {
-		int nbytes = 3 * ncolors;
-		int[] tab = null;
-		byte[] c = new byte[nbytes];
+
+    private int[] readColorTable(int ncolors) {
+        int nbytes = 3 * ncolors;
+        int[] tab = null;
+        byte[] c = new byte[nbytes];
 		int n = 0;
 		try {
 			n = in.read(c);
@@ -402,10 +414,11 @@ public class GIFDecode {
 		}
 		return tab;
 	}
-	protected void readContents() {
-		// read GIF file content blocks
-		boolean done = false;
-		while (!(done || err())) {
+
+    private void readContents() {
+        // read GIF file content blocks
+        boolean done = false;
+        while (!(done || err())) {
 			int code = read();
 			switch (code) {		
 			case 0x2C: // image separator
@@ -419,14 +432,14 @@ public class GIFDecode {
 						break;
 					case 0xff: // application extension
 						readBlock();
-						String app = "";
-						for (int i = 0; i < 11; i++) {
-							app += (char) block[i];
-						}
-						if (app.equals("NETSCAPE2.0")) {
-							readNetscapeExt();
-						} else {
-							skip(); // don't care
+                        StringBuilder app = new StringBuilder();
+                        for (int i = 0; i < 11; i++) {
+                            app.append((char) block[i]);
+                        }
+                        if (app.toString().equals("NETSCAPE2.0")) {
+                            readNetscapeExt();
+                        } else {
+                            skip(); // don't care
 						}
 						break;
 					default: // uninteresting extension
@@ -443,10 +456,11 @@ public class GIFDecode {
 			}
 		}
 	}
-	protected void readGraphicControlExt() {
-		read(); // block size
-		int packed = read(); // packed fields
-		dispose = (packed & 0x1c) >> 2; // disposal method
+
+    private void readGraphicControlExt() {
+        read(); // block size
+        int packed = read(); // packed fields
+        dispose = (packed & 0x1c) >> 2; // disposal method
 		if (dispose == 0) {
 			dispose = 1; // elect to keep old image if discretionary
 		}
@@ -455,26 +469,27 @@ public class GIFDecode {
 		transIndex = read(); // transparent color index
 		read(); // block terminator
 	}
-	
-	protected void readHeader() {
-		String id = "";
-		for (int i = 0; i < 6; i++) {
-			id += (char) read();
-		}
-		if (!id.startsWith("GIF")) {
-			status = STATUS_FORMAT_ERROR;
-			return;
-		}
+
+    private void readHeader() {
+        StringBuilder id = new StringBuilder();
+        for (int i = 0; i < 6; i++) {
+            id.append((char) read());
+        }
+        if (!id.toString().startsWith("GIF")) {
+            status = STATUS_FORMAT_ERROR;
+            return;
+        }
 		readLSD();
 		if (gctFlag && !err()) {
 			gct = readColorTable(gctSize);
 			bgColor = gct[bgIndex];
 		}
 	}
-	protected void readImage() {
-		ix = readShort(); // (sub)image position & size
-		iy = readShort();
-		iw = readShort();
+
+    private void readImage() {
+        ix = readShort(); // (sub)image position & size
+        iy = readShort();
+        iw = readShort();
 		ih = readShort();
 		int packed = read();
 		lctFlag = (packed & 0x80) != 0; // 1 - local color table flag
@@ -519,10 +534,11 @@ public class GIFDecode {
 		}
 		resetFrame();
 	}
-	protected void readLSD() {
-		// logical screen size
-		width = readShort();
-		height = readShort();	
+
+    private void readLSD() {
+        // logical screen size
+        width = readShort();
+        height = readShort();
 		// packed fields
 		int packed = read();
 		gctFlag = (packed & 0x80) != 0; // 1 : global color table flag
@@ -532,10 +548,11 @@ public class GIFDecode {
 		bgIndex = read(); // background color index
 		pixelAspect = read(); // pixel aspect ratio
 	}
-	protected void readNetscapeExt() {
-		do {
-			readBlock();
-			if (block[0] == 1) {
+
+    private void readNetscapeExt() {
+        do {
+            readBlock();
+            if (block[0] == 1) {
 				// loop count sub-block
 				int b1 = ((int) block[1]) & 0xff;
 				int b2 = ((int) block[2]) & 0xff;
@@ -543,14 +560,16 @@ public class GIFDecode {
 			}
 		} while ((blockSize > 0) && !err());
 	}
-	protected int readShort() {
-		// read 16-bit value, LSB first
-		return read() | (read() << 8);
-	}
-	protected void resetFrame() {
-		lastDispose = dispose;
-		lrx = ix;
-		lry = iy;
+
+    private int readShort() {
+        // read 16-bit value, LSB first
+        return read() | (read() << 8);
+    }
+
+    private void resetFrame() {
+        lastDispose = dispose;
+        lrx = ix;
+        lry = iy;
 		lrw = iw;
 		lrh = ih;
 		lastImage = image;
@@ -564,10 +583,10 @@ public class GIFDecode {
 	/**
 	* Skips variable length blocks up to and including next zero length block.
 	*/
-	protected void skip() {
-		do {
-			readBlock();
-		} while ((blockSize > 0) && !err());
+    private void skip() {
+        do {
+            readBlock();
+        } while ((blockSize > 0) && !err());
 	}
 }
 

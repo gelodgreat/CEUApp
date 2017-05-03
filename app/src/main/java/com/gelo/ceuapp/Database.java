@@ -7,10 +7,10 @@ import android.database.sqlite.SQLiteOpenHelper;
 /**
  * Created by ANDREW on 12/7/2015.
  */
-public class Database extends SQLiteOpenHelper {
+class Database extends SQLiteOpenHelper {
 
-    public static final String db_name = "Ceuapp.db";
-    public static final String tbl_name = "places";
+    private static final String db_name = "Ceuapp.db";
+    private static final String tbl_name = "places";
     public static final String col1 = "id";
     public static final String col2 = "desc";
     public static final String col3 = "locator";

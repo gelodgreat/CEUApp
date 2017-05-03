@@ -13,7 +13,6 @@ import com.google.android.gms.ads.AdView;
 public class Offenses extends AppCompatActivity {
 
     public static EditText et_off;
-    private AdView mAdView3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,13 +22,13 @@ public class Offenses extends AppCompatActivity {
         Click();
 
 
-        mAdView3 = (AdView) findViewById(R.id.offensesAd);
+        AdView mAdView3 = (AdView) findViewById(R.id.offensesAd);
         AdRequest adRequest = new AdRequest.Builder().addTestDevice(getString(R.string.test_device_id)).build();
         mAdView3.loadAd(adRequest);
 
     }
 
-    public void Click() {
+    private void Click() {
         Button btn_minor = (Button) findViewById(R.id.btn_minor);
         Button btn_lessserious = (Button) findViewById(R.id.btn_lessserious);
         Button btn_serious = (Button) findViewById(R.id.btn_serious);

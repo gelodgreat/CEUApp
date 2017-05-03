@@ -14,7 +14,7 @@ public class developer_tan extends AppCompatActivity {
         abouttan();
     }
 
-    public void abouttan() {
+    private void abouttan() {
         WebView wv = (WebView) findViewById(R.id.wv_abouttan);
         WebSettings webSettings = wv.getSettings();
         webSettings.setBuiltInZoomControls(true);

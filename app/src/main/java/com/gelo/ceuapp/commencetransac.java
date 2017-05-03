@@ -10,8 +10,8 @@ import android.widget.ImageButton;
 
 public class commencetransac extends AppCompatActivity {
 
-    public static WebView wv_commencetransac;
-    ImageButton floatButton;
+    private static WebView wv_commencetransac;
+    private ImageButton floatButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +29,7 @@ public class commencetransac extends AppCompatActivity {
         });
     }
 
-    public void commencetransac() {
+    private void commencetransac() {
         wv_commencetransac = (WebView) findViewById(R.id.wv_commencetransac);
 
         WebSettings webSettings = wv_commencetransac.getSettings();

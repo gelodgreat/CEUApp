@@ -13,13 +13,13 @@ import android.widget.TextView;
 
 public class CeuHymn extends AppCompatActivity implements View.OnClickListener {
 
-    ImageButton play;
-    ImageButton pause;
-    ImageButton stop;
+    private ImageButton play;
+    private ImageButton pause;
+    private ImageButton stop;
     TextView lyrics;
     ScrollView scr;
-    MediaPlayer mp;
-    String a = new String("false");
+    private MediaPlayer mp;
+    private String a = "false";
 
 
     @Override

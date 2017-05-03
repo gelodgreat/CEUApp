@@ -10,7 +10,7 @@ import android.widget.ImageButton;
 
 public class North_Gate_Navigation extends AppCompatActivity {
 
-    ImageButton floatButton;
+    private ImageButton floatButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

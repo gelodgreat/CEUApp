@@ -23,7 +23,7 @@ import com.google.android.gms.ads.MobileAds;
  */
 public class faq extends Fragment {
 
-    public static EditText et_aboutt;
+    private static EditText et_aboutt;
 
     public faq() {
         // Required empty public constructor
@@ -148,7 +148,7 @@ public class faq extends Fragment {
     }
 
 
-    public void displayInterstitial() {
+    private void displayInterstitial() {
         // If Ads are loaded, show Interstitial else show nothing.
         if (interstitial.isLoaded()) {
             interstitial.show();

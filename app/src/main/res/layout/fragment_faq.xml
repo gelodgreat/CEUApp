@@ -23,7 +23,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <Button
                 android:id="@+id/btn_offense"
@@ -122,7 +122,7 @@
                 ads:adUnitId="@string/banner_ad_unit_id_banner2"
                 android:layout_alignParentTop="true"
                 android:layout_alignLeft="@+id/adView"
-                android:layout_alignStart="@+id/adView"></com.google.android.gms.ads.AdView>
+                android:layout_alignStart="@+id/adView" />
 
         </RelativeLayout>
 

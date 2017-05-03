@@ -14,7 +14,7 @@ public class developer_umali extends AppCompatActivity {
         aboutumali();
     }
 
-    public void aboutumali() {
+    private void aboutumali() {
         WebView wv = (WebView) findViewById(R.id.wv_aboutumali);
         WebSettings webSettings = wv.getSettings();
         webSettings.setBuiltInZoomControls(true);
