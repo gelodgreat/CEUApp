@@ -16,7 +16,6 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent">
 
-
             <TabHost
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -31,8 +30,7 @@
                     android:orientation="vertical">
                     <HorizontalScrollView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:id="@+id/horiscroll">
+                        android:layout_height="match_parent">
 
                         <TabWidget
                             android:id="@android:id/tabs"
@@ -68,7 +66,5 @@
             </TabHost>
 
 
-
         </RelativeLayout>
-
 </RelativeLayout>
