@@ -7,6 +7,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 public class chooseenroll extends AppCompatActivity {
 
     public static EditText et_enroll;
@@ -16,6 +19,17 @@ public class chooseenroll extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chooseenroll);
         onClickChoice();
+
+        AdView madviewchenroll = (AdView) findViewById(R.id.chooseenrollad);
+        AdView madviewchenroll2 = (AdView) findViewById(R.id.chooseenrollad2);
+
+        AdRequest adRequest = new AdRequest.Builder()
+                //                .addTestDevice(getString(R.string.test_device_id))
+                .build();
+
+        madviewchenroll.loadAd(adRequest);
+        madviewchenroll2.loadAd(adRequest);
+
     }
 
     private void onClickChoice() {
