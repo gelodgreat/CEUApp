@@ -6,7 +6,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
 
-
+    <string name="appversion">1.5.5</string>
     <string name="title_activity_cah">CAH</string>
 
     <string name="title_activity_cdl">CDL</string>

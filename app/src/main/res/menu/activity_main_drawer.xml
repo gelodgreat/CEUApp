@@ -35,28 +35,37 @@
 
     </group>
 
-        <item android:title="Exit">
-            <menu>
-        <item
-            android:id="@+id/nav_exit"
-            android:icon="@drawable/ic_power_settings_new"
-            android:title="Exit" />
-            </menu>
-        </item>
-
-
-
-   <!-- <item android:title="Communicate">
+    <item android:title="Exit">
         <menu>
             <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
+                android:id="@+id/nav_exit"
+                android:icon="@drawable/ic_power_settings_new"
+                android:title="Exit" />
         </menu>
-    </item>-->
+    </item>
+
+    <item
+        android:enabled="false"
+        android:title="App Version">
+        <menu>
+            <item
+                android:enabled="false"
+                android:title="@string/appversion"
+                android:titleCondensed="@string/appversion"></item>
+        </menu>
+    </item>
+
+    <!-- <item android:title="Communicate">
+         <menu>
+             <item
+                 android:id="@+id/nav_share"
+                 android:icon="@drawable/ic_menu_share"
+                 android:title="Share" />
+             <item
+                 android:id="@+id/nav_send"
+                 android:icon="@drawable/ic_menu_send"
+                 android:title="Send" />
+         </menu>
+     </item>-->
 
 </menu>
