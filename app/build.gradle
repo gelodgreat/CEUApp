@@ -40,7 +40,9 @@ dependencies {
     compile 'com.android.support:design:25.3.1'
     compile 'de.hdodenhof:circleimageview:2.1.0'
     compile 'com.android.support:support-v4:25.3.1'
-    'Ads'
+    compile 'com.roughike:bottom-bar:2.3.1'
+
+//    'Ads'
     //    compile 'com.google.firebase:firebase-ads:10.2.1'
     compile 'com.google.android.gms:play-services-ads:10.2.4'
 }

@@ -7,6 +7,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.MobileAds;
+
 public class othertransac extends AppCompatActivity {
 
     private static Button btn_crossenroll;
@@ -18,12 +23,16 @@ public class othertransac extends AppCompatActivity {
     private static Button btn_shifting;
     private static Button btn_addndrop;
     public static EditText et_choosetransac;
+    InterstitialAd mInterstitialAd;
+    private InterstitialAd interstitial;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_othertransac);
         onClickTransactionOn();
+
+        MobileAds.initialize(getApplicationContext(), getString(R.string.ad_app_id));
     }
 
     private void onClickTransactionOn() {
@@ -103,5 +112,32 @@ public class othertransac extends AppCompatActivity {
         });
 
 
+        AdRequest adRequest = new AdRequest.Builder()
+                //                .addTestDevice(getString(R.string.test_device_id))
+                .build();
+
+        // Prepare the Interstitial Ad
+        interstitial = new InterstitialAd(othertransac.this);
+        // Insert the Ad Unit ID
+        interstitial.setAdUnitId(getString(R.string.banner_ad_unit_id_interstitial2));
+
+        interstitial.loadAd(adRequest);
+        // Prepare an Interstitial Ad Listener
+        interstitial.setAdListener(new AdListener() {
+            public void onAdLoaded() {
+                // Call displayInterstitial() function
+                displayInterstitial();
+            }
+        });
+
+
     }
+
+    private void displayInterstitial() {
+        // If Ads are loaded, show Interstitial else show nothing.
+        if (interstitial.isLoaded()) {
+            interstitial.show();
+        }
+    }
+
 }
