@@ -11,6 +11,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -90,7 +93,18 @@ public class about extends Fragment {
         });
 
 
+        AdView madviewabout = (AdView) view.findViewById(R.id.adsabout);
+        AdView madviewabout2 = (AdView) view.findViewById(R.id.adsabout2);
+
+        AdRequest adRequest = new AdRequest.Builder()
+                //                .addTestDevice(getString(R.string.test_device_id))
+                .build();
+
+        madviewabout.loadAd(adRequest);
+        madviewabout2.loadAd(adRequest);
+
         return view;
+
 
     }
 
