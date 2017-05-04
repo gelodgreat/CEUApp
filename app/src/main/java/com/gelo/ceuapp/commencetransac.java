@@ -10,16 +10,13 @@ import android.widget.ImageButton;
 
 public class commencetransac extends AppCompatActivity {
 
-    private static WebView wv_commencetransac;
-    private ImageButton floatButton;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_commencetransac);
         commencetransac();
 
-        floatButton = (ImageButton) findViewById(R.id.img_commencetransac_float);
+        ImageButton floatButton = (ImageButton) findViewById(R.id.img_commencetransac_float);
         floatButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -30,7 +27,7 @@ public class commencetransac extends AppCompatActivity {
     }
 
     private void commencetransac() {
-        wv_commencetransac = (WebView) findViewById(R.id.wv_commencetransac);
+        WebView wv_commencetransac = (WebView) findViewById(R.id.wv_commencetransac);
 
         WebSettings webSettings = wv_commencetransac.getSettings();
         webSettings.setBuiltInZoomControls(true);

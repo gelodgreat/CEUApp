@@ -9,9 +9,10 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.ImageButton;
 
+import java.util.Objects;
+
 public class ceumusic extends AppCompatActivity implements View.OnClickListener {
 
-    private ImageButton floatButton;
     private ImageButton play;
     private ImageButton pause;
     ImageButton stop;
@@ -31,7 +32,7 @@ public class ceumusic extends AppCompatActivity implements View.OnClickListener 
         mp = MediaPlayer.create(this, R.raw.ceuhymn);
         //mp.setLooping(true);
 
-        floatButton = (ImageButton) findViewById(R.id.img_ceumusic_float);
+        ImageButton floatButton = (ImageButton) findViewById(R.id.img_ceumusic_float);
         floatButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -80,7 +81,7 @@ public class ceumusic extends AppCompatActivity implements View.OnClickListener 
     public void onClick(View v) {
         if (v == play) {
 
-            if (a == "true") {
+            if (Objects.equals(a, "true")) {
                 mp.reset();
                 if (ceuchoosemusic.et_choosemusic.getText().toString().equalsIgnoreCase("elcollar")) {
                     mp = MediaPlayer.create(this, R.raw.elcollar);

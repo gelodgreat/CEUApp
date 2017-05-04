@@ -7,7 +7,8 @@ import android.graphics.Bitmap.Config;
 
 import java.io.InputStream;
 import java.util.Vector;
-public class GIFDecode {
+
+class GIFDecode {
 
     private static final int STATUS_OK = 0;
     private static final int STATUS_FORMAT_ERROR = 1;
@@ -29,11 +30,8 @@ public class GIFDecode {
     private int bgIndex; // background color index
     private int bgColor; // background color
     private int lastBgColor; // previous bg color
-    private int pixelAspect; // pixel aspect ratio
 
-    private boolean lctFlag; // local color table flag
     private boolean interlace; // interlace flag
-    private int lctSize; // local color table size
 
     private int ix;
     private int iy;
@@ -55,9 +53,8 @@ public class GIFDecode {
 	public void setFrameindex(int frameindex) {
 		this.frameindex = frameindex;
 		if(frameindex>frames.size()-1){
-			frameindex=0;	
-		}
-	}
+        }
+    }
 
     private final byte[] block = new byte[256]; // current data block
     private int blockSize = 0; // block size
@@ -351,8 +348,8 @@ public class GIFDecode {
     private void init() {
         status = STATUS_OK;
         frameCount = 0;
-        frames = new Vector<GifFrame>();
-		gct = null;
+        frames = new Vector<>();
+        gct = null;
 		lct = null;
 	}
 
@@ -371,8 +368,8 @@ public class GIFDecode {
         int n = 0;
         if (blockSize > 0) {
 			try {
-				int count = 0;
-				while (n < blockSize) {
+                int count;
+                while (n < blockSize) {
 					count = in.read(block, n, blockSize - n);
 					if (count == -1) {
 						break;
@@ -492,12 +489,12 @@ public class GIFDecode {
         iw = readShort();
 		ih = readShort();
 		int packed = read();
-		lctFlag = (packed & 0x80) != 0; // 1 - local color table flag
-		interlace = (packed & 0x40) != 0; // 2 - interlace flag
+        boolean lctFlag = (packed & 0x80) != 0;
+        interlace = (packed & 0x40) != 0; // 2 - interlace flag
 		// 3 - sort flag
 		// 4-5 - reserved
-		lctSize = 2 << (packed & 7); // 6-8 - local color table size	
-		if (lctFlag) {
+        int lctSize = 2 << (packed & 7);
+        if (lctFlag) {
 			lct = readColorTable(lctSize); // read table
 			act = lct; // make local table active
 		} else {
@@ -546,8 +543,8 @@ public class GIFDecode {
 		// 5 : gct sort flag
 		gctSize = 2 << (packed & 7); // 6-8 : gct size	
 		bgIndex = read(); // background color index
-		pixelAspect = read(); // pixel aspect ratio
-	}
+        int pixelAspect = read();
+    }
 
     private void readNetscapeExt() {
         do {

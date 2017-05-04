@@ -9,10 +9,6 @@ import android.widget.EditText;
 
 public class ceuchoosemusic extends AppCompatActivity {
 
-    private static Button btn_elcollar;
-    private static Button btn_laflor;
-    private static Button btn_mabango;
-    private static Button btn_ceuhymn;
     public static EditText et_choosemusic;
 
     @Override
@@ -23,11 +19,11 @@ public class ceuchoosemusic extends AppCompatActivity {
     }
 
     private void choosmusic() {
-        btn_elcollar = (Button) findViewById(R.id.btn_elcollar);
-        btn_laflor = (Button) findViewById(R.id.btn_laflor);
-        btn_mabango = (Button) findViewById(R.id.btn_sampmabango);
+        Button btn_elcollar = (Button) findViewById(R.id.btn_elcollar);
+        Button btn_laflor = (Button) findViewById(R.id.btn_laflor);
+        Button btn_mabango = (Button) findViewById(R.id.btn_sampmabango);
         et_choosemusic = (EditText) findViewById(R.id.et_choosemusic);
-        btn_ceuhymn = (Button) findViewById(R.id.hymn);
+        Button btn_ceuhymn = (Button) findViewById(R.id.hymn);
 
         btn_elcollar.setOnClickListener(new View.OnClickListener() {
             @Override

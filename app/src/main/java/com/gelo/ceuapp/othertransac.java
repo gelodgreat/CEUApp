@@ -14,14 +14,6 @@ import com.google.android.gms.ads.MobileAds;
 
 public class othertransac extends AppCompatActivity {
 
-    private static Button btn_crossenroll;
-    private static Button btn_eval;
-    private static Button btn_id;
-    private static Button btn_promi;
-    private static Button btn_read;
-    private static Button btn_refund;
-    private static Button btn_shifting;
-    private static Button btn_addndrop;
     public static EditText et_choosetransac;
     InterstitialAd mInterstitialAd;
     private InterstitialAd interstitial;
@@ -36,15 +28,15 @@ public class othertransac extends AppCompatActivity {
     }
 
     private void onClickTransactionOn() {
-        btn_crossenroll = (Button) findViewById(R.id.btn_crossenroll);
-        btn_eval = (Button) findViewById(R.id.btn_evaluation);
-        btn_id = (Button) findViewById(R.id.btn_id);
-        btn_promi = (Button) findViewById(R.id.btn_promisorry);
-        btn_read = (Button) findViewById(R.id.btn_readmission);
-        btn_refund = (Button) findViewById(R.id.btn_refund);
-        btn_shifting = (Button) findViewById(R.id.btn_shifting);
+        Button btn_crossenroll = (Button) findViewById(R.id.btn_crossenroll);
+        Button btn_eval = (Button) findViewById(R.id.btn_evaluation);
+        Button btn_id = (Button) findViewById(R.id.btn_id);
+        Button btn_promi = (Button) findViewById(R.id.btn_promisorry);
+        Button btn_read = (Button) findViewById(R.id.btn_readmission);
+        Button btn_refund = (Button) findViewById(R.id.btn_refund);
+        Button btn_shifting = (Button) findViewById(R.id.btn_shifting);
         et_choosetransac = (EditText) findViewById(R.id.et_chooseothertransac);
-        btn_addndrop = (Button) findViewById(R.id.btn_addndrop);
+        Button btn_addndrop = (Button) findViewById(R.id.btn_addndrop);
 
         btn_crossenroll.setOnClickListener(new View.OnClickListener() {
             @Override

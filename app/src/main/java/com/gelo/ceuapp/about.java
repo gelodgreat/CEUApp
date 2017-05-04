@@ -17,11 +17,7 @@ import android.widget.EditText;
  */
 public class about extends Fragment {
 
-    private static Button btn_devs;
-    private static Button btn_apps;
-    private static Button btn_disclaimer;
     public static EditText et_about;
-    private static EditText et_aboutt;
 
     public about() {
         // Required empty public constructor
@@ -30,7 +26,7 @@ public class about extends Fragment {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        et_aboutt = (EditText) getView().findViewById(R.id.et_aboutt);
+        EditText et_aboutt = (EditText) getView().findViewById(R.id.et_aboutt);
         //noinspection SimplifiableIfStatement
         if (id == R.id.aboutdevss) {
 
@@ -58,9 +54,9 @@ public class about extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_about, container, false);
 
-        btn_devs = (Button) view.findViewById(R.id.btn_devs);
-        btn_apps = (Button) view.findViewById(R.id.btn_apps);
-        btn_disclaimer = (Button) view.findViewById(R.id.btn_disclaimer);
+        Button btn_devs = (Button) view.findViewById(R.id.btn_devs);
+        Button btn_apps = (Button) view.findViewById(R.id.btn_apps);
+        Button btn_disclaimer = (Button) view.findViewById(R.id.btn_disclaimer);
         et_about = (EditText) view.findViewById(R.id.et_about);
 
         btn_devs.setOnClickListener(new View.OnClickListener() {

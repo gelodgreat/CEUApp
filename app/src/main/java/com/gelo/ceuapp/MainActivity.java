@@ -15,9 +15,7 @@ import android.view.MenuItem;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-    private NavigationView navigationView = null;
     private final Toolbar toolbar = null;
-    private Database mydb;
     public static EditText et_aboutt;
 
 
@@ -25,7 +23,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mydb = new Database(this);
+        Database mydb = new Database(this);
 
 
 
@@ -50,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.requestFocus();
         navigationView.setNavigationItemSelectedListener(this);
 

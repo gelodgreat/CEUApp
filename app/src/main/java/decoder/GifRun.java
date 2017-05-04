@@ -15,8 +15,6 @@ class GifRun implements Runnable, Callback {
 
     private Bitmap bmb;
     private GIFDecode decode;
-    private int ind;
-    private int gifCount;
     private SurfaceHolder mSurfaceHolder;
     private boolean surfaceExists;
 
@@ -26,10 +24,10 @@ class GifRun implements Runnable, Callback {
 	       mSurfaceHolder.addCallback(this);
 	       decode = new GIFDecode();
 	       decode.read(theTHIS.getResources().openRawResource(R_drawable));
-	       ind = 0;
-			// decode.
-			gifCount = decode.getFrameCount();
-			bmb = decode.getFrame(0);
+        int ind = 0;
+        // decode.
+        int gifCount = decode.getFrameCount();
+        bmb = decode.getFrame(0);
 			surfaceExists=true;
 			Thread t = new Thread(this);
 			t.start();

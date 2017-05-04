@@ -9,11 +9,6 @@ import android.widget.EditText;
 
 public class chooseenroll extends AppCompatActivity {
 
-    private static Button btn_fresh;
-    private static Button btn_alien;
-    private static Button btn_seconddeg;
-    private static Button btn_transferee;
-    private static Button btn_continuing;
     public static EditText et_enroll;
 
     @Override
@@ -24,11 +19,11 @@ public class chooseenroll extends AppCompatActivity {
     }
 
     private void onClickChoice() {
-        btn_fresh = (Button) findViewById(R.id.btn_fresh);
-        btn_alien = (Button) findViewById(R.id.btn_alienproc);
-        btn_seconddeg = (Button) findViewById(R.id.btn_seconddeg);
-        btn_transferee = (Button) findViewById(R.id.btn_transferee);
-        btn_continuing = (Button) findViewById(R.id.btn_contin);
+        Button btn_fresh = (Button) findViewById(R.id.btn_fresh);
+        Button btn_alien = (Button) findViewById(R.id.btn_alienproc);
+        Button btn_seconddeg = (Button) findViewById(R.id.btn_seconddeg);
+        Button btn_transferee = (Button) findViewById(R.id.btn_transferee);
+        Button btn_continuing = (Button) findViewById(R.id.btn_contin);
         et_enroll = (EditText) findViewById(R.id.et_enroll);
 
         btn_fresh.setOnClickListener(new View.OnClickListener() {

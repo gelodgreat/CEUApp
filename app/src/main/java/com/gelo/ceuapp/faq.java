@@ -23,8 +23,6 @@ import com.google.android.gms.ads.MobileAds;
  */
 public class faq extends Fragment {
 
-    private static EditText et_aboutt;
-
     public faq() {
         // Required empty public constructor
     }
@@ -35,7 +33,7 @@ public class faq extends Fragment {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        et_aboutt = (EditText) getView().findViewById(R.id.et_aboutt);
+        EditText et_aboutt = (EditText) getView().findViewById(R.id.et_aboutt);
         //noinspection SimplifiableIfStatement
         if (id == R.id.aboutdevss) {
 

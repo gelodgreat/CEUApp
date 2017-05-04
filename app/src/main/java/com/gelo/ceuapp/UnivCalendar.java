@@ -19,8 +19,6 @@ import android.widget.EditText;
  */
 public class UnivCalendar extends Fragment {
 
-    private static EditText et_aboutt;
-
     public UnivCalendar() {
         // Required empty public constructor
     }
@@ -28,7 +26,7 @@ public class UnivCalendar extends Fragment {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        et_aboutt = (EditText) getView().findViewById(R.id.et_aboutt);
+        EditText et_aboutt = (EditText) getView().findViewById(R.id.et_aboutt);
         //noinspection SimplifiableIfStatement
         if (id == R.id.aboutdevss) {
 
