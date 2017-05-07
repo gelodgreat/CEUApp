@@ -24,14 +24,14 @@
                 android:id="@+id/btn_addndrop"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/et_chooseothertransac"
-                android:layout_marginTop="53dp"
+                android:layout_marginTop="29dp"
                 android:background="@color/colorPrimary"
                 android:padding="8dp"
                 android:text="Add and Drop"
                 android:textColor="#fff"
-                android:textSize="20sp" />
+                android:textSize="30sp"
+                android:layout_below="@+id/et_chooseothertransac"
+                android:layout_alignParentStart="true" />
 
             <Button
                 android:id="@+id/btn_crossenroll"
@@ -44,7 +44,7 @@
                 android:padding="8dp"
                 android:text="Cross Enroll"
                 android:textColor="#fff"
-                android:textSize="20sp" />
+                android:textSize="30sp" />
 
             <Button
                 android:id="@+id/btn_evaluation"
@@ -70,7 +70,7 @@
                 android:padding="8dp"
                 android:text="ID"
                 android:textColor="#fff"
-                android:textSize="20sp" />
+                android:textSize="30sp" />
 
             <Button
                 android:id="@+id/btn_promisorry"
@@ -83,7 +83,7 @@
                 android:padding="8dp"
                 android:text="Promissory Note"
                 android:textColor="#fff"
-                android:textSize="20sp" />
+                android:textSize="30sp" />
 
             <Button
                 android:id="@+id/btn_readmission"
@@ -96,7 +96,7 @@
                 android:padding="8dp"
                 android:text="Readmission"
                 android:textColor="#fff"
-                android:textSize="20sp" />
+                android:textSize="30sp" />
 
             <Button
                 android:id="@+id/btn_refund"
@@ -109,7 +109,7 @@
                 android:padding="8dp"
                 android:text="Refund"
                 android:textColor="#fff"
-                android:textSize="20sp" />
+                android:textSize="30sp" />
 
             <Button
                 android:id="@+id/btn_shifting"
@@ -122,7 +122,7 @@
                 android:padding="8dp"
                 android:text="Shifting"
                 android:textColor="#fff"
-                android:textSize="20sp" />
+                android:textSize="30sp" />
 
             <EditText
                 android:id="@+id/et_chooseothertransac"

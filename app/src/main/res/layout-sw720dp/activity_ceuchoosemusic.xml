@@ -30,7 +30,7 @@
                 android:padding="8dp"
                 android:text="CEU Hymn"
                 android:textColor="#fff"
-                android:textSize="20sp" />
+                android:textSize="30sp" />
 
             <Button
                 android:id="@+id/btn_elcollar"
@@ -43,7 +43,7 @@
                 android:padding="8dp"
                 android:text="El Collar de Sampaguita"
                 android:textColor="#fff"
-                android:textSize="20sp" />
+                android:textSize="30sp" />
 
             <Button
                 android:id="@+id/btn_laflor"
@@ -56,7 +56,7 @@
                 android:padding="8dp"
                 android:text="Sampaguita La Flor de Manila"
                 android:textColor="#fff"
-                android:textSize="20sp" />
+                android:textSize="30sp" />
 
             <Button
                 android:id="@+id/btn_sampmabango"
@@ -68,8 +68,7 @@
                 android:padding="8dp"
                 android:text="Sampaguitang Mabango"
                 android:textColor="#fff"
-
-                android:textSize="20sp" />
+                android:textSize="30sp" />
 
             <EditText
                 android:id="@+id/et_choosemusic"

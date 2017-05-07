@@ -29,7 +29,7 @@
                 android:padding="8dp"
                 android:text="About Developers"
                 android:textColor="#fff"
-                android:textSize="28sp"
+                android:textSize="30sp"
                 android:layout_above="@+id/btn_apps"
                 android:layout_alignParentStart="true"
                 android:layout_marginBottom="9dp" />
@@ -38,12 +38,12 @@
                 android:id="@+id/btn_disclaimer"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:layout_marginBottom="16dp"
+                android:layout_marginBottom="109dp"
                 android:background="@color/colorPrimary"
                 android:padding="8dp"
                 android:text="Disclaimer"
                 android:textColor="#fff"
-                android:textSize="28sp"
+                android:textSize="30sp"
                 android:layout_above="@+id/adsabout"
                 android:layout_alignParentStart="true" />
 
@@ -55,7 +55,7 @@
                 android:padding="8dp"
                 android:text="About Application"
                 android:textColor="#fff"
-                android:textSize="28sp"
+                android:textSize="30sp"
                 android:layout_marginBottom="7dp"
                 android:layout_above="@+id/btn_disclaimer"
                 android:layout_alignParentStart="true" />

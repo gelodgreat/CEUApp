@@ -33,7 +33,7 @@
                 android:padding="8dp"
                 android:text="Disciplinary Measures"
                 android:textColor="#fff"
-                android:textSize="20sp" />
+                android:textSize="30sp" />
 
 
             <Button
@@ -47,7 +47,7 @@
                 android:padding="8dp"
                 android:text="Enrollment Procedures"
                 android:textColor="#fff"
-                android:textSize="20sp" />
+                android:textSize="30sp" />
 
             <Button
                 android:id="@+id/btn_othertransac"
@@ -60,7 +60,7 @@
                 android:padding="8dp"
                 android:text="Other Transaction"
                 android:textColor="#fff"
-                android:textSize="20sp" />
+                android:textSize="30sp" />
 
             <Button
                 android:id="@+id/btn_ceuchoosemusic"
@@ -72,7 +72,7 @@
                 android:padding="8dp"
                 android:text="CEU Music"
                 android:textColor="#fff"
-                android:textSize="20sp" />
+                android:textSize="30sp" />
 
             <Button
                 android:id="@+id/btn_board"
@@ -85,7 +85,7 @@
                 android:padding="8dp"
                 android:text="CEU Board Members"
                 android:textColor="#fff"
-                android:textSize="20sp" />
+                android:textSize="30sp" />
 
             <EditText
                 android:id="@+id/et_aboutt"

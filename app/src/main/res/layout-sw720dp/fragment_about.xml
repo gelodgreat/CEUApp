@@ -32,20 +32,20 @@
                 android:padding="8dp"
                 android:text="About Developers"
                 android:textColor="#fff"
-                android:textSize="28sp" />
+                android:textSize="30sp" />
 
             <Button
                 android:id="@+id/btn_disclaimer"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
-                android:layout_above="@+id/adsabout"
-                android:layout_alignParentStart="true"
-                android:layout_marginBottom="115dp"
                 android:background="@color/colorPrimary"
                 android:padding="8dp"
                 android:text="Disclaimer"
                 android:textColor="#fff"
-                android:textSize="28sp" />
+                android:textSize="30sp"
+                android:layout_below="@+id/adsabout"
+                android:layout_toEndOf="@+id/et_about"
+                android:layout_marginTop="323dp" />
 
             <Button
                 android:id="@+id/btn_apps"
@@ -58,7 +58,7 @@
                 android:padding="8dp"
                 android:text="About Application"
                 android:textColor="#fff"
-                android:textSize="28sp" />
+                android:textSize="30sp" />
 
 
             <EditText

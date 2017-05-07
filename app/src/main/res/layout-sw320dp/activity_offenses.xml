@@ -49,7 +49,7 @@
 
             <Button
                 android:id="@+id/btn_minor"
-                android:layout_width="160dp"
+                android:layout_width="140dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/iv_pic"
                 android:layout_marginTop="-340dp"
@@ -72,7 +72,7 @@
 
             <Button
                 android:id="@+id/btn_serious"
-                android:layout_width="160dp"
+                android:layout_width="140dp"
                 android:layout_height="wrap_content"
                 android:background="@color/colorPrimary"
                 android:text="Serious Offense"
