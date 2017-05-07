@@ -91,7 +91,7 @@ public class UnivCalendar extends Fragment {
             }
         });
 
-        wv.loadUrl( "https://raw.githubusercontent.com/andrewhamili/CEUApp/optimizedbyandroidlint/app/src/main/assets/Calendar.html" );
+        wv.loadUrl( "http://ceuapp.000webhostapp.com/Calendar.html" );
 
         /*String add="https://raw.githubusercontent.com/andrewhamili/CEUApp/master/app/src/main/AndroidManifest.xml";
 
