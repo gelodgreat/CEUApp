@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.EditText;
 
 import java.io.File;
@@ -67,7 +68,7 @@ public class UnivCalendar extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_univ_calendar, container, false);
 
-        WebView wv = (WebView) view.findViewById(R.id.wv_uvc);
+        final WebView wv = (WebView) view.findViewById(R.id.wv_uvc);
         wv.getSettings().setCacheMode(WebSettings.LOAD_DEFAULT);
         wv.getSettings().setAppCacheEnabled(true);
         WebSettings webSettings = wv.getSettings();
@@ -83,7 +84,14 @@ public class UnivCalendar extends Fragment {
             wv.getSettings().setCacheMode( WebSettings.LOAD_CACHE_ELSE_NETWORK );
         }
 
-        wv.loadUrl( "https://raw.githubusercontent.com/andrewhamili/CEUApp/master/app/src/main/assets/Calendar.html" );
+        wv.setWebViewClient(new WebViewClient() {
+            public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
+                wv.loadUrl("file:///android_asset/nointernet.html");
+
+            }
+        });
+
+        wv.loadUrl( "https://raw.githubusercontent.com/andrewhamili/CEUApp/optimizedbyandroidlint/app/src/main/assets/Calendar.html" );
 
         /*String add="https://raw.githubusercontent.com/andrewhamili/CEUApp/master/app/src/main/AndroidManifest.xml";
 
