@@ -10,7 +10,7 @@ android {
     buildToolsVersion "25.0.2"
     defaultConfig {
         applicationId 'com.gelo.ceuapp'
-        minSdkVersion 19
+        minSdkVersion 17
         targetSdkVersion 25
         versionName '1.5.5'
         versionCode 6
