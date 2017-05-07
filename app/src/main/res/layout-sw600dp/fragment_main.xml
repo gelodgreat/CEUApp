@@ -1,7 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/map_600"
+    android:id="@+id/fm_600"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.gelo.ceuapp.MainFragment">
@@ -14,7 +14,7 @@
 
         <AbsoluteLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
 
             <android.support.design.widget.CoordinatorLayout xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -51,15 +51,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="963dp"
                 android:layout_x="2dp"
-                android:layout_y="0dp"
+                android:layout_y="44dp"
                 android:src="@drawable/campus_map_v3" />
 
             <ImageButton
                 android:id="@+id/imgbmm_ds"
                 android:layout_width="120dp"
                 android:layout_height="115dp"
-                android:layout_x="234dp"
-                android:layout_y="261dp"
+                android:layout_x="231dp"
+                android:layout_y="304dp"
                 android:background="@android:color/transparent" />
 
             <ImageButton
@@ -67,15 +67,15 @@
                 android:layout_width="49dp"
                 android:layout_height="98dp"
                 android:layout_x="232dp"
-                android:layout_y="378dp"
+                android:layout_y="424dp"
                 android:background="@android:color/transparent" />
 
             <ImageButton
                 android:id="@+id/imgbmm_isc"
                 android:layout_width="70dp"
                 android:layout_height="67dp"
-                android:layout_x="240dp"
-                android:layout_y="502dp"
+                android:layout_x="242dp"
+                android:layout_y="547dp"
                 android:background="@android:color/transparent" />
 
             <ImageButton
@@ -83,15 +83,15 @@
                 android:layout_width="132dp"
                 android:layout_height="68dp"
                 android:layout_x="311dp"
-                android:layout_y="500dp"
+                android:layout_y="547dp"
                 android:background="@android:color/transparent" />
 
             <ImageButton
                 android:id="@+id/imgbmm_ffh"
                 android:layout_width="64dp"
                 android:layout_height="39dp"
-                android:layout_x="179dp"
-                android:layout_y="568dp"
+                android:layout_x="176dp"
+                android:layout_y="615dp"
                 android:background="@android:color/transparent" />
 
             <ImageButton
@@ -99,63 +99,63 @@
                 android:layout_width="34dp"
                 android:layout_height="71dp"
                 android:layout_x="240dp"
-                android:layout_y="572dp"
+                android:layout_y="619dp"
                 android:background="@android:color/transparent" />
 
             <ImageButton
                 android:id="@+id/imgbmm_dcth"
                 android:layout_width="56dp"
                 android:layout_height="37dp"
-                android:layout_x="277dp"
-                android:layout_y="573dp"
+                android:layout_x="276dp"
+                android:layout_y="614dp"
                 android:background="@android:color/transparent" />
 
             <ImageButton
                 android:id="@+id/imgbmm_phlh"
                 android:layout_width="62dp"
                 android:layout_height="40dp"
-                android:layout_x="333dp"
-                android:layout_y="570dp"
+                android:layout_x="331dp"
+                android:layout_y="616dp"
                 android:background="@android:color/transparent" />
 
             <ImageButton
                 android:id="@+id/imgbmm_fsh"
                 android:layout_width="80dp"
                 android:layout_height="40dp"
-                android:layout_x="394dp"
-                android:layout_y="573dp"
+                android:layout_x="392dp"
+                android:layout_y="613dp"
                 android:background="@android:color/transparent" />
 
             <ImageButton
                 android:id="@+id/imgbmm_chapel"
                 android:layout_width="34dp"
                 android:layout_height="55dp"
-                android:layout_x="239dp"
-                android:layout_y="645dp"
+                android:layout_x="241dp"
+                android:layout_y="685dp"
                 android:background="@android:color/transparent" />
 
             <ImageButton
                 android:id="@+id/imgbmm_sac"
                 android:layout_width="96dp"
                 android:layout_height="58dp"
-                android:layout_x="274dp"
-                android:layout_y="610dp"
+                android:layout_x="275dp"
+                android:layout_y="657dp"
                 android:background="@android:color/transparent" />
 
             <ImageButton
                 android:id="@+id/imgbmm_northquad"
                 android:layout_width="78dp"
                 android:layout_height="57dp"
-                android:layout_x="397dp"
-                android:layout_y="611dp"
+                android:layout_x="394dp"
+                android:layout_y="655dp"
                 android:background="@android:color/transparent" />
 
             <ImageButton
                 android:id="@+id/imgbmm_lah"
                 android:layout_width="120dp"
                 android:layout_height="54dp"
-                android:layout_x="274dp"
-                android:layout_y="670dp"
+                android:layout_x="276dp"
+                android:layout_y="715dp"
                 android:background="@android:color/transparent" />
 
             <ImageButton
@@ -163,31 +163,31 @@
                 android:layout_width="55dp"
                 android:layout_height="54dp"
                 android:layout_x="396dp"
-                android:layout_y="673dp"
+                android:layout_y="713dp"
                 android:background="@android:color/transparent" />
 
             <ImageButton
                 android:id="@+id/imgbmm_gdlsc"
                 android:layout_width="99dp"
                 android:layout_height="59dp"
-                android:layout_x="451dp"
-                android:layout_y="669dp"
+                android:layout_x="448dp"
+                android:layout_y="711dp"
                 android:background="@android:color/transparent" />
 
             <ImageButton
                 android:id="@+id/imgbmm_cdl"
                 android:layout_width="164dp"
                 android:layout_height="55dp"
-                android:layout_x="75dp"
-                android:layout_y="671dp"
+                android:layout_x="76dp"
+                android:layout_y="717dp"
                 android:background="@android:color/transparent" />
 
             <ImageButton
                 android:id="@+id/imgbmm_sdvh"
                 android:layout_width="63dp"
                 android:layout_height="120dp"
-                android:layout_x="112dp"
-                android:layout_y="551dp"
+                android:layout_x="114dp"
+                android:layout_y="593dp"
                 android:background="@android:color/transparent" />
 
             <ImageButton

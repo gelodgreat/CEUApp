@@ -9,6 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:id="@+id/ao_480"
     tools:context="com.gelo.ceuapp.Offenses">
 
 
@@ -29,7 +30,7 @@
 
             <ImageView
                 android:id="@+id/iv_pic"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="-400dp"
@@ -54,7 +55,7 @@
                 android:layout_width="215dp"
                 android:layout_height="80dp"
                 android:layout_below="@+id/iv_pic"
-                android:layout_marginTop="-260dp"
+                android:layout_marginTop="-200dp"
                 android:width="180dp"
                 android:background="@color/colorPrimary"
                 android:text="Slight Offense"
@@ -80,6 +81,7 @@
                 android:layout_alignBottom="@+id/btn_minor"
                 android:layout_alignParentEnd="true"
                 android:background="@color/colorPrimary"
+                android:layout_below="@+id/iv_pic"
                 android:text="Serious Offense"
                 android:textColor="#fff" />
 

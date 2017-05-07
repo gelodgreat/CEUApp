@@ -8,6 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:id="@+id/ccm_320"
     tools:context="com.gelo.ceuapp.ceuchoosemusic">
 
     <ScrollView
@@ -23,53 +24,53 @@
                 android:id="@+id/hymn"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/btn_elcollar"
-                android:layout_marginTop="19dp"
+                android:layout_marginTop="18dp"
                 android:background="@color/colorPrimary"
                 android:padding="8dp"
                 android:text="CEU Hymn"
                 android:textColor="#fff"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:layout_below="@+id/btn_elcollar"
+                android:layout_alignParentStart="true" />
 
             <Button
                 android:id="@+id/btn_elcollar"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/btn_laflor"
-                android:layout_marginTop="19dp"
+                android:layout_marginTop="11dp"
                 android:background="@color/colorPrimary"
                 android:padding="8dp"
                 android:text="El Collar de Sampaguita"
                 android:textColor="#fff"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:layout_below="@+id/btn_laflor"
+                android:layout_alignParentStart="true" />
 
             <Button
                 android:id="@+id/btn_laflor"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/et_choosemusic"
-                android:layout_marginTop="42dp"
+                android:layout_marginTop="64dp"
                 android:background="@color/colorPrimary"
                 android:padding="8dp"
                 android:text="Sampaguita La Flor de Manila"
                 android:textColor="#fff"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:layout_below="@+id/et_choosemusic"
+                android:layout_alignParentStart="true" />
 
             <Button
                 android:id="@+id/btn_sampmabango"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginBottom="94dp"
                 android:background="@color/colorPrimary"
                 android:padding="8dp"
                 android:text="Sampaguitang Mabango"
                 android:textColor="#fff"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:layout_marginTop="13dp"
+                android:layout_below="@+id/hymn"
+                android:layout_alignParentStart="true" />
 
             <EditText
                 android:id="@+id/et_choosemusic"

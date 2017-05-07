@@ -9,6 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:id="@+id/che_320"
     tools:context="com.gelo.ceuapp.chooseenroll">
 
 
@@ -40,15 +41,14 @@
                 android:id="@+id/btn_contin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/btn_alienproc"
-                android:layout_alignParentBottom="true"
-                android:layout_alignStart="@+id/btn_alienproc"
-                android:layout_marginBottom="97dp"
                 android:background="@color/colorPrimary"
                 android:padding="8dp"
                 android:text="Continuing Student"
                 android:textColor="#fff"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:layout_below="@+id/btn_transferee"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="17dp" />
 
             <Button
                 android:id="@+id/btn_fresh"
@@ -81,15 +81,14 @@
                 android:id="@+id/btn_transferee"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_above="@+id/btn_contin"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginBottom="11dp"
                 android:background="@color/colorPrimary"
                 android:padding="8dp"
                 android:text="Transferee"
                 android:textColor="#fff"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:layout_marginTop="14dp"
+                android:layout_below="@+id/btn_seconddeg"
+                android:layout_alignParentStart="true" />
 
             <EditText
                 android:id="@+id/et_enroll"
