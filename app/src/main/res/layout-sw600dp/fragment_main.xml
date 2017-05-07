@@ -90,8 +90,8 @@
                 android:id="@+id/imgbmm_ffh"
                 android:layout_width="64dp"
                 android:layout_height="39dp"
-                android:layout_x="176dp"
-                android:layout_y="615dp"
+                android:layout_x="179dp"
+                android:layout_y="611dp"
                 android:background="@android:color/transparent" />
 
             <ImageButton
