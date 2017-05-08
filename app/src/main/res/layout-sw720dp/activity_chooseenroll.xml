@@ -79,7 +79,7 @@
                 android:id="@+id/btn_transferee"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:layout_marginBottom="234dp"
+                android:layout_marginBottom="179dp"
                 android:background="@color/colorPrimary"
                 android:padding="8dp"
                 android:text="Transferee"

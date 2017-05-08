@@ -25,14 +25,14 @@
                 android:id="@+id/btn_devs"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
-                android:layout_above="@+id/btn_apps"
-                android:layout_alignParentStart="true"
-                android:layout_marginBottom="28dp"
                 android:background="@color/colorPrimary"
                 android:padding="8dp"
                 android:text="About Developers"
                 android:textColor="#fff"
-                android:textSize="30sp" />
+                android:textSize="30sp"
+                android:layout_below="@+id/adsabout2"
+                android:layout_alignEnd="@+id/btn_disclaimer"
+                android:layout_marginTop="312dp" />
 
             <Button
                 android:id="@+id/btn_disclaimer"
@@ -43,22 +43,22 @@
                 android:text="Disclaimer"
                 android:textColor="#fff"
                 android:textSize="30sp"
-                android:layout_below="@+id/adsabout"
-                android:layout_toEndOf="@+id/et_about"
-                android:layout_marginTop="323dp" />
+                android:layout_below="@+id/btn_devs"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="198dp" />
 
             <Button
                 android:id="@+id/btn_apps"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
-                android:layout_above="@+id/btn_disclaimer"
-                android:layout_alignParentStart="true"
-                android:layout_marginBottom="23dp"
                 android:background="@color/colorPrimary"
                 android:padding="8dp"
                 android:text="About Application"
                 android:textColor="#fff"
-                android:textSize="30sp" />
+                android:textSize="30sp"
+                android:layout_below="@+id/btn_devs"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="35dp" />
 
 
             <EditText
