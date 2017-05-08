@@ -24,7 +24,6 @@
                 android:id="@+id/btn_addndrop"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:layout_marginTop="54dp"
                 android:background="@color/colorPrimary"
                 android:padding="8dp"
                 android:text="Add and Drop"

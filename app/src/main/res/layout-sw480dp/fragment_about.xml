@@ -24,21 +24,21 @@
             <Button
                 android:id="@+id/btn_devs"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="70dp"
                 android:background="@color/colorPrimary"
                 android:padding="8dp"
                 android:text="About Developers"
                 android:textColor="#fff"
                 android:textSize="30sp"
+                android:layout_marginBottom="25dp"
                 android:layout_above="@+id/btn_apps"
-                android:layout_alignParentStart="true"
-                android:layout_marginBottom="9dp" />
+                android:layout_alignParentStart="true" />
 
             <Button
                 android:id="@+id/btn_disclaimer"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_marginBottom="109dp"
+                android:layout_height="70dp"
+                android:layout_marginBottom="218dp"
                 android:background="@color/colorPrimary"
                 android:padding="8dp"
                 android:text="Disclaimer"
@@ -50,13 +50,13 @@
             <Button
                 android:id="@+id/btn_apps"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="70dp"
                 android:background="@color/colorPrimary"
                 android:padding="8dp"
                 android:text="About Application"
                 android:textColor="#fff"
                 android:textSize="30sp"
-                android:layout_marginBottom="7dp"
+                android:layout_marginBottom="28dp"
                 android:layout_above="@+id/btn_disclaimer"
                 android:layout_alignParentStart="true" />
 
