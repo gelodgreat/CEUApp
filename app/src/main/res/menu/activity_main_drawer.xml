@@ -10,6 +10,11 @@
             android:title="Vicinity Map" />
 
         <item
+            android:id="@+id/nav_memo"
+            android:icon="@drawable/ic_action_calendar_month"
+            android:title="Memo" />
+
+        <item
             android:id="@+id/nav_univcalendar"
             android:icon="@drawable/ic_action_calendar_month"
             android:title="University Calendar" />

@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Database mydb = new Database(this);
+
 
 
 
@@ -176,6 +176,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             fragmentTransaction.replace(R.id.fragment_container, fragment);
             fragmentTransaction.commit();
 
+        } else if (id == R.id.nav_memo) {
+            memo fragment = new memo();
+            android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_container, fragment);
+            fragmentTransaction.commit();
         } else if (id == R.id.nav_exit) {
 
             AlertDialog.Builder alertdialog = new AlertDialog.Builder(this);
@@ -189,6 +194,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     MainActivity.this.finishAffinity();
                 }
             });
+
 
             alertdialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
                 @Override
