@@ -7,7 +7,7 @@
     <LinearLayout
         android:id="@+id/lin"
         android:layout_width="match_parent"
-        android:layout_height="500dp">
+        android:layout_height="450dp">
 
         <ScrollView
             android:layout_width="match_parent"

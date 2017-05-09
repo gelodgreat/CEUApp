@@ -12,7 +12,7 @@ android {
         applicationId 'com.gelo.ceuapp'
         minSdkVersion 17
         targetSdkVersion 25
-        versionName '1.6.0'
+        versionName '1.6.1.0'
         versionCode 7
     }
     buildTypes {

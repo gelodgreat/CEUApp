@@ -443,10 +443,6 @@ public class MainFragment extends Fragment {
             }
         });
 
-
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
                 interstitial = new InterstitialAd(getActivity().getApplicationContext());
                 interstitial.setAdUnitId(getString(R.string.banner_ad_unit_id_interstitial));
                 AdRequest adRequest = new AdRequest.Builder().build();
@@ -458,9 +454,6 @@ public class MainFragment extends Fragment {
                         displayInterstitial();
                     }
                 });
-            }
-        }, 5000);
-
         return view;
 
 
