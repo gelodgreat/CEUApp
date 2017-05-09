@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,7 +23,7 @@ public class memo extends Fragment {
     private EditText et_gomemo;
     private GridView gv_memolist;
     private SQLiteHelper myDB;
-
+    private String selectedItem;
 
     public memo() {
         // Required empty public constructor
@@ -39,7 +40,6 @@ public class memo extends Fragment {
         gv_memolist = (GridView) view.findViewById(R.id.memo_list);
         myDB = new SQLiteHelper(getActivity().getApplicationContext());
 
-
         btn_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,9 +54,18 @@ public class memo extends Fragment {
             }
         });
 
+        gv_memolist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                selectedItem = parent.getItemAtPosition(position).toString();
+                et_gomemo.setText(selectedItem);
+            }
+        });
+
         get_data();
         return view;
     }
+
 
     private void get_data() {
         Cursor cursor = myDB.get_all_memo();
