@@ -7,7 +7,7 @@
     <LinearLayout
         android:id="@+id/lin"
         android:layout_width="match_parent"
-        android:layout_height="150dp">
+        android:layout_height="300dp">
 
         <ScrollView
             android:layout_width="match_parent"
@@ -18,7 +18,8 @@
                 android:id="@+id/memo_list"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:numColumns="auto_fit"></GridView>
+                android:numColumns="auto_fit"
+                android:background="#000000" />
         </ScrollView>
     </LinearLayout>
 
@@ -37,10 +38,12 @@
             <Button
                 android:id="@+id/memo_btn_add"
                 android:layout_width="wrap_content"
-
+                android:background="@color/colorPrimary"
+                android:textColor="#fff"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentTop="true"
+                android:layout_marginTop="3dp"
                 android:text="Add" />
 
             <Button
@@ -49,15 +52,17 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="5dp"
                 android:layout_toLeftOf="@id/memo_btn_add"
+                android:background="@color/colorPrimary"
+                android:textColor="#fff"
+                android:layout_marginTop="3dp"
                 android:text="Delete" />
 
             <EditText
-                android:id="@+id/editText"
+                android:id="@+id/et_gomemo"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_alignEnd="@+id/memo_btn_add"
                 android:layout_below="@+id/memo_btn_add"
-                android:ems="10"
                 android:hint="Put your memo here, Escolarian"
                 android:inputType="textMultiLine" />
 

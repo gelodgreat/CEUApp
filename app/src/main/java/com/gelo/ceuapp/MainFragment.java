@@ -37,9 +37,6 @@ import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
 
-import java.util.Timer;
-import java.util.TimerTask;
-
 
 /**
  * A simple {@link Fragment} subclass.
@@ -447,21 +444,6 @@ public class MainFragment extends Fragment {
         });
 
 
-        startAds();
-        return view;
-
-
-    }
-
-
-    private void displayInterstitial() {
-        // If Ads are loaded, show Interstitial else show nothing.
-        if (interstitial.isLoaded()) {
-            interstitial.show();
-        }
-    }
-
-    private void startAds() {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -479,7 +461,17 @@ public class MainFragment extends Fragment {
             }
         }, 5000);
 
+        return view;
 
+
+    }
+
+
+    private void displayInterstitial() {
+        // If Ads are loaded, show Interstitial else show nothing.
+        if (interstitial.isLoaded()) {
+            interstitial.show();
+        }
     }
 
 
