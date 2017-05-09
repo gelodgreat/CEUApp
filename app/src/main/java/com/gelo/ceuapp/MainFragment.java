@@ -15,6 +15,7 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
@@ -36,26 +37,29 @@ import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class MainFragment extends Fragment {
-    private static AutoCompleteTextView search;
     public static SurfaceView suv;
     public static EditText retainn;
-
+    private static AutoCompleteTextView search;
     private static FloatingActionButton fab_plus;
     private static FloatingActionButton fab_faq;
+    private final String[] Building_List = {"CAH", "CDL", "Chapel", "DCTH", "Dent Sci", "FFH", "FGH", "FSH", "GDLSC", "ISC", "LAH", "MVH", "North Quadrangle", "PHLH", "SAC", "SDVH", "Tech Center", "Academic Affairs Office", "Library Department", "Probe Room", "Masscomm, Laboratory Rooms", "Social Sciences Department", "Filipino Department", "Social Arts and Humanities Department", "Campus Ministry", "International Languages Department", "Teaching and Learning Technology Department (TLTD)", "Multimedia Instruction Room (MIR)", "School of Education-Libreral Arts-Music-Social Work", "Music Rooms", "Tiongco Recital Hall", "Social Work Case Conference Room", "Human Resource Department", "Non-Teaching Employee's Lounge", "Cafeteria", "Librada Avelino Auditorium", "Clinical Laboratory", "Health Services Department", "SDV Lanai and Friendship Areas", "Diagnostic Center-Radiology Section", "Graduate School", "Marketing Communications Department", "Guidance and Counseling Department", "Psychology Laboratory", "Social Arts Laboratories", "Speech Laboratory", "Auxilliary Services Department (MATPRO)", "Cash Department", "Chapel/Adoration Chapel", "Chaplain's Office", "Executive Meeting Room", "Executive Vice President's Office", "Professional and Continuing Education Office", "Office of the Corporate Secretary", "President's Office", "Security Department", "SRMD (Registrar's Office)", "Treasurer's Office", "Uniform Section", "Meeting Room", "Biological Science Department", "University Publications", "Museum", "Physical Science Department", "LAH Seminar Rooms 1,2 and 3", "Nursing Arts Laboratories", "Pharmacare Laboratory", "Alumni Relations Department", "Audit Department", "Study Area", "Food Booths", "School of Nutrition and Hospitality Management", "Lecture or Demo Room", "Food Laboratories", "Linen and Laundry Room", "Hotel Suite", "Science Laboratory Rooms", "Extramurals Athletic Coordinator", "Gymnasium", "CEU Consumers Cooperative", "Bulwagang Maestra Osang", "Manufacturing Laboratory (Pharmacy)", "Vision and Eye Care Center", "College of Nursing", "College of Optometry", "Optometry Junior's Clinic", "Nursing Arts Laboratory", "College of Medical Technology", "Computer Laboratories", "ISC Canteen", "Travel Bureau", "Friend's Cafe", "ISC Mezzanine Function Rooms", "I.D. Section", "Management Information System Department", "Computer Education Department", "Information and Communication Technology Department", "School of Dentistry", "Laboratory Rooms", "School of Science and Technology", "Mathematics Department", "Psychology Department", "Gym and Fitness Room", "P.E. Department", "Swimming Pool", "Dental Clinics", "Food Booths", "M.S. Periodontics Clinic", "M.S. Orthodontics Clinic", "Simulations Rooms", "CEU-FAWU Office", "Baking Room and Cold Kitchen", "Food Laboratories", "Physical Plant and Facilities Department", "Student Organizations Center", "Science Laboratory Rooms", "Student Affairs Office", "University Council Office", "Community Outreach Department", "DCTH Canteen", "Property Department", "School of Accountancy and Management", "Market Research and Bank Simulation Room", "Quality and Productivity Rooms", "Accounting Laboratory", "Lecture Hall", "FFH Assembly Hall",};
+    InterstitialAd mInterstitialAd;
+
     private Animation fabopen;
     private Animation fabclose;
     private Animation fabclockwise;
     private Animation fabcounterclockwise;
     private boolean isOpen = false;
-    InterstitialAd mInterstitialAd;
     private InterstitialAd interstitial;
 
-    private final String[] Building_List = {"CAH", "CDL", "Chapel", "DCTH", "Dent Sci", "FFH", "FGH", "FSH", "GDLSC", "ISC", "LAH", "MVH", "North Quadrangle", "PHLH", "SAC", "SDVH", "Tech Center", "Academic Affairs Office", "Library Department", "Probe Room", "Masscomm, Laboratory Rooms", "Social Sciences Department", "Filipino Department", "Social Arts and Humanities Department", "Campus Ministry", "International Languages Department", "Teaching and Learning Technology Department (TLTD)", "Multimedia Instruction Room (MIR)", "School of Education-Libreral Arts-Music-Social Work", "Music Rooms", "Tiongco Recital Hall", "Social Work Case Conference Room", "Human Resource Department", "Non-Teaching Employee's Lounge", "Cafeteria", "Librada Avelino Auditorium", "Clinical Laboratory", "Health Services Department", "SDV Lanai and Friendship Areas", "Diagnostic Center-Radiology Section", "Graduate School", "Marketing Communications Department", "Guidance and Counseling Department", "Psychology Laboratory", "Social Arts Laboratories", "Speech Laboratory", "Auxilliary Services Department (MATPRO)", "Cash Department", "Chapel/Adoration Chapel", "Chaplain's Office", "Executive Meeting Room", "Executive Vice President's Office", "Professional and Continuing Education Office", "Office of the Corporate Secretary", "President's Office", "Security Department", "SRMD (Registrar's Office)", "Treasurer's Office", "Uniform Section", "Meeting Room", "Biological Science Department", "University Publications", "Museum", "Physical Science Department", "LAH Seminar Rooms 1,2 and 3", "Nursing Arts Laboratories", "Pharmacare Laboratory", "Alumni Relations Department", "Audit Department", "Study Area", "Food Booths", "School of Nutrition and Hospitality Management", "Lecture or Demo Room", "Food Laboratories", "Linen and Laundry Room", "Hotel Suite", "Science Laboratory Rooms", "Extramurals Athletic Coordinator", "Gymnasium", "CEU Consumers Cooperative", "Bulwagang Maestra Osang", "Manufacturing Laboratory (Pharmacy)", "Vision and Eye Care Center", "College of Nursing", "College of Optometry", "Optometry Junior's Clinic", "Nursing Arts Laboratory", "College of Medical Technology", "Computer Laboratories", "ISC Canteen", "Travel Bureau", "Friend's Cafe", "ISC Mezzanine Function Rooms", "I.D. Section", "Management Information System Department", "Computer Education Department", "Information and Communication Technology Department", "School of Dentistry", "Laboratory Rooms", "School of Science and Technology", "Mathematics Department", "Psychology Department", "Gym and Fitness Room", "P.E. Department", "Swimming Pool", "Dental Clinics", "Food Booths", "M.S. Periodontics Clinic", "M.S. Orthodontics Clinic", "Simulations Rooms", "CEU-FAWU Office", "Baking Room and Cold Kitchen", "Food Laboratories", "Physical Plant and Facilities Department", "Student Organizations Center", "Science Laboratory Rooms", "Student Affairs Office", "University Council Office", "Community Outreach Department", "DCTH Canteen", "Property Department", "School of Accountancy and Management", "Market Research and Bank Simulation Room", "Quality and Productivity Rooms", "Accounting Laboratory", "Lecture Hall", "FFH Assembly Hall",};
 
     public MainFragment() {
         // Required empty public constructor
@@ -442,30 +446,40 @@ public class MainFragment extends Fragment {
             }
         });
 
-        AdRequest adRequest = new AdRequest.Builder().build();
 
-        interstitial = new InterstitialAd(getActivity().getApplicationContext());
-        interstitial.setAdUnitId(getString(R.string.banner_ad_unit_id_interstitial));
-        interstitial.loadAd(adRequest);
-        interstitial.setAdListener(new AdListener() {
-            @Override
-            public void onAdLoaded() {
-                super.onAdLoaded();
-                displayInterstitial();
-            }
-        });
-
-
+        startAds();
         return view;
 
 
     }
+
 
     private void displayInterstitial() {
         // If Ads are loaded, show Interstitial else show nothing.
         if (interstitial.isLoaded()) {
             interstitial.show();
         }
+    }
+
+    private void startAds() {
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                interstitial = new InterstitialAd(getActivity().getApplicationContext());
+                interstitial.setAdUnitId(getString(R.string.banner_ad_unit_id_interstitial));
+                AdRequest adRequest = new AdRequest.Builder().build();
+                interstitial.loadAd(adRequest);
+                interstitial.setAdListener(new AdListener() {
+                    @Override
+                    public void onAdLoaded() {
+                        super.onAdLoaded();
+                        displayInterstitial();
+                    }
+                });
+            }
+        }, 5000);
+
+
     }
 
 
