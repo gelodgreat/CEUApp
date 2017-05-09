@@ -36,8 +36,19 @@
             android:layout_height="match_parent">
 
             <Button
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/memo_btn_clear"
+                android:background="@color/colorPrimary"
+                android:text="Clear"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@id/memo_btn_delete"
+                android:textColor="#fff" />
+
+            <Button
                 android:id="@+id/memo_btn_add"
-                android:layout_width="200dp"
+                android:layout_width="150dp"
                 android:background="@color/colorPrimary"
                 android:textColor="#fff"
                 android:layout_height="wrap_content"
@@ -49,7 +60,7 @@
 
             <Button
                 android:id="@+id/memo_btn_delete"
-                android:layout_width="200dp"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="5dp"
                 android:layout_toLeftOf="@id/memo_btn_add"

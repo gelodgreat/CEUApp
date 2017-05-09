@@ -36,15 +36,25 @@
             android:layout_height="match_parent">
 
             <Button
+                android:id="@+id/memo_btn_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="3dp"
+                android:background="@color/colorPrimary"
+                android:text="Clear"
+                android:textColor="#fff" />
+
+            <Button
                 android:id="@+id/memo_btn_add"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentTop="true"
+                android:layout_marginRight="5dp"
                 android:layout_marginTop="3dp"
                 android:background="@color/colorPrimary"
                 android:text="Add"
-                android:layout_marginRight="5dp"
                 android:textColor="#fff" />
 
             <Button
