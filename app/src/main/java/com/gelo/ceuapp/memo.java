@@ -3,7 +3,6 @@ package com.gelo.ceuapp;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,7 +22,7 @@ public class memo extends Fragment {
     private EditText et_gomemo;
     private GridView gv_memolist;
     private SQLiteHelper myDB;
-    private String getmyetgomemo;
+
 
     public memo() {
         // Required empty public constructor
@@ -32,7 +31,7 @@ public class memo extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // Inflate the layout for this fragmen
+        // Inflate the layout for this fragmentfffff
         final View view = inflater.inflate(R.layout.fragment_memo, container, false);
         btn_add = (Button) view.findViewById(R.id.memo_btn_add);
         btn_del = (Button) view.findViewById(R.id.memo_btn_delete);
@@ -40,13 +39,11 @@ public class memo extends Fragment {
         gv_memolist = (GridView) view.findViewById(R.id.memo_list);
         myDB = new SQLiteHelper(getActivity().getApplicationContext());
 
-        getmyetgomemo = et_gomemo.getText().toString().trim();
 
         btn_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                if (getmyetgomemo.isEmpty()) {
+                if (et_gomemo.getText().toString().matches("")) {
                     Toast.makeText(getActivity().getApplicationContext(), "Are you mocking me? Fill me slave!", Toast.LENGTH_LONG).show();
                 } else {
                     myDB.insertingmemo(et_gomemo.getText().toString().trim());
