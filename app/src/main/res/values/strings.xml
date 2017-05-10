@@ -6,7 +6,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
 
-    <string name="appversion">1.6.0</string>
+    <string name="appversion">1.6.1.0</string>
     <string name="title_activity_cah">CAH</string>
 
     <string name="title_activity_cdl">CDL</string>
@@ -35,5 +35,6 @@
     <string name="ad_app_id">ca-app-pub-1707899762861819~4381648286</string>
 
 
+    <string name="test_device_ad_exclusion">TEST_EMULATOR</string>
 </resources>
 

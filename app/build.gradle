@@ -12,7 +12,7 @@ android {
         applicationId 'com.gelo.ceuapp'
         minSdkVersion 17
         targetSdkVersion 25
-        versionName '1.6.0'
+        versionName '1.6.1.0'
         versionCode 7
     }
     buildTypes {
@@ -43,7 +43,10 @@ dependencies {
     //    'Ads'
     //    compile 'com.google.firebase:firebase-ads:10.2.1'
     compile 'com.google.android.gms:play-services-ads:10.2.4'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
 }
+
+
 
 
 

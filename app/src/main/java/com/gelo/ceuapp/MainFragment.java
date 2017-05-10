@@ -15,7 +15,6 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
@@ -33,12 +32,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
-
-import java.util.Timer;
-import java.util.TimerTask;
 
 
 /**
@@ -446,41 +440,29 @@ public class MainFragment extends Fragment {
             }
         });
 
-
-        startAds();
+        //                interstitial = new InterstitialAd(getActivity().getApplicationContext());
+        //                interstitial.setAdUnitId(getString(R.string.banner_ad_unit_id_interstitial));
+        //                AdRequest adRequest = new AdRequest.Builder().build();
+        //                interstitial.loadAd(adRequest);
+        //                interstitial.setAdListener(new AdListener() {
+        //                    @Override
+        //                    public void onAdLoaded() {
+        //                        super.onAdLoaded();
+        //                        displayInterstitial();
+        //                    }
+        //                });
         return view;
 
 
     }
 
-
-    private void displayInterstitial() {
-        // If Ads are loaded, show Interstitial else show nothing.
-        if (interstitial.isLoaded()) {
-            interstitial.show();
-        }
-    }
-
-    private void startAds() {
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                interstitial = new InterstitialAd(getActivity().getApplicationContext());
-                interstitial.setAdUnitId(getString(R.string.banner_ad_unit_id_interstitial));
-                AdRequest adRequest = new AdRequest.Builder().build();
-                interstitial.loadAd(adRequest);
-                interstitial.setAdListener(new AdListener() {
-                    @Override
-                    public void onAdLoaded() {
-                        super.onAdLoaded();
-                        displayInterstitial();
-                    }
-                });
-            }
-        }, 5000);
-
-
-    }
+    //
+    //    private void displayInterstitial() {
+    //        // If Ads are loaded, show Interstitial else show nothing.
+    //        if (interstitial.isLoaded()) {
+    //            interstitial.show();
+    //        }
+    //    }
 
 
 }

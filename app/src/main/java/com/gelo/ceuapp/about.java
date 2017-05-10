@@ -97,7 +97,7 @@ public class about extends Fragment {
         AdView madviewabout2 = (AdView) view.findViewById(R.id.adsabout2);
 
         AdRequest adRequest = new AdRequest.Builder()
-                //                .addTestDevice(getString(R.string.test_device_id))
+                //                                .addTestDevice(getString(R.string.test_device_ad_exclusion))
                 .build();
 
         madviewabout.loadAd(adRequest);

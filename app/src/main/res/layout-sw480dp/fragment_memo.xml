@@ -1,0 +1,88 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gelo.ceuapp.memo">
+
+    <LinearLayout
+        android:id="@+id/lin"
+        android:layout_width="match_parent"
+        android:layout_height="450dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <GridView
+                android:id="@+id/memo_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:numColumns="auto_fit"
+                android:background="#000000" />
+        </ScrollView>
+    </LinearLayout>
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/lin"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/memo_btn_clear"
+                android:background="@color/colorPrimary"
+                android:text="Clear"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@id/memo_btn_delete"
+                android:textColor="#fff" />
+
+            <Button
+                android:id="@+id/memo_btn_add"
+                android:layout_width="wrap_content"
+                android:background="@color/colorPrimary"
+                android:textColor="#fff"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="5dp"
+                android:text="Add" />
+
+            <Button
+                android:id="@+id/memo_btn_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@id/memo_btn_add"
+                android:background="@color/colorPrimary"
+                android:textColor="#fff"
+                android:layout_marginTop="3dp"
+                android:text="Delete" />
+
+            <EditText
+                android:id="@+id/et_gomemo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignEnd="@+id/memo_btn_add"
+                android:layout_below="@+id/memo_btn_add"
+                android:hint="Put your memo here, Escolarian"
+                android:inputType="textMultiLine" />
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+</RelativeLayout>
