@@ -41,6 +41,9 @@ public class memo extends Fragment {
         gv_memolist = (GridView) view.findViewById(R.id.memo_list);
         myDB = new SQLiteHelper(getActivity().getApplicationContext());
 
+
+        et_gomemo.setHint("Your one stop Escolarian Memo " + ("\ud83d\ude06"));
+
         btn_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -62,7 +65,7 @@ public class memo extends Fragment {
                 et_gomemo.setText(selectedItem);
 
                 String sm = et_gomemo.getText().toString().trim();
-                showMessage("Your Memo", sm);
+                showMessage("Your Memo " + ("\ud83d\ude0d"), sm);
             }
         });
 
@@ -72,10 +75,10 @@ public class memo extends Fragment {
 
     private void add_memo() {
         if (et_gomemo.getText().toString().trim().matches("")) {
-            Toast.makeText(getActivity().getApplicationContext(), "Are you mocking me? Fill me slave!", Toast.LENGTH_LONG).show();
+            Toast.makeText(getActivity().getApplicationContext(), "Are you really adding a memo? I'm empty you know! " + ("\ud83d\ude12"), Toast.LENGTH_LONG).show();
         } else {
             myDB.insertingmemo(et_gomemo.getText().toString().trim());
-            Toast.makeText(getActivity().getApplicationContext(), "Noted!", Toast.LENGTH_LONG).show();
+            Toast.makeText(getActivity().getApplicationContext(), "Noted! " + ("\ud83d\ude06"), Toast.LENGTH_LONG).show();
             et_gomemo.setText("");
             get_data();
         }
@@ -85,10 +88,10 @@ public class memo extends Fragment {
         Integer deletedRows = myDB.delete_memo(et_gomemo.getText().toString());
 
         if (et_gomemo.getText().toString().trim().matches("")) {
-            Toast.makeText(getContext(), "Are you serious ??", Toast.LENGTH_LONG).show();
+            Toast.makeText(getContext(), "I'm empty, Please fill me. " + ("\ud83d\ude22"), Toast.LENGTH_LONG).show();
         } else {
             if (deletedRows > 0) {
-                Toast.makeText(getContext(), "Memo Deleted! :'(", Toast.LENGTH_LONG).show();
+                Toast.makeText(getContext(), "Memo Deleted! " + ("\ud83d\ude22"), Toast.LENGTH_LONG).show();
                 et_gomemo.setText("");
                 get_data();
             } else {
@@ -100,7 +103,7 @@ public class memo extends Fragment {
         Cursor cursor = myDB.get_all_memo();
 
         if (cursor.getCount() == 0) {
-            Toast.makeText(getActivity(), "No Memo Found", Toast.LENGTH_LONG).show();
+            Toast.makeText(getActivity(), "No Memo Found. " + ("\ud83d\ude1e"), Toast.LENGTH_LONG).show();
 
         } else {
 
