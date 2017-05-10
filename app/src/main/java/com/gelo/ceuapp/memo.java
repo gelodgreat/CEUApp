@@ -85,7 +85,7 @@ public class memo extends Fragment {
         Integer deletedRows = myDB.delete_memo(et_gomemo.getText().toString());
 
         if (et_gomemo.getText().toString().trim().matches("")) {
-            Toast.makeText(getContext(), "Are you kidding me?", Toast.LENGTH_LONG).show();
+            Toast.makeText(getContext(), "Are you serious ??", Toast.LENGTH_LONG).show();
         } else {
             if (deletedRows > 0) {
                 Toast.makeText(getContext(), "Memo Deleted! :'(", Toast.LENGTH_LONG).show();
@@ -127,6 +127,27 @@ public class memo extends Fragment {
         builder.show();
 
     }
+    //
+    //    private void savekomunato(){
+    //
+    //        AlertDialog.Builder alertdialog = new AlertDialog.Builder(getContext());
+    //        alertdialog.setTitle("Memo Deletion");
+    //        alertdialog.setMessage("Delete this memo? :'(");
+    //
+    //        alertdialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+    //            @Override
+    //            public void onClick(DialogInterface dialog, int which) {
+    //
+    //            }
+    //        });
+    //
+    //        alertdialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
+    //            @Override
+    //            public void onClick(DialogInterface dialog, int which) {
+    //
+    //            }
+    //        });
+    //    }
 
 
 }
