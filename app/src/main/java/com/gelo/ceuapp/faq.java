@@ -23,8 +23,6 @@ import com.google.android.gms.ads.MobileAds;
  */
 public class faq extends Fragment {
 
-    public static EditText et_aboutt;
-
     public faq() {
         // Required empty public constructor
     }
@@ -35,7 +33,7 @@ public class faq extends Fragment {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        et_aboutt = (EditText) getView().findViewById(R.id.et_aboutt);
+        EditText et_aboutt = (EditText) getView().findViewById(R.id.et_aboutt);
         //noinspection SimplifiableIfStatement
         if (id == R.id.aboutdevss) {
 
@@ -119,7 +117,9 @@ public class faq extends Fragment {
         mAdView = (AdView) view.findViewById(R.id.adView);
         mAdView2 = (AdView) view.findViewById(R.id.adView2);
 
-        AdRequest adRequest = new AdRequest.Builder().addTestDevice(getString(R.string.test_device_id)).build();
+        AdRequest adRequest = new AdRequest.Builder()
+                //                .addTestDevice(getString(R.string.test_device_id))
+                .build();
 
         mAdView.loadAd(adRequest);
         mAdView2.loadAd(adRequest);
@@ -148,7 +148,7 @@ public class faq extends Fragment {
     }
 
 
-    public void displayInterstitial() {
+    private void displayInterstitial() {
         // If Ads are loaded, show Interstitial else show nothing.
         if (interstitial.isLoaded()) {
             interstitial.show();

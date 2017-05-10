@@ -7,9 +7,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 public class chooseenroll extends AppCompatActivity {
 
-    public static Button btn_fresh, btn_alien, btn_seconddeg, btn_transferee, btn_continuing;
     public static EditText et_enroll;
 
     @Override
@@ -17,14 +19,25 @@ public class chooseenroll extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chooseenroll);
         onClickChoice();
+
+        AdView madviewchenroll = (AdView) findViewById(R.id.chooseenrollad);
+        AdView madviewchenroll2 = (AdView) findViewById(R.id.chooseenrollad2);
+
+        AdRequest adRequest = new AdRequest.Builder()
+                //                .addTestDevice(getString(R.string.test_device_id))
+                .build();
+
+        madviewchenroll.loadAd(adRequest);
+        madviewchenroll2.loadAd(adRequest);
+
     }
 
-    public void onClickChoice() {
-        btn_fresh = (Button) findViewById(R.id.btn_fresh);
-        btn_alien = (Button) findViewById(R.id.btn_alienproc);
-        btn_seconddeg = (Button) findViewById(R.id.btn_seconddeg);
-        btn_transferee = (Button) findViewById(R.id.btn_transferee);
-        btn_continuing = (Button) findViewById(R.id.btn_contin);
+    private void onClickChoice() {
+        Button btn_fresh = (Button) findViewById(R.id.btn_fresh);
+        Button btn_alien = (Button) findViewById(R.id.btn_alienproc);
+        Button btn_seconddeg = (Button) findViewById(R.id.btn_seconddeg);
+        Button btn_transferee = (Button) findViewById(R.id.btn_transferee);
+        Button btn_continuing = (Button) findViewById(R.id.btn_contin);
         et_enroll = (EditText) findViewById(R.id.et_enroll);
 
         btn_fresh.setOnClickListener(new View.OnClickListener() {

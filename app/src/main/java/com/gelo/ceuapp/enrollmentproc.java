@@ -10,8 +10,6 @@ import android.widget.ImageButton;
 
 public class enrollmentproc extends AppCompatActivity {
 
-    ImageButton floatButton;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,7 +18,7 @@ public class enrollmentproc extends AppCompatActivity {
         showwv();
 
 
-        floatButton = (ImageButton) findViewById(R.id.img_enrollproc_float);
+        ImageButton floatButton = (ImageButton) findViewById(R.id.img_enrollproc_float);
         floatButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -31,7 +29,7 @@ public class enrollmentproc extends AppCompatActivity {
 
     }
 
-    public void showwv() {
+    private void showwv() {
 
         WebView wv = (WebView) findViewById(R.id.wv_enroll);
         WebSettings webSettings = wv.getSettings();

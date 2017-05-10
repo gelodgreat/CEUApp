@@ -1,0 +1,114 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D895B0"
+    tools:context="com.gelo.ceuapp.Colleges">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:background="@drawable/scorpibg2"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_scitech"
+                android:layout_width="183dp"
+                android:layout_height="183dp"
+                android:layout_alignParentTop="true"
+
+                android:layout_marginStart="26dp"
+                android:layout_toEndOf="@+id/et_aboutt"
+                android:src="@drawable/imgscitech" />
+
+            <ImageView
+                android:id="@+id/img_pharma"
+                android:layout_width="183dp"
+                android:layout_height="183dp"
+                android:layout_alignStart="@+id/img_scitech"
+                android:layout_below="@+id/img_scitech"
+                android:src="@drawable/imgpharma" />
+
+            <ImageView
+                android:id="@+id/img_dent"
+                android:layout_width="183dp"
+                android:layout_height="183dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="22dp"
+                android:layout_toEndOf="@+id/img_scitech"
+                android:src="@drawable/imgdent" />
+
+            <ImageView
+                android:id="@+id/img_opto"
+                android:layout_width="183dp"
+                android:layout_height="183dp"
+                android:layout_alignStart="@+id/img_dent"
+                android:layout_below="@+id/img_dent"
+                android:src="@drawable/imgopto" />
+
+            <ImageView
+
+                android:id="@+id/img_mt"
+                android:layout_width="183dp"
+                android:layout_height="183dp"
+                android:layout_alignStart="@+id/img_pharma"
+                android:layout_below="@+id/img_pharma"
+                android:src="@drawable/imgmedtech" />
+
+            <ImageView
+                android:id="@+id/img_gradschool"
+                android:layout_width="183dp"
+                android:layout_height="183dp"
+                android:layout_alignStart="@+id/img_opto"
+                android:layout_below="@+id/img_opto"
+                android:src="@drawable/imggradschool" />
+
+            <ImageView
+                android:id="@+id/img_nhm"
+                android:layout_width="183dp"
+                android:layout_height="183dp"
+                android:layout_alignStart="@+id/img_mt"
+                android:layout_below="@+id/img_mt"
+                android:src="@drawable/imgnhm" />
+
+            <ImageView
+                android:id="@+id/img_nursing"
+                android:layout_width="183dp"
+                android:layout_height="183dp"
+                android:layout_alignStart="@+id/img_gradschool"
+                android:layout_below="@+id/img_gradschool"
+                android:src="@drawable/imgnursing" />
+
+            <ImageView
+                android:id="@+id/img_sam"
+                android:layout_width="183dp"
+                android:layout_height="183dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignStart="@+id/img_nhm"
+                android:src="@drawable/imgsam" />
+
+            <ImageView
+                android:id="@+id/img_selams"
+                android:layout_width="183dp"
+                android:layout_height="183dp"
+                android:layout_alignStart="@+id/img_nursing"
+                android:layout_below="@+id/img_nursing"
+                android:src="@drawable/imgselams" />
+
+            <EditText
+                android:id="@+id/et_aboutt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

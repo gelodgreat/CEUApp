@@ -10,15 +10,13 @@ import android.widget.ImageButton;
 
 public class Navigation_Gif extends AppCompatActivity {
 
-    ImageButton floatButton;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation__gif);
 
 
-        floatButton = (ImageButton) findViewById(R.id.img_navnorth_float);
+        ImageButton floatButton = (ImageButton) findViewById(R.id.img_navnorth_float);
         floatButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

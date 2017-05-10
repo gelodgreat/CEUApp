@@ -18,7 +18,7 @@ public class aboutform extends AppCompatActivity {
 
     }
 
-    public void showabout() {
+    private void showabout() {
         WebView wv = (WebView) findViewById(R.id.wv_about);
         WebSettings webSettings = wv.getSettings();
         webSettings.setBuiltInZoomControls(true);

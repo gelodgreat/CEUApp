@@ -10,27 +10,24 @@ import android.view.SurfaceHolder.Callback;
 import android.view.SurfaceView;
 
 
-public class GifRun implements Runnable, Callback {
+class GifRun implements Runnable, Callback {
 
-	
-	public Bitmap bmb;
-	public GIFDecode decode;
-	public int ind;
-	public int gifCount;
-	public SurfaceHolder mSurfaceHolder ;
-	boolean surfaceExists;
-	
-	public void LoadGiff(SurfaceView v, android.content.Context theTHIS, int R_drawable)
-	{		
-		//InputStream Raw= context.getResources().openRawResource(R.drawable.image001);
+
+    private Bitmap bmb;
+    private GIFDecode decode;
+    private SurfaceHolder mSurfaceHolder;
+    private boolean surfaceExists;
+
+    public void LoadGiff(SurfaceView v, android.content.Context theTHIS, int R_drawable) {
+        //InputStream Raw= context.getResources().openRawResource(R.drawable.image001);
 	       mSurfaceHolder = v.getHolder();
 	       mSurfaceHolder.addCallback(this);
 	       decode = new GIFDecode();
 	       decode.read(theTHIS.getResources().openRawResource(R_drawable));
-	       ind = 0;
-			// decode.
-			gifCount = decode.getFrameCount();
-			bmb = decode.getFrame(0);
+        int ind = 0;
+        // decode.
+        int gifCount = decode.getFrameCount();
+        bmb = decode.getFrame(0);
 			surfaceExists=true;
 			Thread t = new Thread(this);
 			t.start();
@@ -50,7 +47,7 @@ public class GifRun implements Runnable, Callback {
 					bmb = decode.next();
 					
 				Thread.sleep(100);
-			} catch (Exception ex) {
+            } catch (Exception ignored) {
 
 			}
 		}

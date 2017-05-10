@@ -10,8 +10,6 @@ import android.widget.ImageButton;
 
 public class listoffenses extends AppCompatActivity {
 
-    ImageButton floatButton;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,7 +17,7 @@ public class listoffenses extends AppCompatActivity {
         condition();
 
 
-        floatButton = (ImageButton) findViewById(R.id.img_offenses_float);
+        ImageButton floatButton = (ImageButton) findViewById(R.id.img_offenses_float);
         floatButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -30,7 +28,7 @@ public class listoffenses extends AppCompatActivity {
 
     }
 
-    public void condition() {
+    private void condition() {
 
         WebView wv = (WebView) findViewById(R.id.wv_listoffenses);
 

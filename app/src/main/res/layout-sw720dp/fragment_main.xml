@@ -1,0 +1,235 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gelo.ceuapp.MainFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <AbsoluteLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <android.support.design.widget.CoordinatorLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/fab_plus"
+                    android:layout_width="50dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="22dp"
+                    android:layout_marginRight="-290dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/ic_action_plus"
+                    app:backgroundTint="@color/colorPrimaryDark" />
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/fab_faq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="55dp"
+                    android:layout_marginRight="-85dp"
+                    android:src="@drawable/ic_faq"
+                    android:visibility="invisible"
+                    app:backgroundTint="#2196F3" />
+
+            </android.support.design.widget.CoordinatorLayout>
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="963dp"
+                android:layout_x="2dp"
+                android:layout_y="63dp"
+                android:src="@drawable/campus_map_v3" />
+
+            <ImageButton
+                android:id="@+id/imgbmm_ds"
+                android:layout_width="157dp"
+                android:layout_height="151dp"
+                android:layout_x="313dp"
+                android:layout_y="249dp"
+                android:background="@android:color/transparent" />
+
+            <ImageButton
+                android:id="@+id/imgbmm_fgh"
+                android:layout_width="71dp"
+                android:layout_height="127dp"
+                android:layout_x="308dp"
+                android:layout_y="404dp"
+                android:background="@android:color/transparent" />
+
+            <ImageButton
+                android:id="@+id/imgbmm_isc"
+                android:layout_width="93dp"
+                android:layout_height="90dp"
+                android:layout_x="318dp"
+                android:layout_y="570dp"
+                android:background="@android:color/transparent" />
+
+            <ImageButton
+                android:id="@+id/imgbmm_tc"
+                android:layout_width="178dp"
+                android:layout_height="91dp"
+                android:layout_x="412dp"
+                android:layout_y="569dp"
+                android:background="@android:color/transparent" />
+
+            <ImageButton
+                android:id="@+id/imgbmm_ffh"
+                android:layout_width="77dp"
+                android:layout_height="48dp"
+                android:layout_x="243dp"
+                android:layout_y="663dp"
+                android:background="@android:color/transparent" />
+
+            <ImageButton
+                android:id="@+id/imgbmm_mvh"
+                android:layout_width="41dp"
+                android:layout_height="94dp"
+                android:layout_x="321dp"
+                android:layout_y="667dp"
+                android:background="@android:color/transparent" />
+
+            <ImageButton
+                android:id="@+id/imgbmm_dcth"
+                android:layout_width="70dp"
+                android:layout_height="48dp"
+                android:layout_x="370dp"
+                android:layout_y="666dp"
+                android:background="@android:color/transparent" />
+
+            <ImageButton
+                android:id="@+id/imgbmm_phlh"
+                android:layout_width="79dp"
+                android:layout_height="49dp"
+                android:layout_x="442dp"
+                android:layout_y="664dp"
+                android:background="@android:color/transparent" />
+
+            <ImageButton
+                android:id="@+id/imgbmm_fsh"
+                android:layout_width="104dp"
+                android:layout_height="49dp"
+                android:layout_x="530dp"
+                android:layout_y="663dp"
+                android:background="@android:color/transparent" />
+
+            <ImageButton
+                android:id="@+id/imgbmm_chapel"
+                android:layout_width="39dp"
+                android:layout_height="73dp"
+                android:layout_x="325dp"
+                android:layout_y="763dp"
+                android:background="@android:color/transparent" />
+
+            <ImageButton
+                android:id="@+id/imgbmm_sac"
+                android:layout_width="128dp"
+                android:layout_height="73dp"
+                android:layout_x="369dp"
+                android:layout_y="723dp"
+                android:background="@android:color/transparent" />
+
+            <ImageButton
+                android:id="@+id/imgbmm_northquad"
+                android:layout_width="101dp"
+                android:layout_height="69dp"
+                android:layout_x="528dp"
+                android:layout_y="723dp"
+                android:background="@android:color/transparent" />
+
+            <ImageButton
+                android:id="@+id/imgbmm_lah"
+                android:layout_width="157dp"
+                android:layout_height="68dp"
+                android:layout_x="367dp"
+                android:layout_y="800dp"
+                android:background="@android:color/transparent" />
+
+            <ImageButton
+                android:id="@+id/imgbmm_cah"
+                android:layout_width="73dp"
+                android:layout_height="62dp"
+                android:layout_x="527dp"
+                android:layout_y="805dp"
+                android:background="@android:color/transparent" />
+
+            <ImageButton
+                android:id="@+id/imgbmm_gdlsc"
+                android:layout_width="128dp"
+                android:layout_height="71dp"
+                android:layout_x="603dp"
+                android:layout_y="799dp"
+                android:background="@android:color/transparent" />
+
+            <ImageButton
+                android:id="@+id/imgbmm_cdl"
+                android:layout_width="218dp"
+                android:layout_height="71dp"
+                android:layout_x="104dp"
+                android:layout_y="804dp"
+                android:background="@android:color/transparent" />
+
+            <ImageButton
+                android:id="@+id/imgbmm_sdvh"
+                android:layout_width="101dp"
+                android:layout_height="140dp"
+                android:layout_x="140dp"
+                android:layout_y="660dp"
+                android:background="@android:color/transparent" />
+
+            <ImageButton
+                android:id="@+id/imgb_drawer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_x="1dp"
+                android:layout_y="1dp"
+                android:background="@android:color/transparent" />
+
+            <Button
+                android:id="@+id/btn_search"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_x="0dp"
+                android:layout_y="122dp"
+                android:background="@color/colorPrimary"
+                android:text="Search"
+                android:textColor="#fff" />
+
+            <EditText
+                android:id="@+id/et_search2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/et_aboutt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible" />
+
+            <AutoCompleteTextView
+                android:id="@+id/actvd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_x="0dp"
+                android:layout_y="77dp"
+                android:hint="Search: Buildings or Department"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="75dp" />
+
+        </AbsoluteLayout>
+    </ScrollView>
+
+</RelativeLayout>

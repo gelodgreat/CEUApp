@@ -19,7 +19,6 @@ import android.widget.ImageView;
 public class Colleges extends Fragment {
 
     public static String title;
-    public static EditText et_aboutt;
 
     public Colleges() {
         // Required empty public constructor
@@ -29,7 +28,7 @@ public class Colleges extends Fragment {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        et_aboutt = (EditText) getView().findViewById(R.id.et_aboutt);
+        EditText et_aboutt = (EditText) getView().findViewById(R.id.et_aboutt);
         //noinspection SimplifiableIfStatement
         if (id == R.id.aboutdevss) {
 

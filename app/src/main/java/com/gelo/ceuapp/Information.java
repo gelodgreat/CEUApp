@@ -10,15 +10,13 @@ import android.widget.ImageButton;
 
 public class Information extends AppCompatActivity {
 
-    ImageButton floatButton;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_information);
         showinformation();
 
-        floatButton = (ImageButton) findViewById(R.id.img_infocollege_float);
+        ImageButton floatButton = (ImageButton) findViewById(R.id.img_infocollege_float);
         floatButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -36,7 +34,7 @@ public class Information extends AppCompatActivity {
         showinformation();
     }
 
-    public void showinformation() {
+    private void showinformation() {
         WebView wv = (WebView) findViewById(R.id.wv_information);
 
         WebSettings webSettings = wv.getSettings();

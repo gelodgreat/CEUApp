@@ -10,10 +10,10 @@ android {
     buildToolsVersion "25.0.2"
     defaultConfig {
         applicationId 'com.gelo.ceuapp'
-        minSdkVersion 16
+        minSdkVersion 17
         targetSdkVersion 25
-        versionName '1.5.2'
-        versionCode 5
+        versionName '1.6.1.0'
+        versionCode 7
     }
     buildTypes {
         release {
@@ -36,14 +36,17 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:25.2.0'
-    compile 'com.android.support:design:25.2.0'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:design:25.3.1'
     compile 'de.hdodenhof:circleimageview:2.1.0'
-    compile 'com.android.support:support-v4:25.2.0'
-    'Ads'
+    compile 'com.android.support:support-v4:25.3.1'
+    //    'Ads'
     //    compile 'com.google.firebase:firebase-ads:10.2.1'
     compile 'com.google.android.gms:play-services-ads:10.2.4'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
 }
+
+
 
 
 

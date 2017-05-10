@@ -11,15 +11,16 @@ import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import java.util.Objects;
+
 public class CeuHymn extends AppCompatActivity implements View.OnClickListener {
 
-    ImageButton play;
-    ImageButton pause;
-    ImageButton stop;
+    private ImageButton play;
+    private ImageButton pause;
     TextView lyrics;
     ScrollView scr;
-    MediaPlayer mp;
-    String a = new String("false");
+    private MediaPlayer mp;
+    private String a = "false";
 
 
     @Override
@@ -46,7 +47,7 @@ public class CeuHymn extends AppCompatActivity implements View.OnClickListener {
         pause.setLayoutParams(layoutparams);
         pause.setOnClickListener(this);
 
-        stop = new ImageButton(this);
+        ImageButton stop = new ImageButton(this);
         stop.setBackgroundResource(R.drawable.stop);
         stop.setLayoutParams(layoutparams);
         stop.setOnClickListener(this);
@@ -75,7 +76,7 @@ public class CeuHymn extends AppCompatActivity implements View.OnClickListener {
 
         if (v == play) {
 
-            if (a == "true") {
+            if (Objects.equals(a, "true")) {
                 mp.reset();
                 mp = MediaPlayer.create(this, R.raw.ceuhymn);
                 mp.start();

@@ -11,14 +11,16 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class about extends Fragment {
 
-    public static Button btn_devs, btn_apps, btn_disclaimer;
-    public static EditText et_about, et_aboutt;
+    public static EditText et_about;
 
     public about() {
         // Required empty public constructor
@@ -27,7 +29,7 @@ public class about extends Fragment {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        et_aboutt = (EditText) getView().findViewById(R.id.et_aboutt);
+        EditText et_aboutt = (EditText) getView().findViewById(R.id.et_aboutt);
         //noinspection SimplifiableIfStatement
         if (id == R.id.aboutdevss) {
 
@@ -55,9 +57,9 @@ public class about extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_about, container, false);
 
-        btn_devs = (Button) view.findViewById(R.id.btn_devs);
-        btn_apps = (Button) view.findViewById(R.id.btn_apps);
-        btn_disclaimer = (Button) view.findViewById(R.id.btn_disclaimer);
+        Button btn_devs = (Button) view.findViewById(R.id.btn_devs);
+        Button btn_apps = (Button) view.findViewById(R.id.btn_apps);
+        Button btn_disclaimer = (Button) view.findViewById(R.id.btn_disclaimer);
         et_about = (EditText) view.findViewById(R.id.et_about);
 
         btn_devs.setOnClickListener(new View.OnClickListener() {
@@ -91,7 +93,18 @@ public class about extends Fragment {
         });
 
 
+        AdView madviewabout = (AdView) view.findViewById(R.id.adsabout);
+        AdView madviewabout2 = (AdView) view.findViewById(R.id.adsabout2);
+
+        AdRequest adRequest = new AdRequest.Builder()
+                //                                .addTestDevice(getString(R.string.test_device_ad_exclusion))
+                .build();
+
+        madviewabout.loadAd(adRequest);
+        madviewabout2.loadAd(adRequest);
+
         return view;
+
 
     }
 

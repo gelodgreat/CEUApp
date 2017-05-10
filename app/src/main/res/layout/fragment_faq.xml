@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@drawable/scorpibg">
+    android:background="#D895B0">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -16,6 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true"
+        android:background="@drawable/scorpibg2"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
@@ -23,10 +24,11 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
+
 
             <Button
-                android:id="@+id/btn_offense"
+                android:id="@+id/button2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/colorPrimary"
@@ -34,11 +36,9 @@
                 android:text="Disciplinary Measures"
                 android:textColor="#fff"
                 android:textSize="20sp"
-                android:layout_marginTop="60dp"
-                android:layout_below="@+id/et_aboutt"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
-
+                android:layout_below="@+id/adView2"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="38dp" />
 
             <Button
                 android:id="@+id/btn_enroll"
@@ -51,7 +51,6 @@
                 android:textSize="20sp"
                 android:layout_marginTop="14dp"
                 android:layout_below="@+id/btn_ceuchoosemusic"
-                android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true" />
 
             <Button
@@ -63,9 +62,8 @@
                 android:text="Other Transaction"
                 android:textColor="#fff"
                 android:textSize="20sp"
-                android:layout_marginTop="12dp"
-                android:layout_below="@+id/btn_offense"
-                android:layout_alignParentLeft="true"
+                android:layout_marginTop="93dp"
+                android:layout_below="@+id/adView2"
                 android:layout_alignParentStart="true" />
 
             <Button
@@ -78,7 +76,6 @@
                 android:textColor="#fff"
                 android:textSize="20sp"
                 android:layout_below="@+id/btn_othertransac"
-                android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_marginTop="13dp" />
 
@@ -91,10 +88,9 @@
                 android:text="CEU Board Members"
                 android:textColor="#fff"
                 android:textSize="20sp"
+                android:layout_marginTop="17dp"
                 android:layout_below="@+id/btn_enroll"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginTop="17dp" />
+                android:layout_alignParentStart="true" />
 
             <EditText
                 android:layout_width="wrap_content"
@@ -122,7 +118,7 @@
                 ads:adUnitId="@string/banner_ad_unit_id_banner2"
                 android:layout_alignParentTop="true"
                 android:layout_alignLeft="@+id/adView"
-                android:layout_alignStart="@+id/adView"></com.google.android.gms.ads.AdView>
+                android:layout_alignStart="@+id/adView" />
 
         </RelativeLayout>
 

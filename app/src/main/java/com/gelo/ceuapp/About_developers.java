@@ -64,7 +64,7 @@ public class About_developers extends ActivityGroup {
 
     }
 
-    public void onclickbutton() {
+    private void onclickbutton() {
         /*ImageButton next, homeb1;
 
         next = (ImageButton) findViewById(R.id.img_aboutnext_float);
