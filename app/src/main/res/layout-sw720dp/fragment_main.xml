@@ -137,8 +137,8 @@
                 android:id="@+id/imgbmm_sac"
                 android:layout_width="128dp"
                 android:layout_height="73dp"
-                android:layout_x="369dp"
-                android:layout_y="723dp"
+                android:layout_x="368dp"
+                android:layout_y="719dp"
                 android:background="@android:color/transparent" />
 
             <ImageButton
