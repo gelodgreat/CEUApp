@@ -11,10 +11,10 @@ import android.database.sqlite.SQLiteOpenHelper;
  */
 
 public class SQLiteHelper extends SQLiteOpenHelper {
-    private static final String DATABASE_NAME = "ceumemodb.db";
     public static final String TABLE_NAME = "ceumemo";
     public static final String CEUMemoDB = "CREATE TABLE " + TABLE_NAME + " (id INTEGER PRIMARY KEY AUTOINCREMENT, memos TEXT)";
     public static final String DropExistingDB = "DROP TABLE IF EXIST " + TABLE_NAME;
+    private static final String DATABASE_NAME = "ceumemodb.db";
 
 
     public SQLiteHelper(Context context) {
@@ -46,4 +46,10 @@ public class SQLiteHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
         return db.rawQuery("SELECT * FROM " + TABLE_NAME, null);
     }
+
+    public Integer delete_memo(String memos) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        return db.delete(TABLE_NAME, "memos = ?", new String[]{memos});
+    }
+
 }
