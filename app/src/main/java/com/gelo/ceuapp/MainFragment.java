@@ -14,6 +14,7 @@ import android.widget.ImageButton;*/
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.drawable.ColorDrawable;
+import android.media.Image;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
@@ -31,6 +32,7 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import com.google.android.gms.ads.InterstitialAd;
 
@@ -120,193 +122,14 @@ public class MainFragment extends Fragment {
             }
         });
 
-
-        ImageButton imgb_drawer = (ImageButton) view.findViewById(R.id.imgb_drawer);
-        imgb_drawer.setOnClickListener(new View.OnClickListener() {
+        ImageView imgviewbldgs = (ImageView) view.findViewById(R.id.img_themap);
+        imgviewbldgs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                drawer.openDrawer(GravityCompat.START);
-            }
-
-        });
-
-        ImageButton btnm_ds = (ImageButton) view.findViewById(R.id.imgbmm_ds);
-        btnm_ds.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent("com.gelo.ceuapp.dent_sci");
-                retainn.setText("Dent Sci");
+                Intent intent = new Intent("com.gelo.ceuapp.ListBuildings");
                 startActivity(intent);
             }
-
         });
-
-        ImageButton btnm_fgh = (ImageButton) view.findViewById(R.id.imgbmm_fgh);
-        btnm_fgh.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent("com.gelo.ceuapp.fgh");
-                retainn.setText("FGH");
-                startActivity(intent);
-            }
-
-        });
-
-        ImageButton btnm_isc = (ImageButton) view.findViewById(R.id.imgbmm_isc);
-        btnm_isc.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent("com.gelo.ceuapp.isc");
-                retainn.setText("ISC");
-                startActivity(intent);
-            }
-
-        });
-
-        ImageButton btnm_tc = (ImageButton) view.findViewById(R.id.imgbmm_tc);
-        btnm_tc.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent("com.gelo.ceuapp.tech_center");
-                retainn.setText("Tech Center");
-                startActivity(intent);
-            }
-
-        });
-
-        ImageButton btnm_ffh = (ImageButton) view.findViewById(R.id.imgbmm_ffh);
-        btnm_ffh.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent("com.gelo.ceuapp.ffh");
-                retainn.setText("FFH");
-                startActivity(intent);
-            }
-
-        });
-
-        ImageButton btnm_mvh = (ImageButton) view.findViewById(R.id.imgbmm_mvh);
-        btnm_mvh.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent("com.gelo.ceuapp.mvh");
-                retainn.setText("MVH");
-                startActivity(intent);
-            }
-
-        });
-
-        ImageButton btnm_dcth = (ImageButton) view.findViewById(R.id.imgbmm_dcth);
-        btnm_dcth.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent("com.gelo.ceuapp.dcth");
-                retainn.setText("DCTH");
-                startActivity(intent);
-            }
-
-        });
-        ImageButton btnm_phlh = (ImageButton) view.findViewById(R.id.imgbmm_phlh);
-        btnm_phlh.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent("com.gelo.ceuapp.phlh");
-                retainn.setText("PHLH");
-                startActivity(intent);
-            }
-
-        });
-        ImageButton btnm_fsh = (ImageButton) view.findViewById(R.id.imgbmm_fsh);
-        btnm_fsh.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent("com.gelo.ceuapp.fsh");
-                retainn.setText("FSH");
-                startActivity(intent);
-            }
-
-        });
-        ImageButton btnm_chapel = (ImageButton) view.findViewById(R.id.imgbmm_chapel);
-        btnm_chapel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent("com.gelo.ceuapp.chapel");
-                retainn.setText("Chapel");
-                startActivity(intent);
-            }
-
-        });
-        ImageButton btnm_sac = (ImageButton) view.findViewById(R.id.imgbmm_sac);
-        btnm_sac.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent("com.gelo.ceuapp.sac");
-                retainn.setText("SAC");
-                startActivity(intent);
-            }
-
-        });
-        ImageButton btnm_north_quad = (ImageButton) view.findViewById(R.id.imgbmm_northquad);
-        btnm_north_quad.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent("com.gelo.ceuapp.north_quad");
-                retainn.setText("North Quad");
-                startActivity(intent);
-            }
-
-        });
-        ImageButton btnm_lah = (ImageButton) view.findViewById(R.id.imgbmm_lah);
-        btnm_lah.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent("com.gelo.ceuapp.lah");
-                retainn.setText("LAH");
-                startActivity(intent);
-            }
-
-        });
-        ImageButton btnm_cah = (ImageButton) view.findViewById(R.id.imgbmm_cah);
-        btnm_cah.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent("com.gelo.ceuapp.cah");
-                retainn.setText("CAH");
-                startActivity(intent);
-            }
-
-        });
-        ImageButton btnm_gdlsc = (ImageButton) view.findViewById(R.id.imgbmm_gdlsc);
-        btnm_gdlsc.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent("com.gelo.ceuapp.gdlsc");
-                retainn.setText("GDLSC");
-                startActivity(intent);
-            }
-
-        });
-        ImageButton btnm_cdl = (ImageButton) view.findViewById(R.id.imgbmm_cdl);
-        btnm_cdl.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent("com.gelo.ceuapp.cdl");
-                retainn.setText("CDL");
-                startActivity(intent);
-            }
-
-        });
-        ImageButton btnm_sdvh = (ImageButton) view.findViewById(R.id.imgbmm_sdvh);
-        btnm_sdvh.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent("com.gelo.ceuapp.sdvh");
-                retainn.setText("SDVH");
-                startActivity(intent);
-            }
-
-        });
-
 
         fab_plus = (FloatingActionButton) view.findViewById(R.id.fab_plus);
         fab_faq = (FloatingActionButton) view.findViewById(R.id.fab_faq);

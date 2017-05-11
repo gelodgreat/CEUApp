@@ -403,7 +403,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".Memo" />
-        <activity android:name=".ListBuildings"></activity>
+        <activity android:name=".ListBuildings">
+            <intent-filter>
+                <action android:name="com.gelo.ceuapp.ListBuildings" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
