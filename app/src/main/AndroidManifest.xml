@@ -15,7 +15,8 @@
     <application
         android:allowBackup="true"
         android:fullBackupContent="@xml/backup_descriptor"
-        android:hardwareAccelerated="true"
+        android:hardwareAccelerated="false"
+        android:largeHeap="true"
         android:icon="@drawable/applogo"
         android:label="@string/app_name"
         android:supportsRtl="true"

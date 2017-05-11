@@ -31,7 +31,6 @@ public class ListBuildings extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_buildings);
-
         CustomListAdapter adapter = new CustomListAdapter(this, bldgname, imgid);
         list = (ListView) findViewById(R.id.list_allbuildings);
         list.setAdapter(adapter);

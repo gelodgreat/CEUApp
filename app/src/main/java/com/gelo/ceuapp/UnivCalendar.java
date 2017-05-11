@@ -94,17 +94,12 @@ public class UnivCalendar extends Fragment {
         wv.loadUrl( "http://ceuapp.000webhostapp.com/Calendar.html" );
 
         /*String add="https://raw.githubusercontent.com/andrewhamili/CEUApp/master/app/src/main/AndroidManifest.xml";
-
-
         try {
             URLConnection cn=new URL(add).openConnection();
             cn.connect();
             InputStream stream =cn.getInputStream();
-
             File download = new File(getContext().getCacheDir(), "AndroidManifest.xml");
-
             wv.loadUrl();
-
         } catch (IOException e) {
             e.printStackTrace();
         }*/

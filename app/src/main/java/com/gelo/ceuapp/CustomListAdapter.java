@@ -16,11 +16,12 @@ import android.widget.TextView;
 
 public class CustomListAdapter extends ArrayAdapter<String> {
 
+    public ListBuildings ls = new ListBuildings();
     private Activity context;
     private String[] bldgname;
     private Integer[] imgid;
-
-    public ListBuildings ls = new ListBuildings();
+    private TextView txtname, txtdesc;
+    private ImageView img_bldg;
 
     public CustomListAdapter(Activity context, String[] bldgname, Integer[] imgid) {
         super(context, R.layout.list_bldg_single, bldgname);
@@ -36,9 +37,9 @@ public class CustomListAdapter extends ArrayAdapter<String> {
         LayoutInflater inflater = context.getLayoutInflater();
         View rowview = inflater.inflate(R.layout.list_bldg_single, null, true);
 
-        TextView txtname = (TextView) rowview.findViewById(R.id.txt_bldg_name);
-        TextView txtdesc = (TextView) rowview.findViewById(R.id.txt_bldg_desc);
-        ImageView img_bldg = (ImageView) rowview.findViewById(R.id.img_bldg);
+        txtname = (TextView) rowview.findViewById(R.id.txt_bldg_name);
+        txtdesc = (TextView) rowview.findViewById(R.id.txt_bldg_desc);
+        img_bldg = (ImageView) rowview.findViewById(R.id.img_bldg);
 
         txtname.setText(bldgname[position]);
         txtdesc.setText("Description: " + bldgname[position]);
