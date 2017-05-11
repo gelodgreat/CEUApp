@@ -402,7 +402,8 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".Memo"></activity>
+        <activity android:name=".Memo" />
+        <activity android:name=".ListBuildings"></activity>
     </application>
 
 </manifest>
