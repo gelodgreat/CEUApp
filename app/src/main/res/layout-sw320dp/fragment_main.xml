@@ -5,8 +5,6 @@
     android:layout_height="match_parent"
     tools:context="com.gelo.ceuapp.MainFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -24,7 +22,7 @@
                 <LinearLayout
                     android:id="@+id/main_rl"
                     android:layout_width="match_parent"
-                    android:layout_height="100dp">
+                    android:layout_height="50dp">
 
                     <android.support.design.widget.CoordinatorLayout xmlns:app="http://schemas.android.com/apk/res-auto"
                         android:layout_width="match_parent"
@@ -45,11 +43,11 @@
 
                             <android.support.design.widget.FloatingActionButton
                                 android:id="@+id/fab_faq"
-                                android:layout_width="match_parent"
+                                android:layout_width="60dp"
                                 android:layout_height="match_parent"
+                                android:layout_marginBottom="4dp"
                                 android:layout_marginLeft="10dp"
-                                android:layout_marginTop="20dp"
-                                android:layout_marginBottom="10dp"
+                                android:layout_marginTop="10dp"
                                 android:layout_toRightOf="@id/fab_plus"
                                 android:src="@drawable/ic_faq"
                                 android:visibility="invisible"
@@ -63,9 +61,9 @@
                 <LinearLayout
                     android:id="@+id/ll2"
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
+                    android:layout_height="wrap_content"
                     android:layout_below="@+id/main_rl"
-                    android:layout_marginTop="20dp">
+                    android:layout_marginTop="10dp">
 
                     <RelativeLayout
                         android:id="@+id/rl0"
@@ -75,19 +73,19 @@
                         <AutoCompleteTextView
                             android:id="@+id/actvd"
                             android:layout_width="match_parent"
-                            android:layout_height="100dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginRight="8dp"
-                            android:hint="Search: Buildings or Department"
-                            android:textSize="30dp" />
+                            android:hint="Search: Buildings or Department" />
 
                         <Button
                             android:id="@+id/btn_search"
                             android:layout_width="match_parent"
-                            android:layout_height="100dp"
+                            android:layout_height="40dp"
                             android:layout_below="@id/actvd"
                             android:background="@color/colorPrimary"
                             android:text="Search"
                             android:textColor="#fff" />
+
                     </RelativeLayout>
                 </LinearLayout>
 
@@ -95,7 +93,6 @@
                     android:id="@+id/op"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-
                     android:layout_below="@id/ll2">
 
                     <RelativeLayout
