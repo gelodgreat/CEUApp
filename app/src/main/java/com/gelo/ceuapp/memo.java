@@ -20,7 +20,7 @@ import java.util.ArrayList;
 public class memo extends Fragment {
 
 
-    private Button btn_add, btn_del;
+    private Button btn_add, btn_del, btn_clear;
     private EditText et_gomemo;
     private GridView gv_memolist;
     private SQLiteHelper myDB;
@@ -33,12 +33,15 @@ public class memo extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // Inflate the layout for this fragmentfffff
+
         final View view = inflater.inflate(R.layout.fragment_memo, container, false);
+
+        btn_clear = (Button) view.findViewById(R.id.memo_btn_clear);
         btn_add = (Button) view.findViewById(R.id.memo_btn_add);
         btn_del = (Button) view.findViewById(R.id.memo_btn_delete);
         et_gomemo = (EditText) view.findViewById(R.id.et_gomemo);
         gv_memolist = (GridView) view.findViewById(R.id.memo_list);
+
         myDB = new SQLiteHelper(getActivity().getApplicationContext());
 
 
@@ -58,6 +61,14 @@ public class memo extends Fragment {
             }
         });
 
+        btn_clear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                et_gomemo.setText("");
+                get_data();
+            }
+        });
+
         gv_memolist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -68,6 +79,7 @@ public class memo extends Fragment {
                 showMessage("Your Memo " + ("\ud83d\ude0d"), sm);
             }
         });
+
 
         get_data();
         return view;

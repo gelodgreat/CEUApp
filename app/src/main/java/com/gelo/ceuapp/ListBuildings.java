@@ -79,6 +79,8 @@ public class ListBuildings extends AppCompatActivity {
             startActivity(new Intent(ListBuildings.this, cah.class));
         } else if (touched == "GDLSC") {
             startActivity(new Intent(ListBuildings.this, gdlsc.class));
+        } else if (touched == "FSH") {
+            startActivity(new Intent(ListBuildings.this, fsh.class));
         }
     }
 }
