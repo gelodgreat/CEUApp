@@ -22,32 +22,32 @@ public class About_developers extends ActivityGroup {
 
         TabHost.TabSpec tab1 = tabHost.newTabSpec("Tab1");
         tab1.setIndicator("UMALI");
-        Intent i1 = new Intent(About_developers.this, developer_umali.class);
+        Intent i1 = new Intent(About_developers.this, umali_developer.class);
         tab1.setContent(i1);
 
         TabHost.TabSpec tab2 = tabHost.newTabSpec("Tab2");
         tab2.setIndicator("HAMILI");
-        Intent i2 = new Intent(About_developers.this, developer_hamili.class);
+        Intent i2 = new Intent(About_developers.this, hamili_developer.class);
         tab2.setContent(i2);
 
         TabHost.TabSpec tab3 = tabHost.newTabSpec("Tab3");
         tab3.setIndicator("WU");
-        Intent i3 = new Intent(About_developers.this, developer_wu.class);
+        Intent i3 = new Intent(About_developers.this, wu_developer.class);
         tab3.setContent(i3);
 
         TabHost.TabSpec tab4 = tabHost.newTabSpec("Tab4");
         tab4.setIndicator("TAN");
-        Intent i4 = new Intent(About_developers.this, developer_tan.class);
+        Intent i4 = new Intent(About_developers.this, tan_developer.class);
         tab4.setContent(i4);
 
         TabHost.TabSpec tab5 = tabHost.newTabSpec("Tab5");
         tab5.setIndicator("BUENAVENTURA");
-        Intent i5 = new Intent(About_developers.this, developer_buenaventura.class);
+        Intent i5 = new Intent(About_developers.this, buenaventura_developer.class);
         tab5.setContent(i5);
 
         TabHost.TabSpec tab6 = tabHost.newTabSpec("Tab6");
         tab6.setIndicator("VIRIL");
-        Intent i6 = new Intent(About_developers.this, developer_viril.class);
+        Intent i6 = new Intent(About_developers.this, viril_developer.class);
         tab6.setContent(i6);
 
 

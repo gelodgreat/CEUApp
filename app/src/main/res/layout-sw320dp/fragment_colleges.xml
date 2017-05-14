@@ -5,7 +5,6 @@
     android:background="#D895B0"
     tools:context="com.gelo.ceuapp.Colleges">
 
-    <!-- TODO: Update blank fragment layout -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"

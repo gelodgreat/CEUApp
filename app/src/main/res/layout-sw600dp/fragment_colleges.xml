@@ -5,7 +5,6 @@
     android:background="#D895B0"
     tools:context="com.gelo.ceuapp.Colleges">
 
-    <!-- TODO: Update blank fragment layout -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -22,10 +21,10 @@
                 android:layout_width="183dp"
                 android:layout_height="183dp"
 
-                android:layout_marginStart="66dp"
-                android:src="@drawable/imgscitech"
                 android:layout_below="@+id/et_aboutt"
-                android:layout_toEndOf="@+id/et_aboutt" />
+                android:layout_marginStart="66dp"
+                android:layout_toEndOf="@+id/et_aboutt"
+                android:src="@drawable/imgscitech" />
 
             <ImageView
                 android:id="@+id/img_pharma"
