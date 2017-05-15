@@ -11,71 +11,56 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
+            android:layout_height="match_parent">
 
-            <LinearLayout
-                android:id="@+id/ll1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:id="@+id/eg_lbl1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="24dp"
-                        android:layout_marginTop="18dp"
-                        android:text="CP:"
-                        android:textSize="15dp" />
-
-                    <EditText
-                        android:id="@+id/et1_gr"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_toRightOf="@+id/eg_lbl1" />
-
-                </RelativeLayout>
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:id="@+id/ll2"
+            <TextView
+                android:id="@+id/eg_lbl1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_below="@+id/ll1">
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="CP"
+                android:textSize="25dp" />
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+            <EditText
+                android:id="@+id/et_cp1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/eg_lbl1"
+                android:gravity="center"
+                android:textSize="20dp" />
 
-                    <TextView
-                        android:id="@+id/eg_lbl2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginTop="18dp"
-                        android:text="Exam:"
-                        android:textSize="15dp" />
+            <TextView
+                android:id="@+id/eg_lbl2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/et_cp1"
+                android:gravity="center"
+                android:text="Exam"
+                android:textSize="25dp" />
 
-                    <EditText
-                        android:id="@+id/et_gr2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_toRightOf="@+id/eg_lbl2" />
+            <EditText
+                android:id="@+id/et_exam1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/eg_lbl2"
+                android:gravity="center"
+                android:textSize="20dp" />
 
-                    <Button
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/et_gr2"
-                        android:text="Calculate Grade" />
+            <Button
+                android:id="@+id/btn_calculate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_exam1"
+                android:text="Calculate Grade" />
 
-                </RelativeLayout>
-            </LinearLayout>
-
+            <TextView
+                android:id="@+id/ttl_res"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_calculate"
+                android:gravity="center"
+                android:textSize="20dp" />
 
         </RelativeLayout>
 

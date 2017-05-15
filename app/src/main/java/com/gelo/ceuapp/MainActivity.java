@@ -181,6 +181,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             fragmentTransaction.replace(R.id.fragment_container, fragment);
             fragmentTransaction.commit();
 
+
+        } else if (id == R.id.nav_calcu) {
+            studentgradecalcu fragment = new studentgradecalcu();
+            android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_container, fragment);
+            fragmentTransaction.commit();
+
+
         } else if (id == R.id.nav_exit) {
 
             AlertDialog.Builder alertdialog = new AlertDialog.Builder(this);
