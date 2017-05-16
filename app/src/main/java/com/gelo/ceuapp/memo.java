@@ -25,6 +25,7 @@ public class memo extends Fragment {
     private GridView gv_memolist;
     private SQLiteHelper myDB;
     private String selectedItem;
+    private ArrayList<String> test = new ArrayList<String>();
 
     public memo() {
         // Required empty public constructor
@@ -103,9 +104,12 @@ public class memo extends Fragment {
             Toast.makeText(getContext(), "I'm empty, Please fill me. " + ("\ud83d\ude22"), Toast.LENGTH_LONG).show();
         } else {
             if (deletedRows > 0) {
+
                 Toast.makeText(getContext(), "Memo Deleted! " + ("\ud83d\ude22"), Toast.LENGTH_LONG).show();
                 et_gomemo.setText("");
                 get_data();
+
+
             } else {
             }
         }
@@ -114,14 +118,14 @@ public class memo extends Fragment {
     private void get_data() {
         Cursor cursor = myDB.get_all_memo();
 
-        if (cursor.getCount() == 0) {
+
+        if (cursor.getCount() <= 0) {
             Toast.makeText(getActivity(), "No Memo Found. " + ("\ud83d\ude1e"), Toast.LENGTH_LONG).show();
+            gv_memolist.setAdapter(null);
 
         } else {
 
-            ArrayList<String> test = new ArrayList<String>();
             test.clear();
-
             ArrayAdapter adapter = new ArrayAdapter(getActivity().getApplicationContext(), android.R.layout.simple_expandable_list_item_1, test);
             gv_memolist.setAdapter(adapter);
 

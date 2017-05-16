@@ -1,0 +1,71 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gelo.ceuapp.studentgradecalcu">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/eg_lbl1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="CP"
+                android:textSize="25dp" />
+
+            <EditText
+                android:id="@+id/et_cp1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/eg_lbl1"
+                android:gravity="center"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/eg_lbl2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/et_cp1"
+                android:gravity="center"
+                android:text="Exam"
+                android:textSize="25dp" />
+
+            <EditText
+                android:id="@+id/et_exam1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/eg_lbl2"
+                android:gravity="center"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/btn_calculate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_exam1"
+                android:text="Calculate Grade" />
+
+            <TextView
+                android:id="@+id/ttl_res"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_calculate"
+                android:gravity="center"
+                android:textSize="20dp" />
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+</FrameLayout>

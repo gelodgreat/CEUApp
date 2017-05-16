@@ -3,16 +3,14 @@
 
     <group android:checkableBehavior="single">
 
+        <item
+            android:enabled="false"
+            android:title="Campus Features" />
 
         <item
             android:id="@+id/nav_vicinitymap"
             android:icon="@drawable/ic_action_map"
             android:title="Vicinity Map" />
-
-        <item
-            android:id="@+id/nav_memo"
-            android:icon="@drawable/ic_notifications_active"
-            android:title="Memo" />
 
         <item
             android:id="@+id/nav_univcalendar"
@@ -32,33 +30,58 @@
             android:icon="@drawable/ic_info"
             android:title="About" />
 
+
+    </group>
+
+
+    <group
+        android:checkableBehavior="single"
+        android:menuCategory="secondary">
+
+        <item
+            android:enabled="false"
+            android:title="Student Utilities" />
+
+        <item
+            android:id="@+id/nav_memo"
+            android:icon="@drawable/ic_notifications_active"
+            android:title="Memo" />
+
+        <item
+            android:id="@+id/nav_calcu"
+            android:icon="@drawable/ic_action_calculator"
+            android:title="Grade Calculator" />
+
         <item
             android:id="@+id/nav_inspire"
             android:icon="@drawable/ic_mood"
             android:title="#CEUInspire" />
 
-
     </group>
 
-    <item android:title="Exit">
-        <menu>
-            <item
-                android:id="@+id/nav_exit"
-                android:icon="@drawable/ic_power_settings_new"
-                android:title="Exit" />
-        </menu>
-    </item>
 
-    <item
-        android:enabled="false"
-        android:title="App Version">
-        <menu>
-            <item
-                android:enabled="false"
-                android:title="@string/appversion"
-                android:titleCondensed="@string/appversion"></item>
-        </menu>
-    </item>
+    <group android:menuCategory="secondary">
+        <item android:title="Exit">
+            <menu>
+                <item
+                    android:id="@+id/nav_exit"
+                    android:icon="@drawable/ic_power_settings_new"
+                    android:title="Exit" />
+            </menu>
+        </item>
+
+        <item
+            android:enabled="false"
+            android:title="App Version">
+            <menu>
+                <item
+                    android:enabled="false"
+                    android:title="@string/appversion"
+                    android:titleCondensed="@string/appversion"></item>
+            </menu>
+        </item>
+    </group>
+
 
     <!-- <item android:title="Communicate">
          <menu>
