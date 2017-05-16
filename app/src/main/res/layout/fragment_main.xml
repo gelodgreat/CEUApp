@@ -43,14 +43,15 @@
 
                             <android.support.design.widget.FloatingActionButton
                                 android:id="@+id/fab_faq"
-                                android:layout_width="60dp"
+                                android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginTop="13dp"
-                                android:layout_toRightOf="@id/fab_plus"
+                                android:layout_marginLeft="5dp"
                                 android:src="@drawable/ic_faq"
                                 android:visibility="invisible"
-                                app:backgroundTint="#2196F3" />
+                                app:backgroundTint="#2196F3"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignStart="@+id/fab_faq"
+                                android:layout_marginStart="15dp" />
 
                         </RelativeLayout>
                     </android.support.design.widget.CoordinatorLayout>
@@ -72,7 +73,6 @@
                             android:id="@+id/actvd"
                             android:layout_width="match_parent"
                             android:layout_height="50dp"
-                            android:layout_marginRight="8dp"
                             android:hint="Search: Buildings or Department" />
 
                         <Button
@@ -110,12 +110,14 @@
                     android:id="@+id/et_search2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:enabled="false"
                     android:visibility="invisible" />
 
                 <EditText
                     android:id="@+id/et_aboutt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:enabled="false"
                     android:visibility="invisible" />
 
             </RelativeLayout>
