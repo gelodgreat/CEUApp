@@ -21,6 +21,7 @@ public class studentgradecalcu extends Fragment {
     private EditText cp, exam;
     private Button btn_calc;
     private TextView ttl;
+    mymethods mm = new mymethods();
 
     public studentgradecalcu() {
         // Required empty public constructor
@@ -64,7 +65,7 @@ public class studentgradecalcu extends Fragment {
             icp = Double.parseDouble(cp.getText().toString());
             iexam = Double.parseDouble(exam.getText().toString());
 
-            Double result = calc(icp, iexam);
+            Double result = mm.calc(icp, iexam);
 
             String xresult = df.format(result);
             ttl.setText("Your Grade is: " + xresult);
@@ -72,9 +73,5 @@ public class studentgradecalcu extends Fragment {
 
     }
 
-    private double calc(double y, double z) {
-        double p = ((y * 2) + z) / 3;
-        return p;
-    }
 
 }
