@@ -46,12 +46,10 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_marginLeft="5dp"
+                                android:layout_toRightOf="@id/fab_plus"
                                 android:src="@drawable/ic_faq"
                                 android:visibility="invisible"
-                                app:backgroundTint="#2196F3"
-                                android:layout_alignParentTop="true"
-                                android:layout_alignStart="@+id/fab_faq"
-                                android:layout_marginStart="15dp" />
+                                app:backgroundTint="#2196F3" />
 
                         </RelativeLayout>
                     </android.support.design.widget.CoordinatorLayout>
