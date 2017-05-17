@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -16,25 +16,21 @@ import java.text.DecimalFormat;
 
 
 public class studentgradecalcu extends Fragment {
-
+    double myfuckingresult = 0;
     double icp, iexam;
+    String ahoy;
+    String xresult;
     DecimalFormat df = new DecimalFormat("#.00");
     mymethods mm = new mymethods();
+    Operations currentoperations;
+    String runningnumber = "";
     String leftValue = "";
     String rightValue = "";
-    String ahoy = "";
-
-    Operations currentoperations;
     double resultsavg = 0;
-
-
-    private ImageView btn_calc_avg;
+    private ImageButton btn_calc_avg_me;
     private EditText cp, exam, numavg;
     private Button btn_calc, btn_1, btn_125, btn_15, btn_175, btn_2, btn_225, btn_25, btn_275, btn_3, btn_4, btn_5, btn_clear;
     private TextView ttl, avg_result;
-
-
-    private String runningnumber = "";
 
     public studentgradecalcu() {
         // Required empty public constructor
@@ -53,6 +49,20 @@ public class studentgradecalcu extends Fragment {
                 calculateresult();
             }
         });
+
+        btn_clear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                avg_result.setText("Your Average Grade:");
+                numavg.setText("");
+                rightValue = "";
+                leftValue = "";
+                resultsavg = 0;
+                runningnumber = "";
+                currentoperations = null;
+            }
+        });
+
 
         return view;
     }
@@ -78,7 +88,7 @@ public class studentgradecalcu extends Fragment {
         btn_4 = (Button) view.findViewById(R.id.btn_four);
         btn_5 = (Button) view.findViewById(R.id.btn_5);
         btn_clear = (Button) view.findViewById(R.id.calc_btn_clear);
-        btn_calc_avg = (ImageView) view.findViewById(R.id.btn_calc_avg);
+        btn_calc_avg_me = (ImageButton) view.findViewById(R.id.btn_calc_avg_me);
 
         numavg.setInputType(InputType.TYPE_CLASS_NUMBER);
         cp.setInputType(InputType.TYPE_CLASS_NUMBER);
@@ -175,23 +185,17 @@ public class studentgradecalcu extends Fragment {
             }
         });
 
-        btn_clear.setOnClickListener(new View.OnClickListener() {
+        btn_calc_avg_me.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                avg_result.setText("");
-                numavg.setText("");
-                rightValue = "";
-                leftValue = "";
-                resultsavg = 0;
-                runningnumber = "";
-                currentoperations = null;
-            }
-        });
+                ahoy = numavg.getText().toString();
 
-        btn_calc_avg.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+                myfuckingresult = resultsavg / Double.parseDouble(ahoy);
+                xresult = df.format(myfuckingresult);
 
+                avg_result.setText(xresult);
+
+                Toast.makeText(getContext(), xresult, Toast.LENGTH_SHORT);
             }
         });
     }
@@ -204,7 +208,7 @@ public class studentgradecalcu extends Fragment {
     private void calculateresult() {
 
         if (cp.getText().toString().matches("") | exam.getText().toString().matches("")) {
-            Toast.makeText(getActivity(), "Complete the Value", Toast.LENGTH_LONG).show();
+            Toast.makeText(getActivity(), "Complete the Value", Toast.LENGTH_SHORT).show();
         } else {
             icp = Double.parseDouble(cp.getText().toString());
             iexam = Double.parseDouble(exam.getText().toString());
@@ -217,19 +221,22 @@ public class studentgradecalcu extends Fragment {
     }
 
     private void processOperation(Operations operations) {
-        ahoy = numavg.getText().toString();
+
 
         if (currentoperations != null) {
             if (runningnumber != "") {
                 rightValue = runningnumber;
                 runningnumber = "";
 
+
                 switch (currentoperations) {
                     case ADD:
+
                         resultsavg = Double.parseDouble(leftValue) + Double.parseDouble(rightValue);
+                        xresult = df.format(resultsavg);
                         break;
                 }
-                leftValue = String.valueOf(resultsavg);
+                leftValue = String.valueOf(xresult);
                 avg_result.setText(leftValue);
             }
         } else {
@@ -240,7 +247,7 @@ public class studentgradecalcu extends Fragment {
     }
 
     private enum Operations {
-        ADD, AVG
+        ADD
     }
 
 

@@ -88,10 +88,10 @@ public class memo extends Fragment {
 
     private void add_memo() {
         if (et_gomemo.getText().toString().trim().matches("")) {
-            Toast.makeText(getActivity().getApplicationContext(), "Are you really adding a memo? I'm empty you know! " + ("\ud83d\ude12"), Toast.LENGTH_LONG).show();
+            Toast.makeText(getActivity().getApplicationContext(), "Are you really adding a memo? I'm empty you know! " + ("\ud83d\ude12"), Toast.LENGTH_SHORT).show();
         } else {
             myDB.insertingmemo(et_gomemo.getText().toString().trim());
-            Toast.makeText(getActivity().getApplicationContext(), "Noted! " + ("\ud83d\ude06"), Toast.LENGTH_LONG).show();
+            Toast.makeText(getActivity().getApplicationContext(), "Noted! " + ("\ud83d\ude06"), Toast.LENGTH_SHORT).show();
             et_gomemo.setText("");
             get_data();
         }
@@ -101,11 +101,11 @@ public class memo extends Fragment {
         Integer deletedRows = myDB.delete_memo(et_gomemo.getText().toString());
 
         if (et_gomemo.getText().toString().trim().matches("")) {
-            Toast.makeText(getContext(), "I'm empty, Please fill me. " + ("\ud83d\ude22"), Toast.LENGTH_LONG).show();
+            Toast.makeText(getContext(), "I'm empty, Please fill me. " + ("\ud83d\ude22"), Toast.LENGTH_SHORT).show();
         } else {
             if (deletedRows > 0) {
 
-                Toast.makeText(getContext(), "Memo Deleted! " + ("\ud83d\ude22"), Toast.LENGTH_LONG).show();
+                Toast.makeText(getContext(), "Memo Deleted! " + ("\ud83d\ude22"), Toast.LENGTH_SHORT).show();
                 et_gomemo.setText("");
                 get_data();
 
@@ -120,7 +120,7 @@ public class memo extends Fragment {
 
 
         if (cursor.getCount() <= 0) {
-            Toast.makeText(getActivity(), "No Memo Found. " + ("\ud83d\ude1e"), Toast.LENGTH_LONG).show();
+            Toast.makeText(getActivity(), "No Memo Found. " + ("\ud83d\ude1e"), Toast.LENGTH_SHORT).show();
             gv_memolist.setAdapter(null);
 
         } else {
