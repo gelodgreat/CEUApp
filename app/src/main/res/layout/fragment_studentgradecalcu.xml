@@ -25,7 +25,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginTop="10dp"
                     android:gravity="center"
-                    android:text="CP"
+                    android:text="CP Grade"
                     android:textSize="25dp" />
 
                 <EditText
@@ -34,6 +34,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/eg_lbl1"
                     android:gravity="center"
+                    android:hint="CP Grade"
                     android:textSize="20dp" />
 
                 <TextView
@@ -42,7 +43,7 @@
                     android:layout_height="match_parent"
                     android:layout_below="@id/et_cp1"
                     android:gravity="center"
-                    android:text="Exam"
+                    android:text="Exam Grade"
                     android:textSize="25dp" />
 
                 <EditText
@@ -51,6 +52,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/eg_lbl2"
                     android:gravity="center"
+                    android:hint="Exam Grade"
                     android:textSize="20dp" />
 
                 <Button
@@ -76,6 +78,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="10dp"
                 android:layout_below="@+id/rl1">
@@ -105,14 +108,16 @@
                             android:gravity="center"
                             android:layout_marginTop="20dp"
                             android:text="Your Average Grade:"
-                            android:textSize="20dp" />
+                            android:textSize="25dp" />
 
-                        <Spinner
-                            android:id="@+id/spinner_subjs"
+                        <EditText
+                            android:id="@+id/tv_numavg"
                             android:layout_width="match_parent"
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:layout_below="@+id/tv_results"
-                            android:gravity="center"></Spinner>
+                            android:hint="Input your total subjects"
+                            android:gravity="center"
+                            android:textSize="20dp" />
                     </RelativeLayout>
                 </LinearLayout>
 
@@ -247,57 +252,12 @@
                             android:text="3.0" />
 
                         <Button
-                            android:id="@+id/btn_325"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_toRightOf="@id/btn_three"
-                            android:background="@color/colorPrimary"
-                            android:textColor="#fff"
-                            android:textSize="20dp"
-                            android:text="3.25" />
-
-                        <Button
-                            android:id="@+id/btn_35"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_toRightOf="@id/btn_325"
-                            android:background="@color/colorPrimary"
-                            android:textColor="#fff"
-                            android:textSize="20dp"
-                            android:text="3.5" />
-
-                        <Button
-                            android:id="@+id/btn_375"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_toRightOf="@id/btn_35"
-                            android:background="@color/colorPrimary"
-                            android:textColor="#fff"
-                            android:textSize="20dp"
-                            android:text="3.75" />
-                    </RelativeLayout>
-
-
-                </LinearLayout>
-
-
-                <LinearLayout
-                    android:id="@+id/ll5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/ll4"
-                    android:layout_marginTop="10dp">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <Button
                             android:id="@+id/btn_four"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:background="@color/colorPrimary"
                             android:textColor="#fff"
+                            android:layout_toRightOf="@+id/btn_three"
                             android:textSize="20dp"
                             android:text="4.0" />
 
@@ -311,43 +271,25 @@
                             android:textSize="20dp"
                             android:text="5.0" />
 
-
-                        <Button
-                            android:id="@+id/calc_btn_add"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_toRightOf="@id/btn_5"
-                            android:background="@color/colorPrimary"
-                            android:textColor="#fff"
-                            android:textSize="20dp"
-                            android:text="+" />
-
                         <ImageView
                             android:layout_width="wrap_content"
+                            android:id="@+id/btn_calc_avg"
                             android:layout_height="50dp"
                             android:src="@drawable/equal"
-                            android:layout_toRightOf="@id/calc_btn_add" />
+                            android:layout_toRightOf="@id/btn_5" />
 
-                        <!--<Button-->
-                        <!--android:id="@+id/calc_btn_equals"-->
-                        <!--android:layout_width="wrap_content"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:layout_toRightOf="@id/calc_btn_add"-->
-                        <!--android:background="@color/colorPrimary"-->
-                        <!--android:textColor="#fff"-->
-                        <!--android:text="=" />-->
 
                     </RelativeLayout>
-
 
                 </LinearLayout>
 
 
+
                 <LinearLayout
-                    android:id="@+id/ll6"
+                    android:id="@+id/ll5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/ll5"
+                    android:layout_below="@id/ll4"
                     android:layout_marginTop="10dp">
 
                     <RelativeLayout
