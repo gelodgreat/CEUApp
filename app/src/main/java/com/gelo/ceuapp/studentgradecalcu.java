@@ -30,7 +30,7 @@ public class studentgradecalcu extends Fragment {
     double resultsavg = 0;
     private ImageButton btn_calc_avg_me;
     private EditText cp, exam, numavg;
-    private Button btn_calc, btn_1, btn_125, btn_15, btn_175, btn_2, btn_225, btn_25, btn_275, btn_3, btn_4, btn_5, btn_clear, btn_clearonegrade;
+    private Button btn_calc, btn_1, btn_125, btn_15, btn_175, btn_2, btn_225, btn_25, btn_275, btn_3, btn_35, btn_4, btn_5, btn_clear, btn_clearonegrade;
     private TextView ttl, avg_result;
 
     public studentgradecalcu() {
@@ -109,6 +109,7 @@ public class studentgradecalcu extends Fragment {
         btn_25.setEnabled(false);
         btn_275.setEnabled(false);
         btn_3.setEnabled(false);
+        btn_35.setEnabled(false);
         btn_4.setEnabled(false);
         btn_5.setEnabled(false);
     }
@@ -123,6 +124,7 @@ public class studentgradecalcu extends Fragment {
         btn_25.setEnabled(true);
         btn_275.setEnabled(true);
         btn_3.setEnabled(true);
+        btn_35.setEnabled(true);
         btn_4.setEnabled(true);
         btn_5.setEnabled(true);
     }
@@ -145,6 +147,7 @@ public class studentgradecalcu extends Fragment {
         btn_25 = (Button) view.findViewById(R.id.btn_25);
         btn_275 = (Button) view.findViewById(R.id.btn_275);
         btn_3 = (Button) view.findViewById(R.id.btn_three);
+        btn_35 = (Button) view.findViewById(R.id.btn_35);
         btn_4 = (Button) view.findViewById(R.id.btn_four);
         btn_5 = (Button) view.findViewById(R.id.btn_5);
         btn_clearonegrade = (Button) view.findViewById(R.id.btn_clearonegrade);
@@ -233,6 +236,14 @@ public class studentgradecalcu extends Fragment {
                 numPressed(3.0);
                 processOperation(Operations.ADD);
 
+            }
+        });
+
+        btn_35.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                numPressed(3.5);
+                processOperation(Operations.ADD);
             }
         });
 
