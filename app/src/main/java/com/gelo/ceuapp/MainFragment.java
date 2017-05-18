@@ -14,11 +14,8 @@ import android.widget.ImageButton;*/
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.drawable.ColorDrawable;
-import android.media.Image;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
-import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -26,12 +23,10 @@ import android.view.SurfaceView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.google.android.gms.ads.InterstitialAd;
@@ -44,16 +39,9 @@ public class MainFragment extends Fragment {
     public static SurfaceView suv;
     public static EditText retainn;
     private static AutoCompleteTextView search;
-    private static FloatingActionButton fab_plus;
-    private static FloatingActionButton fab_faq;
     private final String[] Building_List = {"CAH", "CDL", "Chapel", "DCTH", "Dent Sci", "FFH", "FGH", "FSH", "GDLSC", "ISC", "LAH", "MVH", "North Quadrangle", "PHLH", "SAC", "SDVH", "Tech Center", "Academic Affairs Office", "Library Department", "Probe Room", "Masscomm, Laboratory Rooms", "Social Sciences Department", "Filipino Department", "Social Arts and Humanities Department", "Campus Ministry", "International Languages Department", "Teaching and Learning Technology Department (TLTD)", "Multimedia Instruction Room (MIR)", "School of Education-Libreral Arts-Music-Social Work", "Music Rooms", "Tiongco Recital Hall", "Social Work Case Conference Room", "Human Resource Department", "Non-Teaching Employee's Lounge", "Cafeteria", "Librada Avelino Auditorium", "Clinical Laboratory", "Health Services Department", "SDV Lanai and Friendship Areas", "Diagnostic Center-Radiology Section", "Graduate School", "Marketing Communications Department", "Guidance and Counseling Department", "Psychology Laboratory", "Social Arts Laboratories", "Speech Laboratory", "Auxilliary Services Department (MATPRO)", "Cash Department", "Chapel/Adoration Chapel", "Chaplain's Office", "Executive Meeting Room", "Executive Vice President's Office", "Professional and Continuing Education Office", "Office of the Corporate Secretary", "President's Office", "Security Department", "SRMD (Registrar's Office)", "Treasurer's Office", "Uniform Section", "Meeting Room", "Biological Science Department", "University Publications", "Museum", "Physical Science Department", "LAH Seminar Rooms 1,2 and 3", "Nursing Arts Laboratories", "Pharmacare Laboratory", "Alumni Relations Department", "Audit Department", "Study Area", "Food Booths", "School of Nutrition and Hospitality Management", "Lecture or Demo Room", "Food Laboratories", "Linen and Laundry Room", "Hotel Suite", "Science Laboratory Rooms", "Extramurals Athletic Coordinator", "Gymnasium", "CEU Consumers Cooperative", "Bulwagang Maestra Osang", "Manufacturing Laboratory (Pharmacy)", "Vision and Eye Care Center", "College of Nursing", "College of Optometry", "Optometry Junior's Clinic", "Nursing Arts Laboratory", "College of Medical Technology", "Computer Laboratories", "ISC Canteen", "Travel Bureau", "Friend's Cafe", "ISC Mezzanine Function Rooms", "I.D. Section", "Management Information System Department", "Computer Education Department", "Information and Communication Technology Department", "School of Dentistry", "Laboratory Rooms", "School of Science and Technology", "Mathematics Department", "Psychology Department", "Gym and Fitness Room", "P.E. Department", "Swimming Pool", "Dental Clinics", "Food Booths", "M.S. Periodontics Clinic", "M.S. Orthodontics Clinic", "Simulations Rooms", "CEU-FAWU Office", "Baking Room and Cold Kitchen", "Food Laboratories", "Physical Plant and Facilities Department", "Student Organizations Center", "Science Laboratory Rooms", "Student Affairs Office", "University Council Office", "Community Outreach Department", "DCTH Canteen", "Property Department", "School of Accountancy and Management", "Market Research and Bank Simulation Room", "Quality and Productivity Rooms", "Accounting Laboratory", "Lecture Hall", "FFH Assembly Hall",};
-    InterstitialAd mInterstitialAd;
 
-    private Animation fabopen;
-    private Animation fabclose;
-    private Animation fabclockwise;
-    private Animation fabcounterclockwise;
-    private boolean isOpen = false;
+    InterstitialAd mInterstitialAd;
     private InterstitialAd interstitial;
 
 
@@ -131,41 +119,6 @@ public class MainFragment extends Fragment {
             }
         });
 
-        fab_plus = (FloatingActionButton) view.findViewById(R.id.fab_plus);
-        fab_faq = (FloatingActionButton) view.findViewById(R.id.fab_faq);
-        fabopen = AnimationUtils.loadAnimation(getContext().getApplicationContext(), R.anim.fab_open);
-        fabclose = AnimationUtils.loadAnimation(getContext().getApplicationContext(), R.anim.fab_close);
-        fabclockwise = AnimationUtils.loadAnimation(getContext().getApplicationContext(), R.anim.rotateclockwise);
-        fabcounterclockwise = AnimationUtils.loadAnimation(getContext().getApplicationContext(), R.anim.rotatecounterclockwise);
-
-
-        fab_plus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (isOpen) {
-                    fab_faq.startAnimation(fabclose);
-                    fab_plus.startAnimation(fabcounterclockwise);
-                    fab_faq.setClickable(false);
-                    fab_plus.setClickable(true);
-                    isOpen = false;
-
-                } else {
-                    fab_faq.startAnimation(fabopen);
-                    fab_plus.startAnimation(fabclockwise);
-                    fab_faq.setClickable(true);
-                    fab_plus.setClickable(true);
-                    isOpen = true;
-                }
-            }
-        });
-
-        fab_faq.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent("com.gelo.ceuapp.othertransac");
-                startActivity(intent);
-            }
-        });
 
         search = (AutoCompleteTextView) view.findViewById(R.id.actvd);
         Button search_btn = (Button) view.findViewById(R.id.btn_search);

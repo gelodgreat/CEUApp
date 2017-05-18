@@ -6,122 +6,70 @@
     tools:context="com.gelo.ceuapp.MainFragment">
 
 
-    <ScrollView
+    <EditText
+        android:id="@+id/et_search2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:id="@+id/ll2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <AutoCompleteTextView
+            android:id="@+id/actvd"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:hint="Search: Buildings or Department"
+            android:textSize="40dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll2"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:id="@+id/btn_search"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:textSize="40dp"
+            android:background="@color/colorPrimary"
+            android:text="Search"
+            android:textColor="#fff" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_aboutt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:visibility="invisible" />
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fillViewport="true">
+        android:layout_below="@id/llx">
 
-        <LinearLayout
+        <ImageView
+            android:id="@+id/img_themap"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="the map"
+            android:src="@drawable/campus_map_v3" />
 
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <LinearLayout
-                    android:id="@+id/main_rl"
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp">
-
-                    <android.support.design.widget.CoordinatorLayout xmlns:app="http://schemas.android.com/apk/res-auto"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp">
-
-                            <android.support.design.widget.FloatingActionButton
-                                android:id="@+id/fab_plus"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:src="@drawable/ic_action_plus"
-                                app:backgroundTint="@color/colorPrimaryDark" />
-
-                            <android.support.design.widget.FloatingActionButton
-                                android:id="@+id/fab_faq"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_marginLeft="5dp"
-                                android:layout_toRightOf="@id/fab_plus"
-                                android:src="@drawable/ic_faq"
-                                android:visibility="invisible"
-                                app:backgroundTint="#2196F3" />
-
-                        </RelativeLayout>
-                    </android.support.design.widget.CoordinatorLayout>
-                </LinearLayout>
-
-
-                <LinearLayout
-                    android:id="@+id/ll2"
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:layout_below="@+id/main_rl"
-                    android:layout_marginTop="20dp">
-
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent">
-
-                        <AutoCompleteTextView
-                            android:id="@+id/actvd"
-                            android:layout_width="match_parent"
-                            android:layout_height="100dp"
-                            android:hint="Search: Buildings or Department"
-                            android:textSize="30dp" />
-
-                        <Button
-                            android:id="@+id/btn_search"
-                            android:layout_width="match_parent"
-                            android:layout_height="100dp"
-                            android:layout_below="@id/actvd"
-                            android:background="@color/colorPrimary"
-                            android:text="Search"
-                            android:textColor="#fff" />
-                    </RelativeLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-                    android:layout_below="@id/ll2">
-
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-
-                        <ImageView
-                            android:id="@+id/img_themap"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:src="@drawable/campus_map_v3" />
-
-                    </RelativeLayout>
-                </LinearLayout>
-
-
-                <EditText
-                    android:id="@+id/et_search2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:enabled="false"
-                    android:visibility="invisible" />
-
-                <EditText
-                    android:id="@+id/et_aboutt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:enabled="false"
-                    android:visibility="invisible" />
-
-            </RelativeLayout>
-        </LinearLayout>
-    </ScrollView>
+    </LinearLayout>
 
 
 </RelativeLayout>
