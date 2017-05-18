@@ -46,7 +46,7 @@ public class studentgradecalcu extends Fragment {
         load_clicks(view);
         buttonconditions();
         changesonnumavg();
-
+        showmytips();
         btn_calc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -324,10 +324,21 @@ public class studentgradecalcu extends Fragment {
         }
     }
 
+    private void showmytips() {
+        StringBuilder builder = new StringBuilder();
+        builder.append("1. If you want to calculate only your 'Grade' and 'CP' use the top functions.\n").append("\n");
+        builder.append("2. If you want to calculate your average grade use the bottom part calculations.\n").append("\n");
+        builder.append("3. In using the bottom part, First you need to input your total subjects that needed to be computed\n").append("\n");
+        builder.append("4. After that you may now click your grades to be computed.");
+        showMessage("Calculator Tips", builder.toString());
+    }
+
+
     private void showMessage(String title, String message) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
         builder.setCancelable(true);
         builder.setTitle(title);
+
         builder.setMessage(message);
         builder.show();
 
