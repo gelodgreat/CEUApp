@@ -75,6 +75,7 @@ public class studentgradecalcu extends Fragment {
                 cp.setText("");
                 exam.setText("");
                 ttl.setText("Your Computed Grade");
+                cp.requestFocus();
             }
         });
 
