@@ -17,8 +17,7 @@
             <RelativeLayout
                 android:id="@+id/rl1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="20dp">
+                android:layout_height="match_parent">
 
                 <TextView
                     android:id="@+id/tv_calc_grade"
@@ -59,8 +58,8 @@
                     android:layout_marginTop="10dp"
                     android:background="@color/colorPrimary"
                     android:text="Calculate Grade"
-                    android:textColor="#fff"
-                    android:textSize="30dp" />
+                    android:textSize="30dp"
+                    android:textColor="#fff" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -72,13 +71,13 @@
                         android:id="@+id/ttl_res"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_alignParentStart="true"
                         android:background="@color/colorPrimary"
                         android:gravity="center"
                         android:text="Your Computed Grade"
                         android:textColor="#fff"
-                        android:textSize="30dp" />
+                        android:textSize="30dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentStart="true" />
                 </LinearLayout>
 
 
@@ -89,7 +88,7 @@
                 android:layout_height="match_parent"
                 android:layout_below="@+id/rl1"
 
-                android:layout_marginTop="20dp">
+                android:layout_marginTop="15dp">
 
                 <LinearLayout
                     android:id="@+id/ll1"
@@ -135,39 +134,32 @@
 
                 <LinearLayout
                     android:id="@+id/ll0"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
 
                     android:layout_alignParentRight="true"
-                    android:layout_below="@+id/ll1">
+                    android:layout_below="@+id/ll1"
+                    android:weightSum="3">
 
-
-                    <ImageButton
-                        android:id="@+id/btn_calc_avg_me"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:background="@null"
-                        android:src="@drawable/equal" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/llcontainer"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/ll0">
 
                     <EditText
                         android:id="@+id/tv_numavg"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/llinner1"
+                        android:layout_gravity="center"
                         android:layout_marginTop="5dp"
-                        android:layout_weight="1"
-                        android:gravity="center"
+                        android:layout_weight="2.75"
                         android:hint="Input your total subjects"
-                        android:textSize="30dp" />
+                        android:textSize="20dp" />
+
+                    <ImageButton
+                        android:id="@+id/btn_calc_avg_me"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".25"
+                        android:background="@null"
+                        android:src="@drawable/equal" />
 
                 </LinearLayout>
 
@@ -175,7 +167,7 @@
                     android:id="@+id/ll2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/llcontainer"
+                    android:layout_below="@+id/ll0"
                     android:layout_marginTop="10dp"
                     android:weightSum="4">
 
