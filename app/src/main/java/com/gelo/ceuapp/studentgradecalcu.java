@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,7 +30,6 @@ public class studentgradecalcu extends Fragment {
     int clickcounter = 0;
     String clickcountertest = "";
     int bb;
-    private ImageButton btn_calc_avg_me;
     private EditText cp, exam, numavg;
     private Button btn_calc, btn_1, btn_125, btn_15, btn_175, btn_2, btn_225, btn_25, btn_275, btn_3, btn_35, btn_4, btn_5, btn_clear, btn_clearonegrade;
     private TextView ttl, avg_result;
@@ -61,15 +59,7 @@ public class studentgradecalcu extends Fragment {
         btn_clear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                avg_result.setText("Your Average Grade:");
-                numavg.setText("");
-                rightValue = "";
-                leftValue = "";
-                resultsavg = 0;
-                runningnumber = "";
-                currentoperations = null;
-                buttonconditions();
-                clickcounter = 0;
+                clearavg();
             }
         });
 
@@ -114,6 +104,10 @@ public class studentgradecalcu extends Fragment {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
                 buttonconditions();
+                if (numavg.getText().toString().matches("")) {
+                    clearavg();
+                }
+
                 return false;
             }
         });
@@ -172,9 +166,20 @@ public class studentgradecalcu extends Fragment {
         btn_5 = (Button) view.findViewById(R.id.btn_5);
         btn_clearonegrade = (Button) view.findViewById(R.id.btn_clearonegrade);
         btn_clear = (Button) view.findViewById(R.id.calc_btn_clear);
-        btn_calc_avg_me = (ImageButton) view.findViewById(R.id.btn_calc_avg_me);
 
 
+    }
+
+    private void clearavg() {
+        avg_result.setText("Your Average Grade:");
+        numavg.setText("");
+        rightValue = "";
+        leftValue = "";
+        resultsavg = 0;
+        runningnumber = "";
+        currentoperations = null;
+        buttonconditions();
+        clickcounter = 0;
     }
 
     private void load_clicks(View view) {
@@ -311,12 +316,6 @@ public class studentgradecalcu extends Fragment {
         });
 
 
-        btn_calc_avg_me.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                calc_avg_meeeee();
-            }
-        });
     }
 
     private void calc_avg_meeeee() {
@@ -331,7 +330,7 @@ public class studentgradecalcu extends Fragment {
 
                 myfuckingresult = resultsavg / Double.parseDouble(ahoy);
                 xresult = df.format(myfuckingresult);
-                avg_result.setText(xresult);
+                avg_result.setText("Your Average Grade is: " + xresult);
 
                 Toast.makeText(getContext(), xresult, Toast.LENGTH_SHORT);
             }
@@ -403,7 +402,8 @@ public class studentgradecalcu extends Fragment {
         builder.append("1. If you want to calculate only your 'Grade' and 'CP' use the top functions.\n").append("\n");
         builder.append("2. If you want to calculate your average grade use the bottom part calculations.\n").append("\n");
         builder.append("3. In using the bottom part, First you need to input your total subjects that needed to be computed\n").append("\n");
-        builder.append("4. After that you may now click your grades to be computed.");
+        builder.append("4. After that you may now click your grades to be computed.").append("\n");
+        builder.append("5. After you calculate your average grade click 'CLEAR' button to reset the values.");
         showMessage("Calculator Tips", builder.toString());
     }
 
