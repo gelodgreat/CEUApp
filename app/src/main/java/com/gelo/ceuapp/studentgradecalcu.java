@@ -2,7 +2,9 @@ package com.gelo.ceuapp;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.text.InputType;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,6 +44,8 @@ public class studentgradecalcu extends Fragment {
 
         init(view);
         load_clicks(view);
+        buttonconditions();
+        changesonnumavg();
 
         btn_calc.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,11 +64,58 @@ public class studentgradecalcu extends Fragment {
                 resultsavg = 0;
                 runningnumber = "";
                 currentoperations = null;
+                buttonconditions();
             }
         });
 
 
         return view;
+    }
+
+    private void buttonconditions() {
+        if (numavg.getText().toString().matches("")) {
+            buttonsdisabled();
+        } else {
+            buttonsenabled();
+        }
+    }
+
+    private void changesonnumavg() {
+        numavg.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                buttonconditions();
+                return false;
+            }
+        });
+    }
+
+    private void buttonsdisabled() {
+        btn_1.setEnabled(false);
+        btn_125.setEnabled(false);
+        btn_15.setEnabled(false);
+        btn_175.setEnabled(false);
+        btn_2.setEnabled(false);
+        btn_225.setEnabled(false);
+        btn_25.setEnabled(false);
+        btn_275.setEnabled(false);
+        btn_3.setEnabled(false);
+        btn_4.setEnabled(false);
+        btn_5.setEnabled(false);
+    }
+
+    private void buttonsenabled() {
+        btn_1.setEnabled(true);
+        btn_125.setEnabled(true);
+        btn_15.setEnabled(true);
+        btn_175.setEnabled(true);
+        btn_2.setEnabled(true);
+        btn_225.setEnabled(true);
+        btn_25.setEnabled(true);
+        btn_275.setEnabled(true);
+        btn_3.setEnabled(true);
+        btn_4.setEnabled(true);
+        btn_5.setEnabled(true);
     }
 
     private void init(View view) {
@@ -102,6 +153,7 @@ public class studentgradecalcu extends Fragment {
             public void onClick(View v) {
                 numPressed(1.0);
                 processOperation(Operations.ADD);
+
             }
         });
 
@@ -110,6 +162,7 @@ public class studentgradecalcu extends Fragment {
             public void onClick(View v) {
                 numPressed(1.25);
                 processOperation(Operations.ADD);
+
             }
         });
 
@@ -118,6 +171,7 @@ public class studentgradecalcu extends Fragment {
             public void onClick(View v) {
                 numPressed(1.5);
                 processOperation(Operations.ADD);
+
             }
         });
 
@@ -126,6 +180,7 @@ public class studentgradecalcu extends Fragment {
             public void onClick(View v) {
                 numPressed(1.75);
                 processOperation(Operations.ADD);
+
             }
         });
 
@@ -134,6 +189,7 @@ public class studentgradecalcu extends Fragment {
             public void onClick(View v) {
                 numPressed(2.0);
                 processOperation(Operations.ADD);
+
             }
         });
 
@@ -142,6 +198,7 @@ public class studentgradecalcu extends Fragment {
             public void onClick(View v) {
                 numPressed(2.25);
                 processOperation(Operations.ADD);
+
             }
         });
 
@@ -150,6 +207,7 @@ public class studentgradecalcu extends Fragment {
             public void onClick(View v) {
                 numPressed(2.5);
                 processOperation(Operations.ADD);
+
             }
         });
 
@@ -158,6 +216,7 @@ public class studentgradecalcu extends Fragment {
             public void onClick(View v) {
                 numPressed(2.75);
                 processOperation(Operations.ADD);
+
             }
         });
 
@@ -166,6 +225,7 @@ public class studentgradecalcu extends Fragment {
             public void onClick(View v) {
                 numPressed(3.0);
                 processOperation(Operations.ADD);
+
             }
         });
 
@@ -174,6 +234,7 @@ public class studentgradecalcu extends Fragment {
             public void onClick(View v) {
                 numPressed(4.0);
                 processOperation(Operations.ADD);
+
             }
         });
 
@@ -182,20 +243,27 @@ public class studentgradecalcu extends Fragment {
             public void onClick(View v) {
                 numPressed(5.0);
                 processOperation(Operations.ADD);
+
             }
         });
 
         btn_calc_avg_me.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ahoy = numavg.getText().toString();
 
-                myfuckingresult = resultsavg / Double.parseDouble(ahoy);
-                xresult = df.format(myfuckingresult);
+                try {
 
-                avg_result.setText(xresult);
+                    ahoy = numavg.getText().toString();
 
-                Toast.makeText(getContext(), xresult, Toast.LENGTH_SHORT);
+                    myfuckingresult = resultsavg / Double.parseDouble(ahoy);
+                    xresult = df.format(myfuckingresult);
+                    avg_result.setText(xresult);
+
+                    Toast.makeText(getContext(), xresult, Toast.LENGTH_SHORT);
+
+                } catch (Exception ex) {
+                    showMessage("Error", ex.toString());
+                }
             }
         });
     }
@@ -207,48 +275,66 @@ public class studentgradecalcu extends Fragment {
 
     private void calculateresult() {
 
-        if (cp.getText().toString().matches("") | exam.getText().toString().matches("")) {
-            Toast.makeText(getActivity(), "Complete the Value", Toast.LENGTH_SHORT).show();
-        } else {
-            icp = Double.parseDouble(cp.getText().toString());
-            iexam = Double.parseDouble(exam.getText().toString());
+        try {
 
-            Double result = mm.calc(icp, iexam);
+            if (cp.getText().toString().matches("") | exam.getText().toString().matches("")) {
+                Toast.makeText(getActivity(), "Complete the Value", Toast.LENGTH_SHORT).show();
+            } else {
+                icp = Double.parseDouble(cp.getText().toString());
+                iexam = Double.parseDouble(exam.getText().toString());
 
-            String xresult = df.format(result);
-            ttl.setText("Your Grade is: " + xresult);
+                Double result = mm.calc(icp, iexam);
+
+                String xresult = df.format(result);
+                ttl.setText("Your Grade is: " + xresult);
+            }
+        } catch (Exception ex) {
+            showMessage("Error", ex.toString());
         }
     }
+
 
     private void processOperation(Operations operations) {
 
+        try {
 
-        if (currentoperations != null) {
-            if (runningnumber != "") {
-                rightValue = runningnumber;
-                runningnumber = "";
+            if (currentoperations != null) {
+                if (runningnumber != "") {
+                    rightValue = runningnumber;
+                    runningnumber = "";
 
 
-                switch (currentoperations) {
-                    case ADD:
+                    switch (currentoperations) {
+                        case ADD:
 
-                        resultsavg = Double.parseDouble(leftValue) + Double.parseDouble(rightValue);
-                        xresult = df.format(resultsavg);
-                        break;
+                            resultsavg = Double.parseDouble(leftValue) + Double.parseDouble(rightValue);
+                            xresult = df.format(resultsavg);
+                            break;
+                    }
+                    leftValue = String.valueOf(xresult);
+                    avg_result.setText(leftValue);
                 }
-                leftValue = String.valueOf(xresult);
-                avg_result.setText(leftValue);
+            } else {
+                leftValue = runningnumber;
+                runningnumber = "";
             }
-        } else {
-            leftValue = runningnumber;
-            runningnumber = "";
+            currentoperations = operations;
+        } catch (Exception ex) {
+            showMessage("Error", ex.toString());
         }
-        currentoperations = operations;
     }
+
+    private void showMessage(String title, String message) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        builder.setCancelable(true);
+        builder.setTitle(title);
+        builder.setMessage(message);
+        builder.show();
+
+    }
+
 
     private enum Operations {
         ADD
     }
-
-
 }
