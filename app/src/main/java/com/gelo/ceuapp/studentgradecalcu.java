@@ -91,7 +91,7 @@ public class studentgradecalcu extends Fragment {
             bb = Integer.parseInt(numavg.getText().toString());
             clickcountertest = String.valueOf(bb);
             if (clickcounter == bb) {
-                showMessage("Count", clickcountertest);
+                //                showMessage("Count", clickcountertest);
                 buttonsdisabled();
                 calc_avg_meeeee();
             }
