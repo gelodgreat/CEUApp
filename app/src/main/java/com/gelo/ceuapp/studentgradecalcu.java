@@ -28,6 +28,9 @@ public class studentgradecalcu extends Fragment {
     String leftValue = "";
     String rightValue = "";
     double resultsavg = 0;
+    int clickcounter = 0;
+    String clickcountertest = "";
+    int bb;
     private ImageButton btn_calc_avg_me;
     private EditText cp, exam, numavg;
     private Button btn_calc, btn_1, btn_125, btn_15, btn_175, btn_2, btn_225, btn_25, btn_275, btn_3, btn_35, btn_4, btn_5, btn_clear, btn_clearonegrade;
@@ -66,6 +69,7 @@ public class studentgradecalcu extends Fragment {
                 runningnumber = "";
                 currentoperations = null;
                 buttonconditions();
+                clickcounter = 0;
             }
         });
 
@@ -80,6 +84,21 @@ public class studentgradecalcu extends Fragment {
         });
 
         return view;
+    }
+
+    private void test_click_counter() {
+        try {
+            bb = Integer.parseInt(numavg.getText().toString());
+            clickcountertest = String.valueOf(bb);
+            if (clickcounter == bb) {
+                showMessage("Count", clickcountertest);
+                buttonsdisabled();
+                calc_avg_meeeee();
+            }
+        } catch (Exception ex) {
+            showMessage("Error", ex.toString());
+        }
+
     }
 
     private void buttonconditions() {
@@ -164,6 +183,8 @@ public class studentgradecalcu extends Fragment {
             public void onClick(View v) {
                 numPressed(1.0);
                 processOperation(Operations.ADD);
+                clickcounter = clickcounter + 1;
+                test_click_counter();
 
             }
         });
@@ -173,6 +194,8 @@ public class studentgradecalcu extends Fragment {
             public void onClick(View v) {
                 numPressed(1.25);
                 processOperation(Operations.ADD);
+                clickcounter = clickcounter + 1;
+                test_click_counter();
 
             }
         });
@@ -182,6 +205,8 @@ public class studentgradecalcu extends Fragment {
             public void onClick(View v) {
                 numPressed(1.5);
                 processOperation(Operations.ADD);
+                clickcounter = clickcounter + 1;
+                test_click_counter();
 
             }
         });
@@ -191,6 +216,8 @@ public class studentgradecalcu extends Fragment {
             public void onClick(View v) {
                 numPressed(1.75);
                 processOperation(Operations.ADD);
+                clickcounter = clickcounter + 1;
+                test_click_counter();
 
             }
         });
@@ -200,6 +227,8 @@ public class studentgradecalcu extends Fragment {
             public void onClick(View v) {
                 numPressed(2.0);
                 processOperation(Operations.ADD);
+                clickcounter = clickcounter + 1;
+                test_click_counter();
 
             }
         });
@@ -209,6 +238,8 @@ public class studentgradecalcu extends Fragment {
             public void onClick(View v) {
                 numPressed(2.25);
                 processOperation(Operations.ADD);
+                clickcounter = clickcounter + 1;
+                test_click_counter();
 
             }
         });
@@ -218,6 +249,8 @@ public class studentgradecalcu extends Fragment {
             public void onClick(View v) {
                 numPressed(2.5);
                 processOperation(Operations.ADD);
+                clickcounter = clickcounter + 1;
+                test_click_counter();
 
             }
         });
@@ -227,6 +260,8 @@ public class studentgradecalcu extends Fragment {
             public void onClick(View v) {
                 numPressed(2.75);
                 processOperation(Operations.ADD);
+                clickcounter = clickcounter + 1;
+                test_click_counter();
 
             }
         });
@@ -236,6 +271,8 @@ public class studentgradecalcu extends Fragment {
             public void onClick(View v) {
                 numPressed(3.0);
                 processOperation(Operations.ADD);
+                clickcounter = clickcounter + 1;
+                test_click_counter();
 
             }
         });
@@ -245,6 +282,9 @@ public class studentgradecalcu extends Fragment {
             public void onClick(View v) {
                 numPressed(3.5);
                 processOperation(Operations.ADD);
+                clickcounter = clickcounter + 1;
+                test_click_counter();
+
             }
         });
 
@@ -253,6 +293,8 @@ public class studentgradecalcu extends Fragment {
             public void onClick(View v) {
                 numPressed(4.0);
                 processOperation(Operations.ADD);
+                clickcounter = clickcounter + 1;
+                test_click_counter();
 
             }
         });
@@ -262,35 +304,42 @@ public class studentgradecalcu extends Fragment {
             public void onClick(View v) {
                 numPressed(5.0);
                 processOperation(Operations.ADD);
+                clickcounter = clickcounter + 1;
+                test_click_counter();
 
             }
         });
+
 
         btn_calc_avg_me.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                try {
-
-                    if (numavg.getText().toString().matches("") | resultsavg == 0) {
-                        Toast.makeText(getContext(), "Please input your total subjects to be computed!", Toast.LENGTH_SHORT).show();
-                    } else {
-
-                        ahoy = numavg.getText().toString();
-
-                        myfuckingresult = resultsavg / Double.parseDouble(ahoy);
-                        xresult = df.format(myfuckingresult);
-                        avg_result.setText(xresult);
-
-                        Toast.makeText(getContext(), xresult, Toast.LENGTH_SHORT);
-                    }
-
-
-                } catch (Exception ex) {
-                    showMessage("Error", ex.toString());
-                }
+                calc_avg_meeeee();
             }
         });
+    }
+
+    private void calc_avg_meeeee() {
+
+        try {
+
+            if (numavg.getText().toString().matches("") | resultsavg == 0) {
+                Toast.makeText(getContext(), "Please input your total subjects to be computed!", Toast.LENGTH_SHORT).show();
+            } else {
+
+                ahoy = numavg.getText().toString();
+
+                myfuckingresult = resultsavg / Double.parseDouble(ahoy);
+                xresult = df.format(myfuckingresult);
+                avg_result.setText(xresult);
+
+                Toast.makeText(getContext(), xresult, Toast.LENGTH_SHORT);
+            }
+
+
+        } catch (Exception ex) {
+            showMessage("Error", ex.toString());
+        }
     }
 
     private void numPressed(double number) {
