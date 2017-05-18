@@ -20,39 +20,34 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/eg_lbl1"
+                    android:id="@+id/tv_calc_grade"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:gravity="center"
-                    android:text="CP Grade"
-                    android:textSize="25dp" />
+                    android:text="Calculate your Grade"
+                    android:textSize="30dp" />
+
 
                 <EditText
                     android:id="@+id/et_cp1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/eg_lbl1"
+                    android:layout_below="@id/tv_calc_grade"
+                    android:layout_marginTop="10dp"
                     android:gravity="center"
-                    android:hint="CP Grade"
+                    android:hint="Input your CP Grade"
                     android:textSize="20dp" />
 
-                <TextView
-                    android:id="@+id/eg_lbl2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_below="@id/et_cp1"
-                    android:gravity="center"
-                    android:text="Exam Grade"
-                    android:textSize="25dp" />
 
                 <EditText
                     android:id="@+id/et_exam1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/eg_lbl2"
+                    android:layout_below="@id/et_cp1"
+                    android:layout_marginTop="10dp"
                     android:gravity="center"
-                    android:hint="Exam Grade"
+                    android:hint="Input your Exam Grade"
                     android:textSize="20dp" />
 
                 <Button
@@ -60,8 +55,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/et_exam1"
-                    android:text="Calculate Grade"
+                    android:layout_marginTop="10dp"
                     android:background="@color/colorPrimary"
+                    android:text="Calculate Grade"
                     android:textColor="#fff" />
 
                 <TextView
@@ -78,10 +74,10 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="15dp"
+                android:layout_below="@+id/rl1"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="10dp"
-                android:layout_below="@+id/rl1">
+                android:layout_marginTop="15dp">
 
                 <LinearLayout
                     android:id="@+id/ll1"
@@ -98,15 +94,15 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="Calculate your Average Grade"
-                            android:textSize="20dp" />
+                            android:textSize="30dp" />
 
                         <TextView
                             android:id="@+id/tv_results"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_below="@+id/non"
-                            android:gravity="center"
                             android:layout_marginTop="20dp"
+                            android:gravity="center"
                             android:text="Your Average Grade:"
                             android:textSize="25dp" />
 
@@ -115,8 +111,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_below="@+id/tv_results"
-                            android:hint="Input your total subjects"
                             android:gravity="center"
+                            android:hint="Input your total subjects"
                             android:textSize="20dp" />
                     </RelativeLayout>
                 </LinearLayout>
@@ -137,9 +133,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:background="@color/colorPrimary"
+                            android:text="1.0"
                             android:textColor="#fff"
-                            android:textSize="20dp"
-                            android:text="1.0" />
+                            android:textSize="20dp" />
 
                         <Button
                             android:id="@+id/btn_125"
@@ -147,9 +143,9 @@
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/btn_one"
                             android:background="@color/colorPrimary"
+                            android:text="1.25"
                             android:textColor="#fff"
-                            android:textSize="20dp"
-                            android:text="1.25" />
+                            android:textSize="20dp" />
 
                         <Button
                             android:id="@+id/btn_15"
@@ -157,9 +153,9 @@
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/btn_125"
                             android:background="@color/colorPrimary"
+                            android:text="1.5"
                             android:textColor="#fff"
-                            android:textSize="20dp"
-                            android:text="1.5" />
+                            android:textSize="20dp" />
 
                         <Button
                             android:id="@+id/btn_175"
@@ -167,9 +163,9 @@
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/btn_15"
                             android:background="@color/colorPrimary"
+                            android:text="1.75"
                             android:textColor="#fff"
-                            android:textSize="20dp"
-                            android:text="1.75" />
+                            android:textSize="20dp" />
                     </RelativeLayout>
 
 
@@ -192,9 +188,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:background="@color/colorPrimary"
+                            android:text="2.0"
                             android:textColor="#fff"
-                            android:textSize="20dp"
-                            android:text="2.0" />
+                            android:textSize="20dp" />
 
                         <Button
                             android:id="@+id/btn_225"
@@ -202,9 +198,9 @@
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/btn_two"
                             android:background="@color/colorPrimary"
+                            android:text="2.25"
                             android:textColor="#fff"
-                            android:textSize="20dp"
-                            android:text="2.25" />
+                            android:textSize="20dp" />
 
                         <Button
                             android:id="@+id/btn_25"
@@ -212,9 +208,9 @@
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/btn_225"
                             android:background="@color/colorPrimary"
+                            android:text="2.5"
                             android:textColor="#fff"
-                            android:textSize="20dp"
-                            android:text="2.5" />
+                            android:textSize="20dp" />
 
                         <Button
                             android:id="@+id/btn_275"
@@ -222,9 +218,9 @@
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/btn_25"
                             android:background="@color/colorPrimary"
+                            android:text="2.75"
                             android:textColor="#fff"
-                            android:textSize="20dp"
-                            android:text="2.75" />
+                            android:textSize="20dp" />
                     </RelativeLayout>
 
 
@@ -247,19 +243,19 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:background="@color/colorPrimary"
+                            android:text="3.0"
                             android:textColor="#fff"
-                            android:textSize="20dp"
-                            android:text="3.0" />
+                            android:textSize="20dp" />
 
                         <Button
                             android:id="@+id/btn_four"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@color/colorPrimary"
-                            android:textColor="#fff"
                             android:layout_toRightOf="@+id/btn_three"
-                            android:textSize="20dp"
-                            android:text="4.0" />
+                            android:background="@color/colorPrimary"
+                            android:text="4.0"
+                            android:textColor="#fff"
+                            android:textSize="20dp" />
 
                         <Button
                             android:id="@+id/btn_5"
@@ -267,23 +263,22 @@
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/btn_four"
                             android:background="@color/colorPrimary"
+                            android:text="5.0"
                             android:textColor="#fff"
-                            android:textSize="20dp"
-                            android:text="5.0" />
+                            android:textSize="20dp" />
 
                         <ImageButton
+                            android:id="@+id/btn_calc_avg_me"
                             android:layout_width="wrap_content"
                             android:layout_height="50dp"
+                            android:layout_toRightOf="@id/btn_5"
                             android:background="@null"
-                            android:id="@+id/btn_calc_avg_me"
-                            android:src="@drawable/equal"
-                            android:layout_toRightOf="@id/btn_5" />
+                            android:src="@drawable/equal" />
 
 
                     </RelativeLayout>
 
                 </LinearLayout>
-
 
 
                 <LinearLayout
@@ -302,10 +297,10 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@color/colorPrimary"
-                            android:textColor="#fff"
-                            android:textSize="30dp"
                             android:gravity="center"
-                            android:text="CLEAR" />
+                            android:text="CLEAR"
+                            android:textColor="#fff"
+                            android:textSize="30dp" />
 
 
                     </RelativeLayout>
