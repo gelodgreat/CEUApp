@@ -253,13 +253,19 @@ public class studentgradecalcu extends Fragment {
 
                 try {
 
-                    ahoy = numavg.getText().toString();
+                    if (numavg.getText().toString().matches("") | resultsavg == 0) {
+                        Toast.makeText(getContext(), "Please input your total subjects to be computed!", Toast.LENGTH_SHORT).show();
+                    } else {
 
-                    myfuckingresult = resultsavg / Double.parseDouble(ahoy);
-                    xresult = df.format(myfuckingresult);
-                    avg_result.setText(xresult);
+                        ahoy = numavg.getText().toString();
 
-                    Toast.makeText(getContext(), xresult, Toast.LENGTH_SHORT);
+                        myfuckingresult = resultsavg / Double.parseDouble(ahoy);
+                        xresult = df.format(myfuckingresult);
+                        avg_result.setText(xresult);
+
+                        Toast.makeText(getContext(), xresult, Toast.LENGTH_SHORT);
+                    }
+
 
                 } catch (Exception ex) {
                     showMessage("Error", ex.toString());
