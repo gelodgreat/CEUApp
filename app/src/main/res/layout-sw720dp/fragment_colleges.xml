@@ -5,110 +5,111 @@
     android:background="#D895B0"
     tools:context="com.gelo.ceuapp.Colleges">
 
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/scorpibg2"
         android:fillViewport="true">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:baselineAligned="false">
 
-            <ImageView
-                android:id="@+id/img_scitech"
-                android:layout_width="183dp"
-                android:layout_height="183dp"
-                android:layout_below="@+id/et_aboutt"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
 
+                <ImageView
+                    android:id="@+id/img_gradschool"
+                    android:layout_width="match_parent"
+                    android:layout_height="183dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/imggradschool" />
 
-                android:layout_marginStart="152dp"
-                android:layout_marginTop="50dp"
-                android:layout_toEndOf="@+id/et_aboutt"
-                android:src="@drawable/imgscitech" />
+                <ImageView
+                    android:id="@+id/img_nhm"
+                    android:layout_width="match_parent"
+                    android:layout_height="183dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/imgnhm" />
 
-            <ImageView
-                android:id="@+id/img_pharma"
-                android:layout_width="183dp"
-                android:layout_height="183dp"
-                android:layout_alignStart="@+id/img_scitech"
-                android:layout_below="@+id/img_scitech"
-                android:src="@drawable/imgpharma" />
+                <ImageView
+                    android:id="@+id/img_nursing"
+                    android:layout_width="match_parent"
+                    android:layout_height="183dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/imgnursing" />
 
-            <ImageView
-                android:id="@+id/img_dent"
-                android:layout_width="183dp"
-                android:layout_height="183dp"
-                android:layout_alignTop="@+id/img_scitech"
-                android:layout_marginStart="66dp"
-                android:layout_toEndOf="@+id/img_scitech"
-                android:src="@drawable/imgdent" />
+                <ImageView
+                    android:id="@+id/img_sam"
+                    android:layout_width="match_parent"
+                    android:layout_height="183dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/imgsam" />
 
-            <ImageView
-                android:id="@+id/img_opto"
-                android:layout_width="183dp"
-                android:layout_height="183dp"
-                android:layout_alignStart="@+id/img_dent"
-                android:layout_below="@+id/img_dent"
-                android:src="@drawable/imgopto" />
+                <ImageView
+                    android:id="@+id/img_selams"
+                    android:layout_width="match_parent"
+                    android:layout_height="183dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/imgselams" />
 
-            <ImageView
+            </LinearLayout>
 
-                android:id="@+id/img_mt"
-                android:layout_width="183dp"
-                android:layout_height="183dp"
-                android:layout_alignStart="@+id/img_pharma"
-                android:layout_below="@+id/img_pharma"
-                android:src="@drawable/imgmedtech" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/img_gradschool"
-                android:layout_width="183dp"
-                android:layout_height="183dp"
-                android:layout_alignStart="@+id/img_opto"
-                android:layout_below="@+id/img_opto"
-                android:src="@drawable/imggradschool" />
+                <ImageView
+                    android:id="@+id/img_dent"
+                    android:layout_width="match_parent"
+                    android:layout_height="183dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/imgdent" />
 
-            <ImageView
-                android:id="@+id/img_nhm"
-                android:layout_width="183dp"
-                android:layout_height="183dp"
-                android:layout_alignStart="@+id/img_mt"
-                android:layout_below="@+id/img_mt"
-                android:src="@drawable/imgnhm" />
+                <ImageView
+                    android:id="@+id/img_pharma"
+                    android:layout_width="match_parent"
+                    android:layout_height="183dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/imgpharma" />
 
-            <ImageView
-                android:id="@+id/img_nursing"
-                android:layout_width="183dp"
-                android:layout_height="183dp"
-                android:layout_alignStart="@+id/img_gradschool"
-                android:layout_below="@+id/img_gradschool"
-                android:src="@drawable/imgnursing" />
+                <ImageView
+                    android:id="@+id/img_opto"
+                    android:layout_width="match_parent"
+                    android:layout_height="183dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/imgopto" />
 
-            <ImageView
-                android:id="@+id/img_sam"
-                android:layout_width="183dp"
-                android:layout_height="183dp"
-                android:layout_alignStart="@+id/img_nhm"
-                android:layout_below="@+id/img_nhm"
-                android:src="@drawable/imgsam" />
+                <ImageView
+                    android:id="@+id/img_scitech"
+                    android:layout_width="match_parent"
+                    android:layout_height="183dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/imgscitech" />
 
-            <ImageView
-                android:id="@+id/img_selams"
-                android:layout_width="183dp"
-                android:layout_height="183dp"
-                android:layout_alignStart="@+id/img_nursing"
-                android:layout_below="@+id/img_nursing"
-                android:src="@drawable/imgselams" />
+                <ImageView
 
-            <EditText
-                android:id="@+id/et_aboutt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:visibility="invisible" />
-
-
-        </RelativeLayout>
+                    android:id="@+id/img_mt"
+                    android:layout_width="match_parent"
+                    android:layout_height="183dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/imgmedtech" />
+            </LinearLayout>
+        </LinearLayout>
     </ScrollView>
 
 </RelativeLayout>

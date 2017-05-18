@@ -10,6 +10,18 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.gelo.ceuapp.about">
 
+    <EditText
+        android:id="@+id/et_about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible" />
+
+    <EditText
+        android:id="@+id/et_aboutt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -18,79 +30,86 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
-            <Button
-                android:id="@+id/btn_devs"
+            <RelativeLayout
+                android:id="@+id/ll0"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/colorPrimary"
-                android:padding="8dp"
-                android:text="About Developers"
-                android:textColor="#fff"
-                android:textSize="28sp"
-                android:layout_above="@+id/btn_apps"
-                android:layout_alignParentStart="true"
-                android:layout_marginBottom="9dp" />
+                android:gravity="top">
 
-            <Button
-                android:id="@+id/btn_disclaimer"
+                <com.google.android.gms.ads.AdView
+                    android:id="@+id/adsabout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentStart="true"
+                    ads:adSize="BANNER"
+                    ads:adUnitId="@string/banner_ad_unit_id_banner2" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="85dp"
-                android:background="@color/colorPrimary"
-                android:padding="8dp"
-                android:text="Disclaimer"
-                android:textColor="#fff"
-                android:textSize="28sp"
-                android:layout_above="@+id/adsabout"
-                android:layout_alignParentStart="true" />
+                android:layout_below="@+id/ll2"
+                android:layout_marginTop="40dp"
+                android:orientation="vertical">
 
-            <Button
-                android:id="@+id/btn_apps"
+                <Button
+                    android:id="@+id/btn_devs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/roundedcorners"
+                    android:padding="8dp"
+                    android:text="About Developers"
+                    android:textColor="#fff"
+                    android:textSize="28sp" />
+
+                <Button
+                    android:id="@+id/btn_disclaimer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/roundedcorners"
+                    android:padding="8dp"
+                    android:text="Disclaimer"
+                    android:textColor="#fff"
+                    android:textSize="28sp" />
+
+                <Button
+                    android:id="@+id/btn_apps"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/roundedcorners"
+                    android:padding="8dp"
+                    android:text="About Application"
+                    android:textColor="#fff"
+                    android:textSize="28sp" />
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/ll2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/colorPrimary"
-                android:padding="8dp"
-                android:text="About Application"
-                android:textColor="#fff"
-                android:textSize="28sp"
-                android:layout_marginBottom="7dp"
-                android:layout_above="@+id/btn_disclaimer"
-                android:layout_alignParentStart="true" />
+                android:layout_height="wrap_content">
 
+                <com.google.android.gms.ads.AdView
+                    android:id="@+id/adsabout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    ads:adSize="BANNER"
+                    ads:adUnitId="@string/banner_ad_unit_id_banner3" />
+            </RelativeLayout>
 
-            <EditText
-                android:id="@+id/et_about"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:visibility="invisible" />
-
-            <EditText
-                android:id="@+id/et_aboutt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:visibility="invisible" />
-
-            <com.google.android.gms.ads.AdView
-                android:id="@+id/adsabout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentStart="true"
-                ads:adSize="BANNER"
-                ads:adUnitId="@string/banner_ad_unit_id_banner2" />
-
-            <com.google.android.gms.ads.AdView
-                android:id="@+id/adsabout2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                ads:adSize="BANNER"
-                ads:adUnitId="@string/banner_ad_unit_id_banner3" />
 
         </RelativeLayout>
 
