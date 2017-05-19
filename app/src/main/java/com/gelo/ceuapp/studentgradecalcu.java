@@ -12,6 +12,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
+
 import java.text.DecimalFormat;
 
 
@@ -30,13 +34,17 @@ public class studentgradecalcu extends Fragment {
     int clickcounter = 0;
     String clickcountertest = "";
     int bb;
+    //    ADS'
+    InterstitialAd mInterstitialAd;
     private EditText cp, exam, numavg;
     private Button btn_calc, btn_1, btn_125, btn_15, btn_175, btn_2, btn_225, btn_25, btn_275, btn_3, btn_35, btn_4, btn_5, btn_clear, btn_clearonegrade;
     private TextView ttl, avg_result;
+    private InterstitialAd interstitial;
 
     public studentgradecalcu() {
         // Required empty public constructor
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -46,7 +54,7 @@ public class studentgradecalcu extends Fragment {
         load_clicks(view);
         buttonconditions();
         changesonnumavg();
-
+        load_ads();
 
         showmytips();
         btn_calc.setOnClickListener(new View.OnClickListener() {
@@ -402,7 +410,7 @@ public class studentgradecalcu extends Fragment {
         builder.append("1. If you want to calculate only your 'Grade' and 'CP' use the top functions.\n").append("\n");
         builder.append("2. If you want to calculate your average grade use the bottom part calculations.\n").append("\n");
         builder.append("3. In using the bottom part, First you need to input your total subjects that needed to be computed\n").append("\n");
-        builder.append("4. After that you may now click your grades to be computed.").append("\n");
+        builder.append("4. After that you may now click your grades to be computed.\n").append("\n");
         builder.append("5. After you calculate your average grade click 'CLEAR' button to reset the values.");
         showMessage("Calculator Tips", builder.toString());
     }
@@ -416,6 +424,32 @@ public class studentgradecalcu extends Fragment {
         builder.setMessage(message);
         builder.show();
 
+    }
+
+    private void load_ads() {
+        AdRequest adRequest = new AdRequest.Builder()
+                //                .addTestDevice(getString(R.string.test_device_id))
+                .build();
+        // Prepare the Interstitial Ad
+        interstitial = new InterstitialAd(this.getActivity());
+        // Insert the Ad Unit ID
+        interstitial.setAdUnitId(getString(R.string.banner_ad_unit_id_interstitial));
+
+        interstitial.loadAd(adRequest);
+        // Prepare an Interstitial Ad Listener
+        interstitial.setAdListener(new AdListener() {
+            @Override
+            public void onAdLoaded() {
+                displayInterstitial();
+            }
+        });
+    }
+
+    private void displayInterstitial() {
+        // If Ads are loaded, show Interstitial else show nothing.
+        if (interstitial.isLoaded()) {
+            interstitial.show();
+        }
     }
 
 
