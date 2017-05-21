@@ -46,8 +46,8 @@ public class studentgradecalcu extends Fragment {
 
         init(view);
         load_ads();
-
         showmytips();
+
         btn_calc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -80,16 +80,20 @@ public class studentgradecalcu extends Fragment {
         btn_clear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 clearfunctionchangetotalsubj();
             }
         });
 
+        //function on every text change on total subj
         et_total_subj.setOnKeyListener(new View.OnKeyListener() {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
                 if (et_total_subj.getText().toString().matches("")) {
                     clearfunctionchangetotalsubj();
+                } else if (et_total_subj.getText().toString() != "") {
+                    btn_next.setEnabled(true);
+                    et_grade.setEnabled(true);
+                    et_units.setEnabled(true);
                 }
 
                 return false;
@@ -99,6 +103,7 @@ public class studentgradecalcu extends Fragment {
         return view;
     }
 
+    //loads all controls to application
     private void init(View view) {
         cp = (EditText) view.findViewById(R.id.et_cp1);
         exam = (EditText) view.findViewById(R.id.et_exam1);
@@ -130,8 +135,17 @@ public class studentgradecalcu extends Fragment {
         tv_totalaverage.setText("GWA: " + numtotalave);
         tv_totalclicks.setText("Total Inputed Grade: " + clickcounter);
 
+
     }
 
+    //disables gwa controls
+    private void preventcomputationiffinished() {
+        btn_next.setEnabled(false);
+        et_grade.setEnabled(false);
+        et_units.setEnabled(false);
+    }
+
+    //resettings controls of gwa
     private void clearfunctionchangetotalsubj() {
         numxunits = 0;
         numxgrades = 0;
@@ -145,9 +159,10 @@ public class studentgradecalcu extends Fragment {
         tv_totalaverage.setText("GWA: " + numtotalave);
         tv_totalclicks.setText("Total Inputed Grade: " + clickcounter);
         et_total_subj.requestFocus();
+        preventcomputationiffinished();
     }
 
-
+    //calculate cp * 2
     private void calculateresult() {
         try {
 
@@ -167,6 +182,7 @@ public class studentgradecalcu extends Fragment {
         }
     }
 
+    //computes total gwa
     private void calcuunits() {
         try {
             if (et_units.getText().toString().matches("") | et_grade.getText().toString().matches("") | et_total_subj.getText().toString().matches("")) {
@@ -200,6 +216,7 @@ public class studentgradecalcu extends Fragment {
         }
     }
 
+    //counts computedgrades
     private void total() {
         try {
             clickrecorder = Integer.parseInt(et_total_subj.getText().toString());
@@ -207,6 +224,7 @@ public class studentgradecalcu extends Fragment {
                 double ion = Double.parseDouble(xresultgrades) / Double.parseDouble(xresultunits);
                 xresultgrades = df.format(ion);
                 tv_totalaverage.setText("GWA: " + xresultgrades);
+                preventcomputationiffinished();
             }
         } catch (Exception ex) {
             Toast.makeText(getContext(), ex.toString(), Toast.LENGTH_SHORT).show();
@@ -216,7 +234,7 @@ public class studentgradecalcu extends Fragment {
     }
 
 
-    //ADS
+    //my fucking Ad revenue
     private void load_ads() {
         AdRequest adRequest = new AdRequest.Builder()
                 //                .addTestDevice(getString(R.string.test_device_id))
@@ -236,6 +254,7 @@ public class studentgradecalcu extends Fragment {
         });
     }
 
+    //loading of intersitial
     private void displayInterstitial() {
         // If Ads are loaded, show Interstitial else show nothing.
         if (interstitial.isLoaded()) {
@@ -243,18 +262,19 @@ public class studentgradecalcu extends Fragment {
         }
     }
 
-
+    //message tips on calc start
     private void showmytips() {
         StringBuilder builder = new StringBuilder();
         builder.append("1. If you want to calculate only your 'Grade' and 'CP' use the top functions.\n").append("\n");
-        builder.append("2. If you want to calculate your average grade use the bottom part calculations.\n").append("\n");
-        builder.append("3. In using the bottom part, First you need to input your total subjects that needed to be computed\n").append("\n");
-        builder.append("4. After that you may now click your grades to be computed.\n").append("\n");
-        builder.append("5. After you calculate your average grade click 'CLEAR' button to reset the values.");
+        builder.append("2. If you want to calculate your GWA use the bottom part calculations.\n").append("\n");
+        builder.append("3. In using the bottom part, First you need to input your total subjects that needed to be computed.\n").append("\n");
+        builder.append("4. After that you need to input your Units and Grade\n").append("\n");
+        builder.append("5. After you input the data needed you can press the compute button.\n").append("\n");
+        builder.append("6. After your computation you can press the CLEAR button to have a new calculation").append("\n");
         showMessage("Calculator Tips", builder.toString());
     }
 
-
+    //builder for message
     private void showMessage(String title, String message) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
         builder.setCancelable(true);
