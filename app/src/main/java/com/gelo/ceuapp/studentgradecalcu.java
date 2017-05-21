@@ -7,6 +7,8 @@ import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -27,6 +29,7 @@ public class studentgradecalcu extends Fragment {
     String xresultgrades, xresultunits;
     int clickcounter = 0;
     int clickrecorder;
+    Animation animAlpha;
     private EditText cp, exam;
     private Button btn_calc, btn_clearonegrade;
     private TextView ttl;
@@ -48,10 +51,14 @@ public class studentgradecalcu extends Fragment {
         load_ads();
         showmytips();
 
+        //for button animation
+        animAlpha = AnimationUtils.loadAnimation(getContext(), R.anim.anim_alpha);
+
         btn_calc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 calculateresult();
+                v.startAnimation(animAlpha);
             }
         });
 
@@ -63,6 +70,7 @@ public class studentgradecalcu extends Fragment {
                 exam.setText("");
                 ttl.setText("Your Computed Grade");
                 cp.requestFocus();
+                v.startAnimation(animAlpha);
             }
         });
 
@@ -72,6 +80,7 @@ public class studentgradecalcu extends Fragment {
                 calcuunits();
                 tv_totalclicks.setText("Total Inputed Grade: " + clickcounter);
                 total();
+                v.startAnimation(animAlpha);
             }
         });
 
@@ -80,6 +89,7 @@ public class studentgradecalcu extends Fragment {
             @Override
             public void onClick(View v) {
                 clearfunctionchangetotalsubj();
+                v.startAnimation(animAlpha);
             }
         });
 
@@ -166,7 +176,7 @@ public class studentgradecalcu extends Fragment {
         try {
 
             if (cp.getText().toString().matches("") || exam.getText().toString().matches("")) {
-                Toast.makeText(getActivity(), "Complete the Value", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Complete the fields!", Toast.LENGTH_SHORT).show();
             } else {
                 icp = Double.parseDouble(cp.getText().toString());
                 iexam = Double.parseDouble(exam.getText().toString());
