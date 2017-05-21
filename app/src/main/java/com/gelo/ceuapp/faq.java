@@ -23,13 +23,12 @@ import com.google.android.gms.ads.MobileAds;
  */
 public class faq extends Fragment {
 
+    AdView mAdView, mAdView2;
+    private InterstitialAd interstitial;
+
     public faq() {
         // Required empty public constructor
     }
-
-
-    InterstitialAd mInterstitialAd;
-    private InterstitialAd interstitial;
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -122,7 +121,6 @@ public class faq extends Fragment {
             }
         });
 
-        AdView mAdView, mAdView2;
         mAdView = (AdView) view.findViewById(R.id.adView);
         mAdView2 = (AdView) view.findViewById(R.id.adView2);
 
@@ -133,25 +131,19 @@ public class faq extends Fragment {
         mAdView.loadAd(adRequest);
         mAdView2.loadAd(adRequest);
 
-        // Prepare the Interstitial Ad
+        //         Prepare the Interstitial Ad
         interstitial = new InterstitialAd(this.getActivity());
-        // Insert the Ad Unit ID
+        //         Insert the Ad Unit ID
         interstitial.setAdUnitId(getString(R.string.banner_ad_unit_id_interstitial));
 
         interstitial.loadAd(adRequest);
-        // Prepare an Interstitial Ad Listener
+        //         Prepare an Interstitial Ad Listener
         interstitial.setAdListener(new AdListener() {
             public void onAdLoaded() {
                 // Call displayInterstitial() function
                 displayInterstitial();
             }
         });
-
-
-        //        AdRequest adRequest = new AdRequest.Builder().build();
-        //        mAdView2.loadAd(adRequest);
-        //        mAdView.loadAd(adRequest);
-
 
         return view;
     }
