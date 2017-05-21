@@ -20,8 +20,8 @@
         android:label="@string/app_name"
         android:largeHeap="true"
         android:supportsRtl="true"
-        android:windowSoftInputMode="adjustPan"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:windowSoftInputMode="adjustPan">
         <activity
             android:name=".SplashScreen"
             android:label="@string/app_name"
@@ -344,6 +344,13 @@
         <activity android:name=".ListBuildings">
             <intent-filter>
                 <action android:name="com.gelo.ceuapp.ListBuildings" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ceuhistory">
+            <intent-filter>
+                <action android:name="com.gelo.ceuapp.ceuhistory" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>

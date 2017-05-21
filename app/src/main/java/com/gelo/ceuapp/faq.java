@@ -27,6 +27,7 @@ public class faq extends Fragment {
         // Required empty public constructor
     }
 
+
     InterstitialAd mInterstitialAd;
     private InterstitialAd interstitial;
 
@@ -112,6 +113,14 @@ public class faq extends Fragment {
             }
         });
 
+        Button btn_ceu_history = (Button) view.findViewById(R.id.btn_ceuhistory);
+        btn_ceu_history.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent("com.gelo.ceuapp.ceuhistory");
+                startActivity(intent);
+            }
+        });
 
         AdView mAdView, mAdView2;
         mAdView = (AdView) view.findViewById(R.id.adView);

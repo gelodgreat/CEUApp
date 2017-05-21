@@ -13,79 +13,101 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+
         android:background="@drawable/scorpibg2"
         android:fillViewport="true">
 
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
-            <Button
-                android:id="@+id/btn_offense"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_alignParentStart="true"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/adView2"
-                android:layout_marginTop="110dp"
-                android:background="@color/colorPrimary"
-                android:padding="8dp"
-                android:text="Disciplinary Measures"
-                android:textColor="#fff"
-                android:textSize="30sp" />
+                android:layout_marginTop="60sp"
+                android:orientation="vertical">
 
+                <Button
+                    android:id="@+id/btn_othertransac"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/btn_offense"
+                    android:layout_marginTop="5sp"
+                    android:background="@color/colorPrimary"
+                    android:text="Other Transaction"
+                    android:textColor="#fff"
+                    android:textSize="30sp" />
 
-            <Button
-                android:id="@+id/btn_enroll"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/btn_ceuchoosemusic"
-                android:layout_marginTop="22dp"
-                android:background="@color/colorPrimary"
-                android:padding="8dp"
-                android:text="Enrollment Procedures"
-                android:textColor="#fff"
-                android:textSize="30sp" />
+                <Button
+                    android:id="@+id/btn_ceuhistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/btn_othertransac"
+                    android:layout_marginTop="5sp"
+                    android:background="@color/colorPrimary"
+                    android:text="CEU History"
+                    android:textColor="#fff"
+                    android:textSize="30sp" />
 
-            <Button
-                android:id="@+id/btn_othertransac"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/btn_offense"
-                android:layout_marginTop="30dp"
-                android:background="@color/colorPrimary"
-                android:padding="8dp"
-                android:text="Other Transaction"
-                android:textColor="#fff"
-                android:textSize="30sp" />
+                <Button
+                    android:id="@+id/btn_board"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/btn_enroll"
+                    android:layout_marginTop="5sp"
+                    android:background="@color/colorPrimary"
+                    android:text="CEU Board Members"
+                    android:textColor="#fff"
+                    android:textSize="30sp" />
 
-            <Button
-                android:id="@+id/btn_ceuchoosemusic"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/btn_othertransac"
-                android:layout_marginTop="35dp"
-                android:background="@color/colorPrimary"
-                android:padding="8dp"
-                android:text="CEU Music"
-                android:textColor="#fff"
-                android:textSize="30sp" />
+                <Button
+                    android:id="@+id/btn_offense"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/adView2"
+                    android:layout_marginTop="5sp"
+                    android:background="@color/colorPrimary"
+                    android:text="Disciplinary Measures"
+                    android:textColor="#fff"
+                    android:textSize="30sp" />
 
-            <Button
-                android:id="@+id/btn_board"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/btn_enroll"
-                android:layout_marginTop="30dp"
-                android:background="@color/colorPrimary"
-                android:padding="8dp"
-                android:text="CEU Board Members"
-                android:textColor="#fff"
-                android:textSize="30sp" />
+                <Button
+                    android:id="@+id/btn_enroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/btn_ceuchoosemusic"
+                    android:layout_marginTop="5sp"
+                    android:background="@color/colorPrimary"
+                    android:text="Enrollment Procedures"
+                    android:textColor="#fff"
+                    android:textSize="30sp" />
+
+                <Button
+                    android:id="@+id/btn_ceuchoosemusic"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/btn_othertransac"
+                    android:layout_marginTop="5sp"
+                    android:background="@color/colorPrimary"
+                    android:text="CEU Music"
+                    android:textColor="#fff"
+                    android:textSize="30sp" />
+
+            </LinearLayout>
+
 
             <EditText
                 android:id="@+id/et_aboutt"
@@ -96,7 +118,7 @@
 
             <com.google.android.gms.ads.AdView
                 android:id="@+id/adView"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
@@ -105,10 +127,11 @@
 
             <com.google.android.gms.ads.AdView
                 android:id="@+id/adView2"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
+                android:layout_alignLeft="@+id/adView"
                 android:layout_alignParentTop="true"
+                android:layout_alignStart="@+id/adView"
                 ads:adSize="BANNER"
                 ads:adUnitId="@string/banner_ad_unit_id_banner2" />
 
