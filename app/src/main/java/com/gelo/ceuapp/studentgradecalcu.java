@@ -70,7 +70,6 @@ public class studentgradecalcu extends Fragment {
             @Override
             public void onClick(View v) {
                 calcuunits();
-                clickcounter = clickcounter + 1;
                 tv_totalclicks.setText("Total Inputed Grade: " + clickcounter);
                 total();
             }
@@ -166,7 +165,7 @@ public class studentgradecalcu extends Fragment {
     private void calculateresult() {
         try {
 
-            if (cp.getText().toString().matches("") | exam.getText().toString().matches("")) {
+            if (cp.getText().toString().matches("") || exam.getText().toString().matches("")) {
                 Toast.makeText(getActivity(), "Complete the Value", Toast.LENGTH_SHORT).show();
             } else {
                 icp = Double.parseDouble(cp.getText().toString());
@@ -185,7 +184,7 @@ public class studentgradecalcu extends Fragment {
     //computes total gwa
     private void calcuunits() {
         try {
-            if (et_units.getText().toString().matches("") | et_grade.getText().toString().matches("") | et_total_subj.getText().toString().matches("")) {
+            if (et_units.getText().toString().matches("") || et_grade.getText().toString().matches("") || et_total_subj.getText().toString().matches("")) {
                 Toast.makeText(getContext(), "Fill all fields!", Toast.LENGTH_SHORT).show();
             } else {
 
@@ -208,6 +207,7 @@ public class studentgradecalcu extends Fragment {
                 et_grade.setText("");
                 et_units.setText("");
                 et_units.requestFocus();
+                clickcounter = clickcounter + 1;
             }
 
 
