@@ -232,6 +232,7 @@
                         android:id="@+id/tv_totalgrade"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="5sp"
                         android:layout_weight="1"
                         android:background="@color/colorPrimary"
                         android:gravity="center"

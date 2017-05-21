@@ -41,7 +41,7 @@
                     android:gravity="center"
                     android:hint="Input your CP Grade"
                     android:inputType="numberDecimal"
-                    android:textSize="30sp" />
+                    android:textSize="20sp" />
 
 
                 <EditText
@@ -54,7 +54,7 @@
                     android:gravity="center"
                     android:hint="Input your Exam Grade"
                     android:inputType="numberDecimal"
-                    android:textSize="30sp" />
+                    android:textSize="20sp" />
 
 
                 <LinearLayout
@@ -152,7 +152,7 @@
                         android:gravity="center"
                         android:hint="Total Subjects"
                         android:inputType="numberDecimal"
-                        android:textSize="30sp" />
+                        android:textSize="20sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -172,7 +172,7 @@
                         android:gravity="center"
                         android:hint="Total Units"
                         android:inputType="numberDecimal"
-                        android:textSize="30sp" />
+                        android:textSize="20sp" />
 
                     <EditText
                         android:id="@+id/et_totalgrade"
@@ -183,7 +183,7 @@
                         android:gravity="center"
                         android:hint="Total Grade"
                         android:inputType="numberDecimal"
-                        android:textSize="30sp" />
+                        android:textSize="20sp" />
                 </LinearLayout>
 
 
@@ -226,18 +226,19 @@
                         android:gravity="center"
                         android:text="Calculated Units:"
                         android:textColor="#fff"
-                        android:textSize="30sp" />
+                        android:textSize="20sp" />
 
                     <TextView
                         android:id="@+id/tv_totalgrade"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="5sp"
                         android:layout_weight="1"
                         android:background="@color/colorPrimary"
                         android:gravity="center"
                         android:text="Calculated Grade:"
                         android:textColor="#fff"
-                        android:textSize="30sp" />
+                        android:textSize="20sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -257,7 +258,7 @@
                         android:gravity="center"
                         android:text="Your GWA:"
                         android:textColor="#fff"
-                        android:textSize="30sp" />
+                        android:textSize="20sp" />
 
                     <TextView
                         android:id="@+id/tv_calculated_subjects"
@@ -268,7 +269,7 @@
                         android:gravity="center"
                         android:text="Calculated Subjects: "
                         android:textColor="#fff"
-                        android:textSize="30sp" />
+                        android:textSize="20sp" />
                 </LinearLayout>
 
 
