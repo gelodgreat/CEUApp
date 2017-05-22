@@ -144,7 +144,7 @@ public class studentgradecalcu extends Fragment {
         tv_totalaverage.setText("GWA: " + numtotalave);
         tv_totalclicks.setText("Total Inputed Grade: " + clickcounter);
 
-
+        preventcomputationiffinished();
     }
 
     //disables gwa controls

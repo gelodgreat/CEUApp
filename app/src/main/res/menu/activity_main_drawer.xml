@@ -18,6 +18,11 @@
             android:title="University Calendar" />
 
         <item
+            android:id="@+id/nav_ceuonlineportals"
+            android:icon="@drawable/ic_action_news"
+            android:title="CEU Online Portals" />
+
+        <item
             android:id="@+id/nav_college"
             android:icon="@drawable/ic_school"
             android:title="Schools/Colleges" />

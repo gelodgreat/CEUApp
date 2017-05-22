@@ -1,0 +1,40 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gelo.ceuapp.ceuonlineportals">
+
+    <ScrollView
+        android:id="@+id/sc_opsc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <WebView
+                android:id="@+id/wv_onlineportal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/navigation_onlineportal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:menu="@menu/onlineportalnav" />
+    </RelativeLayout>
+
+
+</FrameLayout>

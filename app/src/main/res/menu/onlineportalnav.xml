@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_ceuwebsite"
+        android:icon="@drawable/ic_web_asset"
+        android:title="CEU Official Website" />
+
+    <item
+        android:id="@+id/nav_onlinegrades"
+        android:icon="@drawable/ic_grade"
+        android:title="CEU Online Grades" />
+
+
+    <item
+        android:id="@+id/nav_campusguidefbpage"
+        android:icon="@drawable/ic_action_news"
+        android:title="Campus Guide for CEU Manila" />
+
+
+</menu>
