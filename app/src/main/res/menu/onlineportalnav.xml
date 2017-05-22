@@ -14,7 +14,7 @@
 
     <item
         android:id="@+id/nav_campusguidefbpage"
-        android:icon="@drawable/ic_action_news"
+        android:icon="@drawable/scorpibg2"
         android:title="Campus Guide for CEU Manila" />
 
 
