@@ -1,5 +1,7 @@
 package com.gelo.ceuapp;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.internal.BottomNavigationItemView;
 import android.support.v4.app.Fragment;
@@ -52,9 +54,17 @@ public class ceuonlineportals extends Fragment {
         campusguidefbpage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                v.startAnimation(animAlpha);
+                /*v.startAnimation(animAlpha);
                 wv_onlineportal.loadUrl("https://www.facebook.com/campusguideceumanila");
-                wv_onlineportal.setWebViewClient(new WebViewClient());
+                wv_onlineportal.setWebViewClient(new WebViewClient());*/
+
+                try {
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("fb://facewebmodal/f?href=1191136224348285"));
+                    startActivity(intent);
+                } catch(Exception e) {
+                    wv_onlineportal.loadUrl("https://www.facebook.com/campusguideceumanila");
+                    wv_onlineportal.setWebViewClient(new WebViewClient());
+                }
             }
         });
 
@@ -94,7 +104,7 @@ public class ceuonlineportals extends Fragment {
 
     private void offlinemode() {
         Boolean net = ((MainActivity) getActivity()).isNetworkAvailable();
-        if (net == false) { // loading offline
+        if (!net) { // loading offline
             wv_onlineportal.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
 
             wv_onlineportal.setWebViewClient(new WebViewClient() {
@@ -105,6 +115,7 @@ public class ceuonlineportals extends Fragment {
             });
         }
     }
+
 
 
 }
