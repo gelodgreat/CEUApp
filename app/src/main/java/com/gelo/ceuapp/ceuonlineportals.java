@@ -6,13 +6,15 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-
 public class ceuonlineportals extends Fragment {
 
+    Animation animAlpha;
     private BottomNavigationItemView mainsite, onlinegrades, campusguidefbpage;
     private WebView wv_onlineportal;
 
@@ -32,23 +34,27 @@ public class ceuonlineportals extends Fragment {
         mainsite.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                v.startAnimation(animAlpha);
                 wv_onlineportal.loadUrl("https://www.ceu.edu.ph");
-
+                wv_onlineportal.setWebViewClient(new WebViewClient());
             }
         });
 
         onlinegrades.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                v.startAnimation(animAlpha);
                 wv_onlineportal.loadUrl("https://grades.ceu.edu.ph");
-
+                wv_onlineportal.setWebViewClient(new WebViewClient());
             }
         });
 
         campusguidefbpage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                v.startAnimation(animAlpha);
                 wv_onlineportal.loadUrl("https://www.facebook.com/campusguideceumanila");
+                wv_onlineportal.setWebViewClient(new WebViewClient());
             }
         });
 
@@ -60,17 +66,30 @@ public class ceuonlineportals extends Fragment {
         onlinegrades = (BottomNavigationItemView) view.findViewById(R.id.nav_onlinegrades);
         campusguidefbpage = (BottomNavigationItemView) view.findViewById(R.id.nav_campusguidefbpage);
         wv_onlineportal = (WebView) view.findViewById(R.id.wv_onlineportal);
+
+        wv_onlineportal.loadUrl("https://grades.ceu.edu.ph");
+        wv_onlineportal.setWebViewClient(new WebViewClient());
+        //for button animation
+        animAlpha = AnimationUtils.loadAnimation(getContext(), R.anim.anim_alpha);
+
     }
 
     private void loadwebsettings() {
-        wv_onlineportal.getSettings().setCacheMode(WebSettings.LOAD_DEFAULT);
-        wv_onlineportal.getSettings().setAppCacheEnabled(true);
+        //        wv_onlineportal.getSettings().setCacheMode(WebSettings.LOAD_DEFAULT);
+        //        wv_onlineportal.getSettings().setAppCacheEnabled(true);
         WebSettings webSettings = wv_onlineportal.getSettings();
         webSettings.setBuiltInZoomControls(true);
         webSettings.setSupportZoom(true);
         webSettings.setJavaScriptEnabled(true);
-        wv_onlineportal.setBackgroundColor(15658734);
         webSettings.setDisplayZoomControls(false);
+        wv_onlineportal.setVerticalScrollBarEnabled(true);
+        wv_onlineportal.setHorizontalScrollBarEnabled(true);
+        wv_onlineportal.setBackgroundColor(15658734);
+
+        wv_onlineportal.getSettings().setRenderPriority(WebSettings.RenderPriority.HIGH);
+        wv_onlineportal.getSettings().setCacheMode(WebSettings.LOAD_NO_CACHE);
+
+
     }
 
     private void offlinemode() {

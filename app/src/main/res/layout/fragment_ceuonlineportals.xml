@@ -29,10 +29,14 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom">
 
+
         <android.support.design.widget.BottomNavigationView
             android:id="@+id/navigation_onlineportal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#000"
+            app:itemIconTint="@color/colorPrimary"
+            app:itemTextColor="@color/colorPrimary"
             app:menu="@menu/onlineportalnav" />
     </RelativeLayout>
 
