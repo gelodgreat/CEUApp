@@ -18,7 +18,7 @@ public class ceuonlineportals extends Fragment {
 
     Animation animAlpha;
     private BottomNavigationItemView mainsite, onlinegrades, campusguidefbpage;
-    private WebView wv_onlineportal;
+    private WebView wv_onlineportal, wv_loadingscreen;
 
     public ceuonlineportals() {
         // Required empty public constructor
@@ -33,12 +33,45 @@ public class ceuonlineportals extends Fragment {
         loadwebsettings();
         offlinemode();
 
+
+        wv_loadingscreen.setVisibility(View.VISIBLE);
+        wv_onlineportal.setVisibility(View.GONE);
+
+        wv_loadingscreen.loadUrl("file:///android_asset/loadingscreen.html");
+        wv_onlineportal.setWebViewClient(new WebViewClient() {
+            @Override
+            public void onPageFinished(WebView view, String url) {
+                //hide loading image
+                wv_loadingscreen.setVisibility(View.GONE);
+                //show webview
+                wv_onlineportal.setVisibility(View.VISIBLE);
+
+            }
+        });
+        wv_onlineportal.loadUrl("https://grades.ceu.edu.ph");
+
+
+
+
         mainsite.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 v.startAnimation(animAlpha);
-                wv_onlineportal.loadUrl("https://www.ceu.edu.ph");
-                wv_onlineportal.setWebViewClient(new WebViewClient());
+                wv_loadingscreen.setVisibility(View.VISIBLE);
+                wv_onlineportal.setVisibility(View.GONE);
+
+                wv_loadingscreen.loadUrl("file:///android_asset/loadingscreen.html");
+                wv_onlineportal.setWebViewClient(new WebViewClient() {
+                    @Override
+                    public void onPageFinished(WebView view, String url) {
+                        //hide loading image
+                        wv_loadingscreen.setVisibility(View.GONE);
+                        //show webview
+                        wv_onlineportal.setVisibility(View.VISIBLE);
+
+                    }
+                });
+                wv_onlineportal.loadUrl("http://www.ceu.edu.ph");
             }
         });
 
@@ -46,24 +79,53 @@ public class ceuonlineportals extends Fragment {
             @Override
             public void onClick(View v) {
                 v.startAnimation(animAlpha);
+                wv_loadingscreen.setVisibility(View.VISIBLE);
+                wv_onlineportal.setVisibility(View.GONE);
+
+                wv_loadingscreen.loadUrl("file:///android_asset/loadingscreen.html");
+                wv_onlineportal.setWebViewClient(new WebViewClient() {
+                    @Override
+                    public void onPageFinished(WebView view, String url) {
+                        //hide loading image
+                        wv_loadingscreen.setVisibility(View.GONE);
+                        //show webview
+                        wv_onlineportal.setVisibility(View.VISIBLE);
+
+                    }
+                });
                 wv_onlineportal.loadUrl("https://grades.ceu.edu.ph");
-                wv_onlineportal.setWebViewClient(new WebViewClient());
+
             }
         });
 
         campusguidefbpage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*v.startAnimation(animAlpha);
+                v.startAnimation(animAlpha);
+                /*
                 wv_onlineportal.loadUrl("https://www.facebook.com/campusguideceumanila");
                 wv_onlineportal.setWebViewClient(new WebViewClient());*/
 
                 try {
+
                     Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("fb://facewebmodal/f?href=1191136224348285"));
                     startActivity(intent);
-                } catch(Exception e) {
+                } catch (Exception e) {
+                    wv_loadingscreen.setVisibility(View.VISIBLE);
+                    wv_onlineportal.setVisibility(View.GONE);
+
+                    wv_loadingscreen.loadUrl("file:///android_asset/loadingscreen.html");
+                    wv_onlineportal.setWebViewClient(new WebViewClient() {
+                        @Override
+                        public void onPageFinished(WebView view, String url) {
+                            //hide loading image
+                            wv_loadingscreen.setVisibility(View.GONE);
+                            //show webview
+                            wv_onlineportal.setVisibility(View.VISIBLE);
+
+                        }
+                    });
                     wv_onlineportal.loadUrl("https://www.facebook.com/campusguideceumanila");
-                    wv_onlineportal.setWebViewClient(new WebViewClient());
                 }
             }
         });
@@ -71,18 +133,18 @@ public class ceuonlineportals extends Fragment {
         return view;
     }
 
+
     private void init(View view) {
+        //for button animation
+        animAlpha = AnimationUtils.loadAnimation(getContext(), R.anim.anim_alpha);
+
         mainsite = (BottomNavigationItemView) view.findViewById(R.id.nav_ceuwebsite);
         onlinegrades = (BottomNavigationItemView) view.findViewById(R.id.nav_onlinegrades);
         campusguidefbpage = (BottomNavigationItemView) view.findViewById(R.id.nav_campusguidefbpage);
         wv_onlineportal = (WebView) view.findViewById(R.id.wv_onlineportal);
-
-        wv_onlineportal.loadUrl("https://grades.ceu.edu.ph");
-        wv_onlineportal.setWebViewClient(new WebViewClient());
-        //for button animation
-        animAlpha = AnimationUtils.loadAnimation(getContext(), R.anim.anim_alpha);
-
+        wv_loadingscreen = (WebView) view.findViewById(R.id.wv_loadingscreen);
     }
+
 
     private void loadwebsettings() {
         //        wv_onlineportal.getSettings().setCacheMode(WebSettings.LOAD_DEFAULT);
@@ -115,7 +177,6 @@ public class ceuonlineportals extends Fragment {
             });
         }
     }
-
 
 
 }
