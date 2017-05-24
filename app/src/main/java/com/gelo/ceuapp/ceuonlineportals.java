@@ -88,7 +88,8 @@ public class ceuonlineportals extends Fragment {
 
                 try {
 
-                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("fb://facewebmodal/f?href=1191136224348285"));
+                    getActivity().getPackageManager().getPackageInfo("com.facebook.katana", 0);
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("fb://page/1191136224348285"));
                     startActivity(intent);
                 } catch (Exception e) {
                     wv_loadingscreen.setVisibility(View.VISIBLE);
@@ -112,6 +113,17 @@ public class ceuonlineportals extends Fragment {
 
         return view;
     }
+
+    //    public static Intent getOpenFacebookIntent(Context context) {
+    //        try{
+    //            // open in Facebook app
+    //            context.getPackageManager().getPackageInfo("com.facebook.katana", 0);
+    //            return new Intent(Intent.ACTION_VIEW, Uri.parse("fb://page/1191136224348285"));
+    //        } catch (Exception e) {
+    //            // open in browser
+    //            return new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/<profile_id>"));
+    //        }
+    //    }
 
 
     private void init(View view) {
