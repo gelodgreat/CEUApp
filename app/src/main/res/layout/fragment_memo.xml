@@ -40,7 +40,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="3dp"
-                android:background="@color/colorPrimary"
+                android:background="@drawable/roundedcorners"
                 android:text="Clear"
                 android:textColor="#fff" />
 
@@ -52,7 +52,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginRight="5dp"
                 android:layout_marginTop="3dp"
-                android:background="@color/colorPrimary"
+                android:background="@drawable/roundedcorners"
                 android:text="Add"
                 android:textColor="#fff" />
 
@@ -63,7 +63,7 @@
                 android:layout_marginRight="5dp"
                 android:layout_marginTop="3dp"
                 android:layout_toLeftOf="@id/memo_btn_add"
-                android:background="@color/colorPrimary"
+                android:background="@drawable/roundedcorners"
                 android:text="Delete"
                 android:textColor="#fff" />
 

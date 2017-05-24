@@ -38,7 +38,7 @@
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/memo_btn_clear"
-                android:background="@color/colorPrimary"
+                android:background="@drawable/roundedcorners"
                 android:text="Clear"
                 android:layout_marginTop="3dp"
                 android:layout_marginRight="5dp"
@@ -48,7 +48,7 @@
             <Button
                 android:id="@+id/memo_btn_add"
                 android:layout_width="150dp"
-                android:background="@color/colorPrimary"
+                android:background="@drawable/roundedcorners"
                 android:textColor="#fff"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -63,7 +63,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="5dp"
                 android:layout_toLeftOf="@id/memo_btn_add"
-                android:background="@color/colorPrimary"
+                android:background="@drawable/roundedcorners"
                 android:textColor="#fff"
                 android:layout_marginTop="3dp"
                 android:text="Delete" />

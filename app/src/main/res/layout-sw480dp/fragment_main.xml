@@ -40,7 +40,7 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_weight="1"
-            android:background="@color/colorPrimary"
+            android:background="@drawable/roundedcorners"
             android:text="Search"
             android:textColor="#fff"
             android:textSize="40dp" />
