@@ -3,10 +3,7 @@ package com.gelo.ceuapp;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.os.Bundle;
-import android.renderscript.ScriptGroup;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -17,19 +14,13 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.EditText;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.URL;
-import java.net.URLConnection;
-
-import static android.content.Context.CONNECTIVITY_SERVICE;
-
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class UnivCalendar extends Fragment {
+
+    private WebView wv_loadingscreen;
 
     public UnivCalendar() {
         // Required empty public constructor
@@ -87,6 +78,24 @@ public class UnivCalendar extends Fragment {
         wv.setWebViewClient(new WebViewClient() {
             public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
                 wv.loadUrl("file:///android_asset/nointernet.html");
+
+            }
+        });
+
+        wv_loadingscreen = (WebView) view.findViewById(R.id.wv_loadingscreen);
+
+
+        wv_loadingscreen.setVisibility(View.VISIBLE);
+        wv.setVisibility(View.GONE);
+
+        wv_loadingscreen.loadUrl("file:///android_asset/loadingscreen.html");
+        wv.setWebViewClient(new WebViewClient() {
+            @Override
+            public void onPageFinished(WebView view, String url) {
+                //hide loading image
+                wv_loadingscreen.setVisibility(View.GONE);
+                //show webview
+                wv.setVisibility(View.VISIBLE);
 
             }
         });
