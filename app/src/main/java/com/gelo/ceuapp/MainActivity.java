@@ -198,7 +198,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else if (id == R.id.nav_exit) {
 
             AlertDialog.Builder alertdialog = new AlertDialog.Builder(this);
-
             alertdialog.setTitle("Confirm to exit?");
             alertdialog.setMessage("Are you sure you want to exit?");
             alertdialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {

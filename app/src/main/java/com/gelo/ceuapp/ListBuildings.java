@@ -48,54 +48,54 @@ public class ListBuildings extends AppCompatActivity {
 
     private void bldgcondition() {
         if (touched == "DentSci") {
-            MainFragment.retainn.setText("Dent Sci");
+            MainFragment.retainn = ("Dent Sci");
             startActivity(new Intent(ListBuildings.this, dent_sci.class));
         } else if (touched == "FGH") {
-            MainFragment.retainn.setText("FGH");
+            MainFragment.retainn = ("FGH");
             startActivity(new Intent(ListBuildings.this, fgh.class));
         } else if (touched == "ISC") {
-            MainFragment.retainn.setText("ISC");
+            MainFragment.retainn = ("ISC");
             startActivity(new Intent(ListBuildings.this, isc.class));
         } else if (touched == "TECH CENTER") {
-            MainFragment.retainn.setText("Tech Center");
+            MainFragment.retainn = ("Tech Center");
             startActivity(new Intent(ListBuildings.this, tech_center.class));
         } else if (touched == "SDVH") {
-            MainFragment.retainn.setText("SDVH");
+            MainFragment.retainn = ("SDVH");
             startActivity(new Intent(ListBuildings.this, sdvh.class));
         } else if (touched == "FFH") {
-            MainFragment.retainn.setText("FFH");
+            MainFragment.retainn = ("FFH");
             startActivity(new Intent(ListBuildings.this, ffh.class));
         } else if (touched == "MVH") {
-            MainFragment.retainn.setText("MVH");
+            MainFragment.retainn = ("MVH");
             startActivity(new Intent(ListBuildings.this, mvh.class));
         } else if (touched == "DCTH") {
-            MainFragment.retainn.setText("DCTH");
+            MainFragment.retainn = ("DCTH");
             startActivity(new Intent(ListBuildings.this, dcth.class));
         } else if (touched == "PHLH") {
-            MainFragment.retainn.setText("PHLH");
+            MainFragment.retainn = ("PHLH");
             startActivity(new Intent(ListBuildings.this, phlh.class));
         } else if (touched == "Student Activity Center") {
-            MainFragment.retainn.setText("SAC");
+            MainFragment.retainn = ("SAC");
             startActivity(new Intent(ListBuildings.this, sac.class));
         } else if (touched == "North Quadrangle") {
             startActivity(new Intent(ListBuildings.this, north_quad.class));
         } else if (touched == "CDL") {
-            MainFragment.retainn.setText("CDL");
+            MainFragment.retainn = ("CDL");
             startActivity(new Intent(ListBuildings.this, cdl.class));
         } else if (touched == "Chapel") {
-            MainFragment.retainn.setText("Chapel");
+            MainFragment.retainn = ("Chapel");
             startActivity(new Intent(ListBuildings.this, chapel.class));
         } else if (touched == "LAH") {
-            MainFragment.retainn.setText("LAH");
+            MainFragment.retainn = ("LAH");
             startActivity(new Intent(ListBuildings.this, lah.class));
         } else if (touched == "CAH") {
-            MainFragment.retainn.setText("CAH");
+            MainFragment.retainn = ("CAH");
             startActivity(new Intent(ListBuildings.this, cah.class));
         } else if (touched == "GDLSC") {
-            MainFragment.retainn.setText("GDLSC");
+            MainFragment.retainn = ("GDLSC");
             startActivity(new Intent(ListBuildings.this, gdlsc.class));
         } else if (touched == "FSH") {
-            MainFragment.retainn.setText("FSH");
+            MainFragment.retainn = ("FSH");
             startActivity(new Intent(ListBuildings.this, fsh.class));
         }
     }

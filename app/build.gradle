@@ -14,14 +14,15 @@ android {
         targetSdkVersion 25
         versionName '1.6.3.7.1'
         versionCode 15
-        vectorDrawables.useSupportLibrary = true
+
     }
     buildTypes {
         release {
             minifyEnabled true
-            shrinkResources true
+            shrinkResources false
+            useProguard true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            proguardFile 'C:/Android_SDK/sdk/tools/proguard/proguard-android.txt'
+
         }
         debug {
             minifyEnabled true
