@@ -170,7 +170,7 @@
                         android:layout_weight="1"
                         android:ems="10"
                         android:gravity="center"
-                        android:hint="Total Units"
+                        android:hint="Units"
                         android:inputType="numberDecimal"
                         android:textSize="20sp" />
 
@@ -181,7 +181,7 @@
                         android:layout_weight="1"
                         android:ems="10"
                         android:gravity="center"
-                        android:hint="Total Grade"
+                        android:hint="Grade"
                         android:inputType="numberDecimal"
                         android:textSize="20sp" />
                 </LinearLayout>

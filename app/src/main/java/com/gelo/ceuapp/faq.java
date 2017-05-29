@@ -18,9 +18,6 @@ import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
 
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class faq extends Fragment {
 
     AdView mAdView, mAdView2;
