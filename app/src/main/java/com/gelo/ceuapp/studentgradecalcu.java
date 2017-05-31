@@ -9,8 +9,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -35,8 +37,10 @@ public class studentgradecalcu extends Fragment {
     private TextView ttl;
     private InterstitialAd interstitial;
     private Button btn_next, btn_clear;
-    private EditText et_units, et_grade, et_total_subj;
+    private EditText et_grade, et_total_subj;
     private TextView tv_totalunits, tv_totalgrade, tv_totalaverage, tv_totalclicks;
+    private Double array_spinner[];
+    private Spinner loadunits;
 
     public studentgradecalcu() {
         // Required empty public constructor
@@ -50,7 +54,7 @@ public class studentgradecalcu extends Fragment {
         init(view);
         load_ads();
         showmytips();
-
+        spinnerloader();
         //for button animation
         animAlpha = AnimationUtils.loadAnimation(getContext(), R.anim.anim_alpha);
 
@@ -102,7 +106,7 @@ public class studentgradecalcu extends Fragment {
                 } else if (et_total_subj.getText().toString() != "") {
                     btn_next.setEnabled(true);
                     et_grade.setEnabled(true);
-                    et_units.setEnabled(true);
+                    loadunits.setEnabled(true);
                 }
 
                 return false;
@@ -119,7 +123,7 @@ public class studentgradecalcu extends Fragment {
         btn_calc = (Button) view.findViewById(R.id.btn_calculate);
         ttl = (TextView) view.findViewById(R.id.ttl_res);
         btn_clearonegrade = (Button) view.findViewById(R.id.btn_clearonegrade);
-
+        loadunits = (Spinner) view.findViewById(R.id.spinner_units);
 
         numxunits = 0;
         numxgrades = 0;
@@ -129,7 +133,7 @@ public class studentgradecalcu extends Fragment {
         btn_next = (Button) view.findViewById(R.id.btn_computeave);
         btn_clear = (Button) view.findViewById(R.id.calc_btn_clear);
 
-        et_units = (EditText) view.findViewById(R.id.et_totalunits);
+
         et_grade = (EditText) view.findViewById(R.id.et_totalgrade);
         et_total_subj = (EditText) view.findViewById(R.id.et_totalsubjects);
 
@@ -151,7 +155,7 @@ public class studentgradecalcu extends Fragment {
     private void preventcomputationiffinished() {
         btn_next.setEnabled(false);
         et_grade.setEnabled(false);
-        et_units.setEnabled(false);
+        loadunits.setEnabled(false);
     }
 
     //resettings controls of gwa
@@ -161,7 +165,6 @@ public class studentgradecalcu extends Fragment {
         numtotalave = 0;
         clickcounter = 0;
         et_grade.setText("");
-        et_units.setText("");
         et_total_subj.setText("");
         tv_totalunits.setText("Calculated Units: " + numxunits);
         tv_totalgrade.setText("Calculated Grade: " + numxgrades);
@@ -194,17 +197,17 @@ public class studentgradecalcu extends Fragment {
     //computes total gwa
     private void calcuunits() {
         try {
-            if (et_units.getText().toString().matches("") || et_grade.getText().toString().matches("") || et_total_subj.getText().toString().matches("")) {
+            if (et_grade.getText().toString().matches("") || et_total_subj.getText().toString().matches("")) {
                 Toast.makeText(getContext(), "Fill all fields!", Toast.LENGTH_SHORT).show();
             } else {
 
                 //Calculating Units
-                xunits = Double.parseDouble(et_units.getText().toString()) + numxunits;
+                xunits = Double.parseDouble(loadunits.getSelectedItem().toString()) + numxunits;
                 numxunits = xunits;
                 xresultunits = df.format(numxunits);
 
                 //Calculating Grade (WRONG FORMULA) DOUBLE CHECK YOUR FUCKING REFERENCE
-                multixgrade = Double.parseDouble(et_grade.getText().toString()) * Double.parseDouble(et_units.getText().toString());
+                multixgrade = Double.parseDouble(et_grade.getText().toString()) * Double.parseDouble(loadunits.getSelectedItem().toString());
                 xgrades = multixgrade + numxgrades;
                 numxgrades = xgrades;
                 xresultgrades = df.format(xgrades);
@@ -213,10 +216,8 @@ public class studentgradecalcu extends Fragment {
                 tv_totalunits.setText("Calculated Units:" + xresultunits);
                 tv_totalgrade.setText("Calculated Grade: " + xresultgrades);
 
-
                 et_grade.setText("");
-                et_units.setText("");
-                et_units.requestFocus();
+                loadunits.requestFocus();
                 clickcounter = clickcounter + 1;
             }
 
@@ -295,5 +296,16 @@ public class studentgradecalcu extends Fragment {
 
     }
 
+    private void spinnerloader() {
+        array_spinner = new Double[5];
+        array_spinner[0] = 1.0;
+        array_spinner[1] = 2.0;
+        array_spinner[2] = 3.0;
+        array_spinner[3] = 4.0;
+        array_spinner[4] = 5.0;
+        ArrayAdapter adapter = new ArrayAdapter(getContext(), R.layout.spinnerunitslayout, array_spinner);
+        loadunits.setAdapter(adapter);
+
+    }
 
 }

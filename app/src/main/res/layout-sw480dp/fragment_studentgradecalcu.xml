@@ -163,23 +163,17 @@
                     android:orientation="horizontal"
                     android:weightSum="2">
 
-                    <EditText
-                        android:id="@+id/et_totalunits"
+                    <Spinner
+                        android:id="@+id/spinner_units"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:ems="10"
-                        android:gravity="center"
-                        android:hint="Units"
-                        android:inputType="numberDecimal"
-                        android:textSize="20sp" />
+                        android:layout_height="40sp"
+                        android:layout_weight="1"></Spinner>
 
                     <EditText
                         android:id="@+id/et_totalgrade"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:ems="10"
                         android:gravity="center"
                         android:hint="Grade"
                         android:inputType="numberDecimal"
