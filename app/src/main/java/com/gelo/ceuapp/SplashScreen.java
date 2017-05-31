@@ -15,7 +15,7 @@ public class SplashScreen extends Activity {
         Thread timerThread = new Thread() {
             public void run() {
                 try {
-                    sleep(1500);
+                    sleep(2000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 } finally {

@@ -38,6 +38,7 @@ public class ceuonlineportals extends Fragment {
             public void onClick(View v) {
                 v.startAnimation(animAlpha);
                 wv_loadingscreen.setVisibility(View.VISIBLE);
+
                 wv_onlineportal.setVisibility(View.GONE);
 
                 wv_loadingscreen.loadUrl("file:///android_asset/loadingscreen.html");
@@ -60,6 +61,7 @@ public class ceuonlineportals extends Fragment {
             public void onClick(View v) {
                 v.startAnimation(animAlpha);
                 wv_loadingscreen.setVisibility(View.VISIBLE);
+
                 wv_onlineportal.setVisibility(View.GONE);
 
                 wv_loadingscreen.loadUrl("file:///android_asset/loadingscreen.html");
@@ -68,6 +70,7 @@ public class ceuonlineportals extends Fragment {
                     public void onPageFinished(WebView view, String url) {
                         //hide loading image
                         wv_loadingscreen.setVisibility(View.GONE);
+
                         //show webview
                         wv_onlineportal.setVisibility(View.VISIBLE);
 
@@ -135,8 +138,6 @@ public class ceuonlineportals extends Fragment {
         campusguidefbpage = (BottomNavigationItemView) view.findViewById(R.id.nav_campusguidefbpage);
         wv_onlineportal = (WebView) view.findViewById(R.id.wv_onlineportal);
         wv_loadingscreen = (WebView) view.findViewById(R.id.wv_loadingscreen);
-
-
         wv_loadingscreen.setVisibility(View.VISIBLE);
         wv_onlineportal.setVisibility(View.GONE);
 
@@ -152,7 +153,6 @@ public class ceuonlineportals extends Fragment {
             }
         });
         wv_onlineportal.loadUrl("https://grades.ceu.edu.ph");
-
 
 
     }
