@@ -7,6 +7,24 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.gelo.ceuapp.buildings.cah;
+import com.gelo.ceuapp.buildings.cdl;
+import com.gelo.ceuapp.buildings.chapel;
+import com.gelo.ceuapp.buildings.dcth;
+import com.gelo.ceuapp.buildings.dent_sci;
+import com.gelo.ceuapp.buildings.ffh;
+import com.gelo.ceuapp.buildings.fgh;
+import com.gelo.ceuapp.buildings.fsh;
+import com.gelo.ceuapp.buildings.gdlsc;
+import com.gelo.ceuapp.buildings.isc;
+import com.gelo.ceuapp.buildings.lah;
+import com.gelo.ceuapp.buildings.mvh;
+import com.gelo.ceuapp.buildings.north_quad;
+import com.gelo.ceuapp.buildings.phlh;
+import com.gelo.ceuapp.buildings.sac;
+import com.gelo.ceuapp.buildings.sdvh;
+import com.gelo.ceuapp.buildings.tech_center;
+
 public class ListBuildings extends AppCompatActivity {
 
 
@@ -50,53 +68,70 @@ public class ListBuildings extends AppCompatActivity {
         if (touched == "DentSci") {
             MainFragment.retainn = ("Dent Sci");
             startActivity(new Intent(ListBuildings.this, dent_sci.class));
+            finish();
         } else if (touched == "FGH") {
             MainFragment.retainn = ("FGH");
             startActivity(new Intent(ListBuildings.this, fgh.class));
+            finish();
         } else if (touched == "ISC") {
             MainFragment.retainn = ("ISC");
             startActivity(new Intent(ListBuildings.this, isc.class));
+            finish();
         } else if (touched == "TECH CENTER") {
             MainFragment.retainn = ("Tech Center");
             startActivity(new Intent(ListBuildings.this, tech_center.class));
+            finish();
         } else if (touched == "SDVH") {
             MainFragment.retainn = ("SDVH");
             startActivity(new Intent(ListBuildings.this, sdvh.class));
+            finish();
         } else if (touched == "FFH") {
             MainFragment.retainn = ("FFH");
             startActivity(new Intent(ListBuildings.this, ffh.class));
+            finish();
         } else if (touched == "MVH") {
             MainFragment.retainn = ("MVH");
             startActivity(new Intent(ListBuildings.this, mvh.class));
+            finish();
         } else if (touched == "DCTH") {
             MainFragment.retainn = ("DCTH");
             startActivity(new Intent(ListBuildings.this, dcth.class));
+            finish();
         } else if (touched == "PHLH") {
             MainFragment.retainn = ("PHLH");
             startActivity(new Intent(ListBuildings.this, phlh.class));
+            finish();
         } else if (touched == "Student Activity Center") {
             MainFragment.retainn = ("SAC");
             startActivity(new Intent(ListBuildings.this, sac.class));
+            finish();
         } else if (touched == "North Quadrangle") {
             startActivity(new Intent(ListBuildings.this, north_quad.class));
+            finish();
         } else if (touched == "CDL") {
             MainFragment.retainn = ("CDL");
             startActivity(new Intent(ListBuildings.this, cdl.class));
+            finish();
         } else if (touched == "Chapel") {
             MainFragment.retainn = ("Chapel");
             startActivity(new Intent(ListBuildings.this, chapel.class));
+            finish();
         } else if (touched == "LAH") {
             MainFragment.retainn = ("LAH");
             startActivity(new Intent(ListBuildings.this, lah.class));
+            finish();
         } else if (touched == "CAH") {
             MainFragment.retainn = ("CAH");
             startActivity(new Intent(ListBuildings.this, cah.class));
+            finish();
         } else if (touched == "GDLSC") {
             MainFragment.retainn = ("GDLSC");
             startActivity(new Intent(ListBuildings.this, gdlsc.class));
+            finish();
         } else if (touched == "FSH") {
             MainFragment.retainn = ("FSH");
             startActivity(new Intent(ListBuildings.this, fsh.class));
+            finish();
         }
     }
 

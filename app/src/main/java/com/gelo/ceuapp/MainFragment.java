@@ -27,6 +27,22 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.gelo.ceuapp.buildings.cah;
+import com.gelo.ceuapp.buildings.cdl;
+import com.gelo.ceuapp.buildings.chapel;
+import com.gelo.ceuapp.buildings.dcth;
+import com.gelo.ceuapp.buildings.dent_sci;
+import com.gelo.ceuapp.buildings.ffh;
+import com.gelo.ceuapp.buildings.fgh;
+import com.gelo.ceuapp.buildings.fsh;
+import com.gelo.ceuapp.buildings.gdlsc;
+import com.gelo.ceuapp.buildings.isc;
+import com.gelo.ceuapp.buildings.lah;
+import com.gelo.ceuapp.buildings.mvh;
+import com.gelo.ceuapp.buildings.phlh;
+import com.gelo.ceuapp.buildings.sac;
+import com.gelo.ceuapp.buildings.sdvh;
+import com.gelo.ceuapp.buildings.tech_center;
 import com.google.android.gms.ads.InterstitialAd;
 
 
@@ -77,27 +93,35 @@ public class MainFragment extends Fragment {
                             if (search.getText().toString().equalsIgnoreCase("SAC")) {
                                 Intent intent = new Intent("com.gelo.ceuapp.Navigation_Gif");
                                 startActivity(intent);
+                                getActivity().finish();
                             } else if (search.getText().toString().equalsIgnoreCase("CDL")) {
                                 Intent intent = new Intent("com.gelo.ceuapp.Navigation_Gif");
                                 startActivity(intent);
+                                getActivity().finish();
                             } else if (search.getText().toString().equalsIgnoreCase("FFH")) {
                                 Intent intent = new Intent("com.gelo.ceuapp.Navigation_Gif");
                                 startActivity(intent);
+                                getActivity().finish();
                             } else if (search.getText().toString().equalsIgnoreCase("DCTH")) {
                                 Intent intent = new Intent("com.gelo.ceuapp.Navigation_Gif");
                                 startActivity(intent);
+                                getActivity().finish();
                             } else if (search.getText().toString().equalsIgnoreCase("Chapel")) {
                                 Intent intent = new Intent("com.gelo.ceuapp.Navigation_Gif");
                                 startActivity(intent);
+                                getActivity().finish();
                             } else if (search.getText().toString().equalsIgnoreCase("ISC")) {
                                 Intent intent = new Intent("com.gelo.ceuapp.Navigation_Gif");
                                 startActivity(intent);
+                                getActivity().finish();
                             } else if (search.getText().toString().equalsIgnoreCase("MVH")) {
                                 Intent intent = new Intent("com.gelo.ceuapp.Navigation_Gif");
                                 startActivity(intent);
+                                getActivity().finish();
                             } else if (search.getText().toString().equalsIgnoreCase("SDVH")) {
                                 Intent intent = new Intent("com.gelo.ceuapp.Navigation_Gif");
                                 startActivity(intent);
+                                getActivity().finish();
                             }
                         default:
                             break;
@@ -113,6 +137,7 @@ public class MainFragment extends Fragment {
             public void onClick(View v) {
                 Intent intent = new Intent("com.gelo.ceuapp.ListBuildings");
                 startActivity(intent);
+                getActivity().finish();
             }
         });
 
@@ -126,89 +151,103 @@ public class MainFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 if (search.getText().toString().equalsIgnoreCase("SAC")) {
-                    Intent intent = new Intent("com.gelo.ceuapp.sac");
+                    Intent intent = new Intent(getActivity(), sac.class);
                     search.setText("");
                     retainn = ("SAC");
                     startActivity(intent);
                 } else if (search.getText().toString().equalsIgnoreCase("CDL") || (search.getText().toString().equalsIgnoreCase("Academic Affairs Office")) || (search.getText().toString().equalsIgnoreCase("Library Department")) || (search.getText().toString().equalsIgnoreCase("Probe Room")) || (search.getText().toString().equalsIgnoreCase("Masscomm, Laboratory Rooms")) || (search.getText().toString().equalsIgnoreCase("Social Sciences Department")) || (search.getText().toString().equalsIgnoreCase("Filipino Department")) || (search.getText().toString().equalsIgnoreCase("Social Arts and Humanities Department")) || (search.getText().toString().equalsIgnoreCase("Campus Ministry")) || (search.getText().toString().equalsIgnoreCase("International Languages Department")) || (search.getText().toString().equalsIgnoreCase("Teaching and Learning Technology Department (TLTD)")) || (search.getText().toString().equalsIgnoreCase("Multimedia Instruction Room (MIR)")) || (search.getText().toString().equalsIgnoreCase("School of Education-Libreral Arts-Music-Social Work")) || (search.getText().toString().equalsIgnoreCase("Music Rooms")) || (search.getText().toString().equalsIgnoreCase("Tiongco Recital Hall")) || (search.getText().toString().equalsIgnoreCase("Social Work Case Conference Room"))
                        /* ||
                         (search.getText().toString().equalsIgnoreCase("Library Department"))*/) {
-                    Intent intent = new Intent("com.gelo.ceuapp.cdl");
+                    Intent intent = new Intent(getActivity(), cdl.class);
                     search.setText("");
                     retainn = ("CDL");
                     startActivity(intent);
+                    getActivity().finish();
                 } else if (search.getText().toString().equalsIgnoreCase("FFH") || (search.getText().toString().equalsIgnoreCase("FFH Assembly Hall"))
 
                         ) {
-                    Intent intent = new Intent("com.gelo.ceuapp.ffh");
+                    Intent intent = new Intent(getActivity(), ffh.class);
                     search.setText("");
                     retainn = ("FFH");
                     startActivity(intent);
+                    getActivity().finish();
                 } else if (search.getText().toString().equalsIgnoreCase("DCTH") || (search.getText().toString().equalsIgnoreCase("Community Outreach Department")) || (search.getText().toString().equalsIgnoreCase("DCTH Canteen")) || (search.getText().toString().equalsIgnoreCase("Property Department")) || (search.getText().toString().equalsIgnoreCase("School of Accountancy and Management")) || (search.getText().toString().equalsIgnoreCase("Market Research and Bank Simulation Room")) || (search.getText().toString().equalsIgnoreCase("Quality and Productivity Rooms")) || (search.getText().toString().equalsIgnoreCase("Accounting Laboratory")) || (search.getText().toString().equalsIgnoreCase("Lecture Hall"))) {
-                    Intent intent = new Intent("com.gelo.ceuapp.dcth");
+                    Intent intent = new Intent(getActivity(), dcth.class);
                     search.setText("");
                     retainn = ("DCTH");
                     startActivity(intent);
                 } else if (search.getText().toString().equalsIgnoreCase("Chapel")) {
-                    Intent intent = new Intent("com.gelo.ceuapp.chapel");
+                    Intent intent = new Intent(getActivity(), chapel.class);
                     search.setText("");
                     retainn = ("Chapel");
                     startActivity(intent);
+                    getActivity().finish();
                 } else if (search.getText().toString().equalsIgnoreCase("ISC") || (search.getText().toString().equalsIgnoreCase("Computer Laboratories")) || (search.getText().toString().equalsIgnoreCase("ISC Canteen")) || (search.getText().toString().equalsIgnoreCase("Travel Bureau")) || (search.getText().toString().equalsIgnoreCase("Friend's Cafe")) || (search.getText().toString().equalsIgnoreCase("ISC Mezzanine Function Rooms")) || (search.getText().toString().equalsIgnoreCase("I.D. Section")) || (search.getText().toString().equalsIgnoreCase("Management Information System Department")) || (search.getText().toString().equalsIgnoreCase("Computer Education Department")) || (search.getText().toString().equalsIgnoreCase("Information and Communication Technology Department"))) {
-                    Intent intent = new Intent("com.gelo.ceuapp.isc");
+                    Intent intent = new Intent(getActivity(), isc.class);
                     search.setText("");
                     retainn = ("ISC");
                     startActivity(intent);
+                    getActivity().finish();
                 } else if (search.getText().toString().equalsIgnoreCase("MVH") || (search.getText().toString().equalsIgnoreCase("Human Resource Department")) || (search.getText().toString().equalsIgnoreCase("Non-Teaching Employee's Lounge")) || (search.getText().toString().equalsIgnoreCase("Cafeteria")) || (search.getText().toString().equalsIgnoreCase("Librada Avelino Auditorium"))) {
-                    Intent intent = new Intent("com.gelo.ceuapp.mvh");
+                    Intent intent = new Intent(getActivity(), mvh.class);
                     search.setText("");
                     retainn = ("MVH");
                     startActivity(intent);
+                    getActivity().finish();
                 } else if (search.getText().toString().equalsIgnoreCase("SDVH") || (search.getText().toString().equalsIgnoreCase("Clinical Laboratory")) || (search.getText().toString().equalsIgnoreCase("Health Services Department")) || (search.getText().toString().equalsIgnoreCase("SDV Lanai and Friendship Areas")) || (search.getText().toString().equalsIgnoreCase("Diagnostic Center-Radiology Section")) || (search.getText().toString().equalsIgnoreCase("Graduate School")) || (search.getText().toString().equalsIgnoreCase("Marketing Communications Department")) || (search.getText().toString().equalsIgnoreCase("Guidance and Counseling Department")) || (search.getText().toString().equalsIgnoreCase("Psychology Laboratory")) || (search.getText().toString().equalsIgnoreCase("Social Arts Laboratories")) || (search.getText().toString().equalsIgnoreCase("Speech Laboratory"))) {
-                    Intent intent = new Intent("com.gelo.ceuapp.sdvh");
+                    Intent intent = new Intent(getActivity(), sdvh.class);
                     search.setText("");
                     retainn = ("SDVH");
                     startActivity(intent);
+                    getActivity().finish();
                 } else if (search.getText().toString().equalsIgnoreCase("CAH")) {
-                    Intent intent = new Intent("com.gelo.ceuapp.cah");
+                    Intent intent = new Intent(getActivity(), cah.class);
                     search.setText("");
                     retainn = ("CAH");
                     startActivity(intent);
+                    getActivity().finish();
                 } else if (search.getText().toString().equalsIgnoreCase("Dent Sci") || (search.getText().toString().equalsIgnoreCase("School of Dentistry")) || (search.getText().toString().equalsIgnoreCase("Laboratory Rooms")) || (search.getText().toString().equalsIgnoreCase("School of Science and Technology")) || (search.getText().toString().equalsIgnoreCase("Mathematics Department")) || (search.getText().toString().equalsIgnoreCase("Psychology Department")) || (search.getText().toString().equalsIgnoreCase("Gym and Fitness Room")) || (search.getText().toString().equalsIgnoreCase("P.E. Department")) || (search.getText().toString().equalsIgnoreCase("Swimming Pool"))) {
-                    Intent intent = new Intent("com.gelo.ceuapp.dent_sci");
+                    Intent intent = new Intent(getActivity(), dent_sci.class);
                     search.setText("");
                     retainn = ("Dent Sci");
                     startActivity(intent);
+                    getActivity().finish();
                 } else if (search.getText().toString().equalsIgnoreCase("FGH") || (search.getText().toString().equalsIgnoreCase("Dental Clinics")) || (search.getText().toString().equalsIgnoreCase("Food Booths")) || (search.getText().toString().equalsIgnoreCase("M.S. Periodontics Clinic")) || (search.getText().toString().equalsIgnoreCase("M.S. Orthodontics Clinic")) || (search.getText().toString().equalsIgnoreCase("Simulations Rooms"))) {
-                    Intent intent = new Intent("com.gelo.ceuapp.fgh");
+                    Intent intent = new Intent(getActivity(), fgh.class);
                     search.setText("");
                     retainn = ("FGH");
                     startActivity(intent);
+                    getActivity().finish();
                 } else if (search.getText().toString().equalsIgnoreCase("FSH") || (search.getText().toString().equalsIgnoreCase("CEU-FAWU Office"))) {
-                    Intent intent = new Intent("com.gelo.ceuapp.fsh");
+                    Intent intent = new Intent(getActivity(), fsh.class);
                     search.setText("");
                     retainn = ("FSH");
                     startActivity(intent);
+                    getActivity().finish();
                 } else if (search.getText().toString().equalsIgnoreCase("GDLSC") || (search.getText().toString().equalsIgnoreCase("Bulwagang Maestra Osang")) || (search.getText().toString().equalsIgnoreCase("Manufacturing Laboratory (Pharmacy)")) || (search.getText().toString().equalsIgnoreCase("Vision and Eye Care Center")) || (search.getText().toString().equalsIgnoreCase("College of Nursing")) || (search.getText().toString().equalsIgnoreCase("College of Optometry")) || (search.getText().toString().equalsIgnoreCase("Optometry Junior's Clinic")) || (search.getText().toString().equalsIgnoreCase("Nursing Arts Laboratory")) || (search.getText().toString().equalsIgnoreCase("College of Medical Technology"))) {
-                    Intent intent = new Intent("com.gelo.ceuapp.gdlsc");
+                    Intent intent = new Intent(getActivity(), gdlsc.class);
                     search.setText("");
                     retainn = ("GDLSC");
                     startActivity(intent);
+                    getActivity().finish();
                 } else if (search.getText().toString().equalsIgnoreCase("LAH") || (search.getText().toString().equalsIgnoreCase("Auxilliary Services Department (MATPRO)")) || (search.getText().toString().equalsIgnoreCase("Cash Department")) || (search.getText().toString().equalsIgnoreCase("Chapel/Adoration Chapel")) || (search.getText().toString().equalsIgnoreCase("Chaplain's Office")) || (search.getText().toString().equalsIgnoreCase("Executive Meeting Room")) || (search.getText().toString().equalsIgnoreCase("Executive Vice President's Office")) || (search.getText().toString().equalsIgnoreCase("Professional and Continuing Education Office")) || (search.getText().toString().equalsIgnoreCase("Office of the Corporate Secretary")) || (search.getText().toString().equalsIgnoreCase("President's Office")) || (search.getText().toString().equalsIgnoreCase("Security Department")) || (search.getText().toString().equalsIgnoreCase("SRMD (Registrar's Office)")) || (search.getText().toString().equalsIgnoreCase("Treasurer's Office")) || (search.getText().toString().equalsIgnoreCase("Uniform Section")) || (search.getText().toString().equalsIgnoreCase("Meeting Room")) || (search.getText().toString().equalsIgnoreCase("Biological Science Department")) || (search.getText().toString().equalsIgnoreCase("University Publications")) || (search.getText().toString().equalsIgnoreCase("Museum")) || (search.getText().toString().equalsIgnoreCase("Physical Science Department")) || (search.getText().toString().equalsIgnoreCase("LAH Seminar Rooms 1,2 and 3")) || (search.getText().toString().equalsIgnoreCase("Nursing Arts Laboratories")) || (search.getText().toString().equalsIgnoreCase("Pharmacare Laboratory")) || (search.getText().toString().equalsIgnoreCase("Alumni Relations Department")) || (search.getText().toString().equalsIgnoreCase("Audit Department"))) {
-                    Intent intent = new Intent("com.gelo.ceuapp.lah");
+                    Intent intent = new Intent(getActivity(), lah.class);
                     search.setText("");
                     retainn = ("LAH");
                     startActivity(intent);
+                    getActivity().finish();
                 } else if (search.getText().toString().equalsIgnoreCase("PHLH") || (search.getText().toString().equalsIgnoreCase("Baking Room and Cold Kitchen")) || (search.getText().toString().equalsIgnoreCase("Food Laboratories")) || (search.getText().toString().equalsIgnoreCase("Physical Plant and Facilities Department")) || (search.getText().toString().equalsIgnoreCase("Student Organizations Center")) || (search.getText().toString().equalsIgnoreCase("Science Laboratory Rooms")) || (search.getText().toString().equalsIgnoreCase("Student Affairs Office")) || (search.getText().toString().equalsIgnoreCase("University Council Office"))) {
-                    Intent intent = new Intent("com.gelo.ceuapp.phlh");
+                    Intent intent = new Intent(getActivity(), phlh.class);
                     search.setText("");
                     retainn = ("PHLH");
                     startActivity(intent);
+                    getActivity().finish();
                 } else if (search.getText().toString().equalsIgnoreCase("Tech Center") || (search.getText().toString().equalsIgnoreCase("Study Area")) || (search.getText().toString().equalsIgnoreCase("Food Booths")) || (search.getText().toString().equalsIgnoreCase("School of Nutrition and Hospitality Management")) || (search.getText().toString().equalsIgnoreCase("Lecture or Demo Room")) || (search.getText().toString().equalsIgnoreCase("Food Laboratories")) || (search.getText().toString().equalsIgnoreCase("Linen and Laundry Room")) || (search.getText().toString().equalsIgnoreCase("Hotel Suite")) || (search.getText().toString().equalsIgnoreCase("Science Laboratory Rooms")) || (search.getText().toString().equalsIgnoreCase("Extramurals Athletic Coordinator")) || (search.getText().toString().equalsIgnoreCase("Gymnasium")) || (search.getText().toString().equalsIgnoreCase("CEU Consumers Cooperative"))) {
-                    Intent intent = new Intent("com.gelo.ceuapp.tech_center");
+                    Intent intent = new Intent(getActivity(), tech_center.class);
                     search.setText("");
                     retainn = ("Tech Center");
                     startActivity(intent);
+                    getActivity().finish();
                 }
             }
         });

@@ -16,6 +16,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
 
+import com.gelo.ceuapp.buildings.faq;
+
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     public static EditText et_aboutt;
     private final Toolbar toolbar = null;

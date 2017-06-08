@@ -4,19 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#D895B0"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.gelo.ceuapp.faq">
+
+    tools:context="com.gelo.ceuapp.buildings.faq">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
         android:background="@drawable/scorpibg2"
         android:fillViewport="true">
-
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -30,9 +25,22 @@
                 android:orientation="vertical">
 
                 <Button
+                    android:id="@+id/btn_board"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/btn_enroll"
+                    android:layout_marginTop="5sp"
+                    android:background="@color/colorPrimary"
+                    android:text="CEU Board Members"
+                    android:textColor="#fff"
+                    android:textSize="30sp" />
+
+                <Button
                     android:id="@+id/btn_othertransac"
                     android:layout_width="match_parent"
-                    android:layout_height="80dp"
+                    android:layout_height="70dp"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_below="@+id/btn_offense"
@@ -45,7 +53,7 @@
                 <Button
                     android:id="@+id/btn_ceuhistory"
                     android:layout_width="match_parent"
-                    android:layout_height="80dp"
+                    android:layout_height="70dp"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_below="@+id/btn_othertransac"
@@ -56,22 +64,9 @@
                     android:textSize="30sp" />
 
                 <Button
-                    android:id="@+id/btn_board"
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_below="@+id/btn_enroll"
-                    android:layout_marginTop="5sp"
-                    android:background="@color/colorPrimary"
-                    android:text="CEU Board Members"
-                    android:textColor="#fff"
-                    android:textSize="30sp" />
-
-                <Button
                     android:id="@+id/btn_offense"
                     android:layout_width="match_parent"
-                    android:layout_height="80dp"
+                    android:layout_height="70dp"
                     android:layout_alignParentStart="true"
                     android:layout_below="@+id/adView2"
                     android:layout_marginTop="5sp"
@@ -83,7 +78,7 @@
                 <Button
                     android:id="@+id/btn_enroll"
                     android:layout_width="match_parent"
-                    android:layout_height="80dp"
+                    android:layout_height="70dp"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_below="@+id/btn_ceuchoosemusic"
@@ -96,7 +91,7 @@
                 <Button
                     android:id="@+id/btn_ceuchoosemusic"
                     android:layout_width="match_parent"
-                    android:layout_height="80dp"
+                    android:layout_height="70dp"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_below="@+id/btn_othertransac"
@@ -105,6 +100,17 @@
                     android:text="CEU Music"
                     android:textColor="#fff"
                     android:textSize="30sp" />
+
+
+                <com.google.android.gms.ads.AdView
+                    android:layout_marginTop="30sp"
+                    android:id="@+id/adView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    ads:adSize="BANNER"
+                    ads:adUnitId="@string/banner_ad_unit_id_banner1"></com.google.android.gms.ads.AdView>
 
             </LinearLayout>
 
@@ -117,21 +123,12 @@
 
 
             <com.google.android.gms.ads.AdView
-                android:id="@+id/adView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
-                ads:adSize="BANNER"
-                ads:adUnitId="@string/banner_ad_unit_id_banner1"></com.google.android.gms.ads.AdView>
-
-            <com.google.android.gms.ads.AdView
                 android:id="@+id/adView2"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/adView"
                 android:layout_alignParentTop="true"
-                android:layout_alignStart="@+id/adView"
+                android:layout_centerHorizontal="true"
+
                 ads:adSize="BANNER"
                 ads:adUnitId="@string/banner_ad_unit_id_banner2" />
 
