@@ -29,6 +29,10 @@
                 android:icon="@drawable/ic_action_help"
                 android:title="FAQ" />
             <item
+                android:id="@+id/nav_search_faq"
+                android:icon="@drawable/ic_action_search"
+                android:title="Search: FAQ" />
+            <item
                 android:id="@+id/nav_about"
                 android:icon="@drawable/ic_info"
                 android:title="About" />

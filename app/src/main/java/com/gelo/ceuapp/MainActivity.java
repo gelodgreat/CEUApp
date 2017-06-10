@@ -24,6 +24,7 @@ import com.gelo.ceuapp.fragments.Colleges;
 import com.gelo.ceuapp.fragments.MainFragment;
 import com.gelo.ceuapp.fragments.ceuonlineportals;
 import com.gelo.ceuapp.fragments.faq;
+import com.gelo.ceuapp.fragments.fragment_search;
 import com.gelo.ceuapp.fragments.memo;
 import com.gelo.ceuapp.fragments.studentgradecalcu;
 
@@ -192,6 +193,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment_container, fragment);
             fragmentTransaction.commit();
+
+        } else if (id == R.id.nav_search_faq) {
+            fragment_search fragment = new fragment_search();
+            android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_container, fragment);
+            fragmentTransaction.commit();
+
 
         } else if (id == R.id.nav_ceuonlineportals) {
             ceuonlineportals fragment = new ceuonlineportals();
