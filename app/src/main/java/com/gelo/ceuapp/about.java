@@ -67,7 +67,7 @@ public class about extends Fragment {
             public void onClick(View v) {
                 //Intent intent= new Intent("com.gelo.ceuapp.aboutform");
                 //Intent intent = new Intent("com.gelo.ceuapp.About_developers");
-                Intent intent = new Intent("com.gelo.ceuapp.DevelperPage");
+                Intent intent = new Intent(getActivity(), DevelperPage.class);
                 et_about.setText("devs");
                 startActivity(intent);
             }
@@ -76,7 +76,7 @@ public class about extends Fragment {
         btn_apps.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent("com.gelo.ceuapp.Disclaimer");
+                Intent intent = new Intent(getActivity(), Disclaimer.class);
                 et_about.setText("apps");
                 startActivity(intent);
 
@@ -86,7 +86,7 @@ public class about extends Fragment {
         btn_disclaimer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent("com.gelo.ceuapp.Disclaimer");
+                Intent intent = new Intent(getActivity(), Disclaimer.class);
                 et_about.setText("disclaimer");
                 startActivity(intent);
             }

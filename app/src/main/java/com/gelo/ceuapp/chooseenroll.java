@@ -43,7 +43,7 @@ public class chooseenroll extends AppCompatActivity {
         btn_fresh.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent("com.gelo.ceuapp.enrollmentproc");
+                Intent intent = new Intent(chooseenroll.this, enrollmentproc.class);
                 et_enroll.setText("fresh");
                 startActivity(intent);
             }
@@ -52,7 +52,7 @@ public class chooseenroll extends AppCompatActivity {
         btn_alien.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent("com.gelo.ceuapp.enrollmentproc");
+                Intent intent = new Intent(chooseenroll.this, enrollmentproc.class);
                 et_enroll.setText("alien");
                 startActivity(intent);
             }
@@ -61,7 +61,7 @@ public class chooseenroll extends AppCompatActivity {
         btn_seconddeg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent("com.gelo.ceuapp.enrollmentproc");
+                Intent intent = new Intent(chooseenroll.this, enrollmentproc.class);
                 et_enroll.setText("seconddeg");
                 startActivity(intent);
             }
@@ -70,7 +70,7 @@ public class chooseenroll extends AppCompatActivity {
         btn_transferee.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent("com.gelo.ceuapp.enrollmentproc");
+                Intent intent = new Intent(chooseenroll.this, enrollmentproc.class);
                 et_enroll.setText("transferee");
                 startActivity(intent);
             }
@@ -79,7 +79,7 @@ public class chooseenroll extends AppCompatActivity {
         btn_continuing.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent("com.gelo.ceuapp.enrollmentproc");
+                Intent intent = new Intent(chooseenroll.this, enrollmentproc.class);
                 et_enroll.setText("continuing");
                 startActivity(intent);
             }

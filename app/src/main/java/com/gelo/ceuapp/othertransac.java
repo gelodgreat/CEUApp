@@ -41,7 +41,7 @@ public class othertransac extends AppCompatActivity {
         btn_crossenroll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent("com.gelo.ceuapp.commencetransac");
+                Intent intent = new Intent(othertransac.this, commencetransac.class);
                 et_choosetransac.setText("cross");
                 startActivity(intent);
             }
@@ -49,7 +49,7 @@ public class othertransac extends AppCompatActivity {
         btn_eval.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent("com.gelo.ceuapp.commencetransac");
+                Intent intent = new Intent(othertransac.this, commencetransac.class);
                 et_choosetransac.setText("eval");
                 startActivity(intent);
             }
@@ -57,7 +57,7 @@ public class othertransac extends AppCompatActivity {
         btn_id.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent("com.gelo.ceuapp.commencetransac");
+                Intent intent = new Intent(othertransac.this, commencetransac.class);
                 et_choosetransac.setText("id");
                 startActivity(intent);
             }
@@ -65,7 +65,7 @@ public class othertransac extends AppCompatActivity {
         btn_promi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent("com.gelo.ceuapp.commencetransac");
+                Intent intent = new Intent(othertransac.this, commencetransac.class);
                 et_choosetransac.setText("promi");
                 startActivity(intent);
             }
@@ -73,7 +73,7 @@ public class othertransac extends AppCompatActivity {
         btn_read.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent("com.gelo.ceuapp.commencetransac");
+                Intent intent = new Intent(othertransac.this, commencetransac.class);
                 et_choosetransac.setText("read");
                 startActivity(intent);
             }
@@ -81,7 +81,7 @@ public class othertransac extends AppCompatActivity {
         btn_refund.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent("com.gelo.ceuapp.commencetransac");
+                Intent intent = new Intent(othertransac.this, commencetransac.class);
                 et_choosetransac.setText("refund");
                 startActivity(intent);
             }
@@ -89,7 +89,7 @@ public class othertransac extends AppCompatActivity {
         btn_shifting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent("com.gelo.ceuapp.commencetransac");
+                Intent intent = new Intent(othertransac.this, commencetransac.class);
                 et_choosetransac.setText("shift");
                 startActivity(intent);
             }
@@ -97,7 +97,7 @@ public class othertransac extends AppCompatActivity {
         btn_addndrop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent("com.gelo.ceuapp.commencetransac");
+                Intent intent = new Intent(othertransac.this, commencetransac.class);
                 et_choosetransac.setText("add");
                 startActivity(intent);
             }

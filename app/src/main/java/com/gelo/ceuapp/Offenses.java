@@ -41,7 +41,7 @@ public class Offenses extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent("com.gelo.ceuapp.listoffenses");
+                Intent intent = new Intent(Offenses.this, listoffenses.class);
                 et_off.setText("minor");
                 startActivity(intent);
             }
@@ -50,7 +50,7 @@ public class Offenses extends AppCompatActivity {
         btn_lessserious.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent("com.gelo.ceuapp.listoffenses");
+                Intent intent = new Intent(Offenses.this, listoffenses.class);
                 et_off.setText("less");
                 startActivity(intent);
             }
@@ -59,7 +59,7 @@ public class Offenses extends AppCompatActivity {
         btn_serious.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent("com.gelo.ceuapp.listoffenses");
+                Intent intent = new Intent(Offenses.this, listoffenses.class);
                 et_off.setText("serious");
                 startActivity(intent);
             }
@@ -68,7 +68,7 @@ public class Offenses extends AppCompatActivity {
         btn_other.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent("com.gelo.ceuapp.listoffenses");
+                Intent intent = new Intent(Offenses.this, listoffenses.class);
                 et_off.setText("other");
                 startActivity(intent);
             }

@@ -91,35 +91,35 @@ public class MainFragment extends Fragment {
                         case KeyEvent.KEYCODE_DPAD_CENTER:
                         case KeyEvent.KEYCODE_ENTER:
                             if (search.getText().toString().equalsIgnoreCase("SAC")) {
-                                Intent intent = new Intent("com.gelo.ceuapp.Navigation_Gif");
+                                Intent intent = new Intent(getActivity(), Navigation_Gif.class);
                                 startActivity(intent);
                                 getActivity().finish();
                             } else if (search.getText().toString().equalsIgnoreCase("CDL")) {
-                                Intent intent = new Intent("com.gelo.ceuapp.Navigation_Gif");
+                                Intent intent = new Intent(getActivity(), Navigation_Gif.class);
                                 startActivity(intent);
                                 getActivity().finish();
                             } else if (search.getText().toString().equalsIgnoreCase("FFH")) {
-                                Intent intent = new Intent("com.gelo.ceuapp.Navigation_Gif");
+                                Intent intent = new Intent(getActivity(), Navigation_Gif.class);
                                 startActivity(intent);
                                 getActivity().finish();
                             } else if (search.getText().toString().equalsIgnoreCase("DCTH")) {
-                                Intent intent = new Intent("com.gelo.ceuapp.Navigation_Gif");
+                                Intent intent = new Intent(getActivity(), Navigation_Gif.class);
                                 startActivity(intent);
                                 getActivity().finish();
                             } else if (search.getText().toString().equalsIgnoreCase("Chapel")) {
-                                Intent intent = new Intent("com.gelo.ceuapp.Navigation_Gif");
+                                Intent intent = new Intent(getActivity(), Navigation_Gif.class);
                                 startActivity(intent);
                                 getActivity().finish();
                             } else if (search.getText().toString().equalsIgnoreCase("ISC")) {
-                                Intent intent = new Intent("com.gelo.ceuapp.Navigation_Gif");
+                                Intent intent = new Intent(getActivity(), Navigation_Gif.class);
                                 startActivity(intent);
                                 getActivity().finish();
                             } else if (search.getText().toString().equalsIgnoreCase("MVH")) {
-                                Intent intent = new Intent("com.gelo.ceuapp.Navigation_Gif");
+                                Intent intent = new Intent(getActivity(), Navigation_Gif.class);
                                 startActivity(intent);
                                 getActivity().finish();
                             } else if (search.getText().toString().equalsIgnoreCase("SDVH")) {
-                                Intent intent = new Intent("com.gelo.ceuapp.Navigation_Gif");
+                                Intent intent = new Intent(getActivity(), Navigation_Gif.class);
                                 startActivity(intent);
                                 getActivity().finish();
                             }
@@ -135,7 +135,7 @@ public class MainFragment extends Fragment {
         imgviewbldgs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent("com.gelo.ceuapp.ListBuildings");
+                Intent intent = new Intent(getActivity(), ListBuildings.class);
                 startActivity(intent);
                 getActivity().finish();
             }

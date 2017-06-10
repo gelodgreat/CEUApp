@@ -64,7 +64,7 @@ public class Colleges extends Fragment {
         img_scitech.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent("com.gelo.ceuapp.Information");
+                Intent intent = new Intent(getActivity(), Information.class);
                 title = "School of Science and Technology";
                 startActivity(intent);
 
@@ -78,7 +78,7 @@ public class Colleges extends Fragment {
         img_Pharma.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent("com.gelo.ceuapp.Information");
+                Intent intent = new Intent(getActivity(), Information.class);
                 title = "School of Pharmacy";
                 startActivity(intent);
 
@@ -92,7 +92,7 @@ public class Colleges extends Fragment {
         img_dent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent("com.gelo.ceuapp.Information");
+                Intent intent = new Intent(getActivity(), Information.class);
                 title = "School of Dentistry";
                 startActivity(intent);
 
@@ -106,7 +106,7 @@ public class Colleges extends Fragment {
         img_opto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent("com.gelo.ceuapp.Information");
+                Intent intent = new Intent(getActivity(), Information.class);
                 title = "College of Optometry";
                 startActivity(intent);
 
@@ -120,7 +120,7 @@ public class Colleges extends Fragment {
         img_mt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent("com.gelo.ceuapp.Information");
+                Intent intent = new Intent(getActivity(), Information.class);
                 title = "College of Medical Technology";
                 startActivity(intent);
 
@@ -134,7 +134,7 @@ public class Colleges extends Fragment {
         img_gradschool.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent("com.gelo.ceuapp.Information");
+                Intent intent = new Intent(getActivity(), Information.class);
                 title = "College of Graduate School";
                 startActivity(intent);
                 getActivity().overridePendingTransition(R.anim.animation, R.anim.animation2);
@@ -147,7 +147,7 @@ public class Colleges extends Fragment {
         img_nhm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent("com.gelo.ceuapp.Information");
+                Intent intent = new Intent(getActivity(), Information.class);
                 title = "College of Nutrition and Hospitality Management";
                 startActivity(intent);
                 getActivity().overridePendingTransition(R.anim.animation, R.anim.animation2);
@@ -160,7 +160,7 @@ public class Colleges extends Fragment {
         img_nursing.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent("com.gelo.ceuapp.Information");
+                Intent intent = new Intent(getActivity(), Information.class);
                 title = "College of Nursing";
                 startActivity(intent);
                 getActivity().overridePendingTransition(R.anim.animation, R.anim.animation2);
@@ -173,7 +173,7 @@ public class Colleges extends Fragment {
         img_sam.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent("com.gelo.ceuapp.Information");
+                Intent intent = new Intent(getActivity(), Information.class);
                 title = "College of Accountancy and Management";
                 startActivity(intent);
                 getActivity().overridePendingTransition(R.anim.animation, R.anim.animation2);
@@ -186,7 +186,7 @@ public class Colleges extends Fragment {
         img_selams.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent("com.gelo.ceuapp.Information");
+                Intent intent = new Intent(getActivity(), Information.class);
                 title = "College of Education-Liberal Arts-Music-Social Work";
                 startActivity(intent);
                 getActivity().overridePendingTransition(R.anim.animation, R.anim.animation2);

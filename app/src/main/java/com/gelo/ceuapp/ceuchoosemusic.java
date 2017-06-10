@@ -28,7 +28,7 @@ public class ceuchoosemusic extends AppCompatActivity {
         btn_elcollar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent("com.gelo.ceuapp.ceumusic");
+                Intent intent = new Intent(ceuchoosemusic.this, ceumusic.class);
                 et_choosemusic.setText("elcollar");
                 startActivity(intent);
             }
@@ -37,7 +37,7 @@ public class ceuchoosemusic extends AppCompatActivity {
         btn_laflor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent("com.gelo.ceuapp.ceumusic");
+                Intent intent = new Intent(ceuchoosemusic.this, ceumusic.class);
                 et_choosemusic.setText("laflor");
                 startActivity(intent);
             }
@@ -45,7 +45,7 @@ public class ceuchoosemusic extends AppCompatActivity {
         btn_mabango.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent("com.gelo.ceuapp.ceumusic");
+                Intent intent = new Intent(ceuchoosemusic.this, ceumusic.class);
                 et_choosemusic.setText("mabango");
                 startActivity(intent);
             }
@@ -55,7 +55,7 @@ public class ceuchoosemusic extends AppCompatActivity {
         btn_ceuhymn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent("com.gelo.ceuapp.ceumusic");
+                Intent intent = new Intent(ceuchoosemusic.this, ceumusic.class);
                 et_choosemusic.setText("hymn");
                 startActivity(intent);
             }
