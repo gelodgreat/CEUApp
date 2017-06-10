@@ -16,7 +16,16 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
 
-import com.gelo.ceuapp.buildings.faq;
+import com.gelo.ceuapp.aboutfolder.UnivCalendar;
+import com.gelo.ceuapp.aboutfolder.about;
+import com.gelo.ceuapp.aboutfolder.aboutform;
+import com.gelo.ceuapp.fragments.CEUInspire;
+import com.gelo.ceuapp.fragments.Colleges;
+import com.gelo.ceuapp.fragments.MainFragment;
+import com.gelo.ceuapp.fragments.ceuonlineportals;
+import com.gelo.ceuapp.fragments.faq;
+import com.gelo.ceuapp.fragments.memo;
+import com.gelo.ceuapp.fragments.studentgradecalcu;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     public static EditText et_aboutt;
@@ -141,11 +150,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment_container, fragment);
             fragmentTransaction.commit();
+
         } else if (id == R.id.nav_faq) {
             faq fragment = new faq();
             android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment_container, fragment);
             fragmentTransaction.commit();
+
         } else if (id == R.id.nav_univcalendar) {
             UnivCalendar fragment = new UnivCalendar();
             android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
@@ -175,7 +186,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment_container, fragment);
             fragmentTransaction.commit();
-
 
         } else if (id == R.id.nav_calcu) {
             studentgradecalcu fragment = new studentgradecalcu();

@@ -11,7 +11,6 @@ import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 
-import com.gelo.ceuapp.MainActivity;
 import com.gelo.ceuapp.R;
 
 public class north_quad extends AppCompatActivity {
@@ -36,16 +35,15 @@ public class north_quad extends AppCompatActivity {
             public void onClick(View view) {
                 new AlertDialog.Builder(north_quad.this).setTitle("Start Location").setMessage("Where do you want to start?").setPositiveButton("South Gate", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
-                        Intent i = new Intent("com.gelo.ceuapp.Navigation_Gif");
+                        Intent i = new Intent(north_quad.this, Navigation_Gif.class);
                         startActivity(i);
                     }
                 }).setNegativeButton("North Gate", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
-                        Intent i = new Intent("com.gelo.ceuapp.North_Gate_Navigation");
+                        Intent i = new Intent(north_quad.this, North_Gate_Navigation.class);
                         startActivity(i);
                     }
                 })
-
                         .setNeutralButton("Cancel", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
@@ -59,9 +57,6 @@ public class north_quad extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
-        Intent intent = new Intent(north_quad.this, MainActivity.class);
-        startActivity(intent);
         finish();
     }
 }

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ff6699"
-    tools:context="com.gelo.ceuapp.ceuhistory">
+    tools:context="com.gelo.ceuapp.faqfolder.ceuhistory">
 
     <WebView
         android:id="@+id/wv_ceuhistory"

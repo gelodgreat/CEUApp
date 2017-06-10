@@ -43,7 +43,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Offenses"
+            android:name=".faqfolder.Offenses"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="com.gelo.ceuapp.Offenses" />
@@ -51,14 +51,14 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".Navigation_Gif">
+        <activity android:name=".buildings.Navigation_Gif">
             <intent-filter>
                 <action android:name="com.gelo.ceuapp.Navigation_Gif" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".North_Gate_Navigation">
+        <activity android:name=".buildings.North_Gate_Navigation">
             <intent-filter>
                 <action android:name="com.gelo.ceuapp.North_Gate_Navigation" />
 
@@ -235,21 +235,21 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".CeuHymn">
+        <activity android:name=".faqfolder.CeuHymn">
             <intent-filter>
                 <action android:name="com.gelo.ceuapp.CeuHymn" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".Information">
+        <activity android:name=".fragments.Information">
             <intent-filter>
                 <action android:name="com.gelo.ceuapp.Information" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".listoffenses">
+        <activity android:name=".faqfolder.listoffenses">
             <intent-filter>
                 <action android:name="com.gelo.ceuapp.listoffenses" />
 
@@ -257,7 +257,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".chooseenroll"
+            android:name=".faqfolder.chooseenroll"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="com.gelo.ceuapp.chooseenroll" />
@@ -265,14 +265,14 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".enrollmentproc">
+        <activity android:name=".faqfolder.enrollmentproc">
             <intent-filter>
                 <action android:name="com.gelo.ceuapp.enrollmentproc" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".aboutform">
+        <activity android:name=".aboutfolder.aboutform">
             <intent-filter>
                 <action android:name="com.gelo.ceuapp.aboutform" />
 
@@ -280,7 +280,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".othertransac"
+            android:name=".faqfolder.othertransac"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="com.gelo.ceuapp.othertransac" />
@@ -288,14 +288,14 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".commencetransac">
+        <activity android:name=".faqfolder.commencetransac">
             <intent-filter>
                 <action android:name="com.gelo.ceuapp.commencetransac" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".ceumusic">
+        <activity android:name=".faqfolder.ceumusic">
             <intent-filter>
                 <action android:name="com.gelo.ceuapp.ceumusic" />
 
@@ -303,7 +303,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ceuchoosemusic"
+            android:name=".faqfolder.ceuchoosemusic"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="com.gelo.ceuapp.ceuchoosemusic" />
@@ -312,7 +312,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".About_developers"
+            android:name=".aboutfolder.About_developers"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="com.gelo.ceuapp.About_developers" />
@@ -320,7 +320,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".Disclaimer">
+        <activity android:name=".aboutfolder.Disclaimer">
             <intent-filter>
                 <action android:name="com.gelo.ceuapp.Disclaimer" />
 
@@ -334,21 +334,21 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".ceuboard">
+        <activity android:name=".faqfolder.ceuboard">
             <intent-filter>
                 <action android:name="com.gelo.ceuapp.ceuboard" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".ListBuildings">
+        <activity android:name=".buildings.ListBuildings">
             <intent-filter>
                 <action android:name="com.gelo.ceuapp.ListBuildings" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".ceuhistory">
+        <activity android:name=".faqfolder.ceuhistory">
             <intent-filter>
                 <action android:name="com.gelo.ceuapp.ceuhistory" />
 
