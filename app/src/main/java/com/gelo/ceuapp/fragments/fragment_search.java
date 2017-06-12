@@ -15,18 +15,19 @@ import android.widget.AutoCompleteTextView;
 
 import com.gelo.ceuapp.R;
 import com.gelo.ceuapp.faqfolder.ceuchoosemusic;
-import com.gelo.ceuapp.faqfolder.ceumusic;
 import com.gelo.ceuapp.faqfolder.enrollmentproc;
 import com.gelo.ceuapp.faqfolder.othertransac;
 
 
 public class fragment_search extends Fragment {
 
-    private final String[] faq_list = {"Board of Directors", "Board Members", "El Collar De Sampaguita", "Sampaguita La Flor De Manila", "Sampaguitang Mabango", "CEU Hymn", "CEU History", "Serious Offense", "CEU Music", "Less Serious Offense", "Slight Offense", "Other Offenses", "Freshmen Enrollment", "Alien/Non-Resident Enrollment", "Second Degree Enrollment", "Continuing Student Enrollment", "Transferee Enrollment", "Enrollment Procedures", "Other Transactions", "Add and Drop", "Cross Enroll", "Evaluation for Graduating Students", "ID", "Promissory Note", "Re-Admission", "Readmission", "Refund", "Shifting"};
+    private final String[] faq_list = {"Board of Directors", "Board Members", "CEU History", "Serious Offense", "CEU Music", "Less Serious Offense", "Slight Offense", "Other Offenses", "Freshmen Enrollment", "Alien/Non-Resident Enrollment", "Second Degree Enrollment", "Continuing Student Enrollment", "Transferee Enrollment", "Enrollment Procedures", "Other Transactions", "Add and Drop", "Cross Enroll", "Evaluation for Graduating Students", "ID", "Promissory Note", "Re-Admission", "Readmission", "Refund", "Shifting"};
 
     WebView wv_loadings_faq, wv_faq_search;
     AutoCompleteTextView autoCompleteTextView;
-
+    /**
+     * "El Collar De Sampaguita", "Sampaguita La Flor De Manila", "Sampaguitang Mabango", "CEU Hymn",
+     **/
     private String search = "";
 
     public fragment_search() {
@@ -91,27 +92,28 @@ public class fragment_search extends Fragment {
             Intent intent = new Intent(getActivity(), ceuchoosemusic.class);
             startActivity(intent);
             autoCompleteTextView.setText("");
-        } else if (search.equalsIgnoreCase("El Collar De Sampaguita")) {
-            ceuchoosemusic.et_choosemusic.setText("elcollar");
-            Intent intent = new Intent(getActivity(), ceumusic.class);
-            startActivity(intent);
-            autoCompleteTextView.setText("");
-        } else if (search.equalsIgnoreCase("Sampaguita La Flor De Manila")) {
-            ceuchoosemusic.et_choosemusic.setText("laflor");
-            Intent intent = new Intent(getActivity(), ceumusic.class);
-            startActivity(intent);
-            autoCompleteTextView.setText("");
-        } else if (search.equalsIgnoreCase("Sampaguitang Mabango")) {
-            ceuchoosemusic.et_choosemusic.setText("mabango");
-            Intent intent = new Intent(getActivity(), ceumusic.class);
-            startActivity(intent);
-            autoCompleteTextView.setText("");
-        } else if (search.equalsIgnoreCase("CEU Hymn")) {
-            ceuchoosemusic.et_choosemusic.setText("hymn");
-            Intent intent = new Intent(getActivity(), ceumusic.class);
-            startActivity(intent);
-            autoCompleteTextView.setText("");
-        } else if (search.equalsIgnoreCase("Serious Offense")) {
+        } /** else if (search.equalsIgnoreCase("El Collar De Sampaguita")) {
+         ceuchoosemusic.et_choosemusic.setText("elcollar");
+         Intent intent = new Intent(getActivity(), ceumusic.class);
+         startActivity(intent);
+         autoCompleteTextView.setText("");
+         } else if (search.equalsIgnoreCase("Sampaguita La Flor De Manila")) {
+         ceuchoosemusic.et_choosemusic.setText("laflor");
+         Intent intent = new Intent(getActivity(), ceumusic.class);
+         startActivity(intent);
+         autoCompleteTextView.setText("");
+         } else if (search.equalsIgnoreCase("Sampaguitang Mabango")) {
+         ceuchoosemusic.et_choosemusic.setText("mabango");
+         Intent intent = new Intent(getActivity(), ceumusic.class);
+         startActivity(intent);
+         autoCompleteTextView.setText("");
+         } else if (search.equalsIgnoreCase("CEU Hymn")) {
+         ceuchoosemusic.et_choosemusic.setText("hymn");
+         Intent intent = new Intent(getActivity(), ceumusic.class);
+         startActivity(intent);
+         autoCompleteTextView.setText("");
+         } **/
+        else if (search.equalsIgnoreCase("Serious Offense")) {
             wv_faq_search.loadUrl("file:///android_asset/serious_offenses.html");
             autoCompleteTextView.setText("");
 
