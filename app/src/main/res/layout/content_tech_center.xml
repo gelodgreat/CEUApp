@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.gelo.ceuapp.tech_center"
+    tools:context="com.gelo.ceuapp.buildings.tech_center"
     tools:showIn="@layout/activity_tech_center">
 
     <WebView

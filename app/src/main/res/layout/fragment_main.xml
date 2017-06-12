@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.gelo.ceuapp.MainFragment">
+    tools:context="com.gelo.ceuapp.fragments.MainFragment">
 
 
     <EditText
@@ -26,13 +26,19 @@
         android:layout_marginTop="20sp"
         android:orientation="vertical">
 
-        <AutoCompleteTextView
-            android:id="@+id/actvd"
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_weight="1"
-            android:hint="Search: Buildings or Department"
-            android:textSize="20sp" />
+            android:layout_height="wrap_content">
+
+            <AutoCompleteTextView
+                android:id="@+id/actvd"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:hint="Search: Buildings or Department"
+                android:textSize="20sp" />
+        </android.support.design.widget.TextInputLayout>
+
 
         <Button
             android:id="@+id/btn_search"
