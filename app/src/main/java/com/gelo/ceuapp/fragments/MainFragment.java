@@ -13,7 +13,6 @@ import android.widget.ImageButton;*/
 
 import android.content.Intent;
 import android.content.res.Configuration;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.DrawerLayout;
@@ -73,19 +72,12 @@ public class MainFragment extends Fragment {
 
         Configuration conf = getResources().getConfiguration();
 
-
-        //TextView t=(TextView)view.findViewById(R.id.textViewcode);
-        //t.setText(conf.smallestScreenWidthDp);
-
         AutoCompleteTextView autoCompleteTextView = (AutoCompleteTextView) view.findViewById(R.id.actvd);
 
-        ArrayAdapter adapter = new ArrayAdapter(getActivity().getApplicationContext(), android.R.layout.simple_expandable_list_item_1, Building_List);
-        autoCompleteTextView.setDropDownBackgroundDrawable(new ColorDrawable(getContext().getResources().getColor(R.color.colorPrimaryDark)));
-        autoCompleteTextView.setTextSize(15);
-        autoCompleteTextView.setDropDownWidth(1500);
-        autoCompleteTextView.setDropDownHeight(500);
-        autoCompleteTextView.setThreshold(1);
+        ArrayAdapter adapter = new ArrayAdapter(getActivity().getApplicationContext(), R.layout.dropdownproperties, Building_List);
         autoCompleteTextView.setAdapter(adapter);
+        autoCompleteTextView.setThreshold(1);
+
 
         autoCompleteTextView.setOnKeyListener(new View.OnKeyListener() {
             public boolean onKey(View v, int keyCode, KeyEvent event) {

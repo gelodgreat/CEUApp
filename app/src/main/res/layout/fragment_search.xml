@@ -2,7 +2,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ecf0f1"
     tools:context="com.gelo.ceuapp.fragments.fragment_search">
 
     <RelativeLayout
@@ -21,9 +20,10 @@
                 android:layout_height="70sp">
 
                 <AutoCompleteTextView
+                    android:id="@+id/actvd_faq_search"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:drawableLeft="@drawable/ic_action_search"
+                    android:drawableRight="@drawable/ic_action_search"
                     android:hint="Search FAQ:" />
 
             </android.support.design.widget.TextInputLayout>
@@ -34,8 +34,14 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:background="#000"
+                android:visibility="gone" />
 
-                />
+            <WebView
+                android:id="@+id/wv_loadings_faq"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="#000" />
 
         </LinearLayout>
 
