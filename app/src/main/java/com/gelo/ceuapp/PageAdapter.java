@@ -8,6 +8,13 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
+import com.gelo.ceuapp.aboutfolder.buenaventura_developer;
+import com.gelo.ceuapp.aboutfolder.hamili_developer;
+import com.gelo.ceuapp.aboutfolder.tan_developer;
+import com.gelo.ceuapp.aboutfolder.umali_developer;
+import com.gelo.ceuapp.aboutfolder.viril_developer;
+import com.gelo.ceuapp.aboutfolder.wu_developer;
+
 class PagerAdapter extends FragmentStatePagerAdapter {
     private final int mNumOfTabs;
 

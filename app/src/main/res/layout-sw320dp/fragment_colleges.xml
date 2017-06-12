@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#D895B0"
-    tools:context="com.gelo.ceuapp.Colleges">
+    tools:context="com.gelo.ceuapp.fragments.Colleges">
 
     <EditText
         android:id="@+id/editText2"

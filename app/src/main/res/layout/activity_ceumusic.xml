@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.gelo.ceuapp.ceumusic"
+    tools:context="com.gelo.ceuapp.faqfolder.ceumusic"
     android:background="#ff6699">
 
     <WebView
