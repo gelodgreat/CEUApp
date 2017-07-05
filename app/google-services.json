@@ -15,6 +15,22 @@
       },
       "oauth_client": [
         {
+          "client_id": "362678896824-knld10gpgbua7uu7ko9lok3iuk59i33n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gelo.ceuapp",
+            "certificate_hash": "912b702425bfd8bd5eb35f0a612ee46d0173cb52"
+          }
+        },
+        {
+          "client_id": "362678896824-rljvq6in03tmal0mcj6ifpfr8q7th9vg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gelo.ceuapp",
+            "certificate_hash": "257f36a13112043af9637f23d94e42ff271b703f"
+          }
+        },
+        {
           "client_id": "362678896824-igo3q6k0v6661igp0b2986i4ptm8kpb1.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
@@ -44,6 +60,37 @@
               "client_type": 3
             }
           ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:362678896824:android:5ce9c33a1316578c",
+        "android_client_info": {
+          "package_name": "com.angelo.gwacalculator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "362678896824-4s7gb6h3092l21tagipob67n41l78a9o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAv6Qs0_zSKK8bUZoHnHG4Np2DO-ifWfpk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
         },
         "ads_service": {
           "status": 2

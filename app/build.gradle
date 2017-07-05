@@ -12,7 +12,7 @@ android {
         applicationId 'com.gelo.ceuapp'
         minSdkVersion 17
         targetSdkVersion 25
-        versionName '1.6.7'
+        versionName '1.6.7.5'
         versionCode 17
 
     }
@@ -49,21 +49,8 @@ dependencies {
     compile 'com.android.support:support-vector-drawable:25.3.1'
     //    'Ads'
     //    compile 'com.google.firebase:firebase-ads:10.2.1'
-    compile 'com.google.android.gms:play-services-ads:10.2.4'
+    compile 'com.google.android.gms:play-services-ads:11.0.1'
     implementation 'com.android.support:support-v4:25.3.1'
+    implementation 'com.google.firebase:firebase-messaging:11.0.1'
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 apply plugin: 'com.google.gms.google-services'
