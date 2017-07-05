@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="com.gelo.ceuapp.faqsearch">
+
+    <LinearLayout
+        android:id="@+id/ll_searchcontainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <AutoCompleteTextView
+                android:id="@+id/actvd_faq_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Search FAQ" />
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_searchcontainer"
+        android:padding="5dp">
+
+        <WebView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </WebView>
+    </RelativeLayout>
+
+</RelativeLayout>

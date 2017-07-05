@@ -32,5 +32,8 @@
     <string name="banner_ad_unit_id_banner3">ca-app-pub-1707899762861819/2837536280</string>
 
     <string name="ad_app_id">ca-app-pub-1707899762861819~4381648286</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
 
